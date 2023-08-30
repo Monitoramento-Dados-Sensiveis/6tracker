@@ -135,22 +135,41 @@ body {
 
 .txtImg {
   color: #fff;
-  font-family: Impact, sans-serif;
-  font-weight: 400;
-  font-size: 100px;
+  font-size: 60px;
+  width: 80%;
+  -webkit-text-stroke: white 2px;
   display: flex;
+  text-align: start;
+  margin-bottom: 5px;
 }
 
 .txtArticle {
   color: #fff;
   width: 100%;
   display: flex;
+  flex-direction: column;
   text-align: start;
-  align-items: end;
 }
 
-.teste {
+.txtObjMt {
+  width: 40%;
+  text-align: start;
+  margin-left: 30px;
+}
+
+.lihaMais {
+  margin-left: 30px;
+  height: 2px;
+  width: 60px;
+  background-color: white;
+}
+
+.txtTitulo {
   width: 100%;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  text-align: start;
 }
 
 .buttonsSpan {
