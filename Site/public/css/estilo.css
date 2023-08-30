@@ -7,7 +7,7 @@ body {
 }
 
 :root {
-  --tamanho-header: 80px;
+  --tamanho-header: 60px;
   --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
@@ -19,25 +19,36 @@ body {
   justify-content: space-between;
 }
 
-.container b {
+/* .container b {
+  width: 100vh;
+} */
+
+.asideParteUm b i {
   width: 100%;
+
 }
 
-.container b p {
-  width: 100%;
+.container i {
+  padding: 1%;
 }
 
 .header .container {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-   margin-left: 30px;
+  margin-left: 30px;
   margin-right: 30px;
+  border-bottom: solid 2px black;
 }
 
 .header a {
   text-decoration: none;
   color: #000000;
+  font-size: 20px;
+}
+
+.header a:hover {
+  color: #c211a1;
 }
 
 .agora {
@@ -45,7 +56,7 @@ body {
 }
 
 .navbar {
-  width: 300px;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,18 +69,26 @@ body {
   margin-right: 30px;
 
 }
+
 .logo {
- width: 200px;
- margin-right: 30px;
- 
+  width: 200px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-.imgContainer{
-  height: 800px;
+
+.imgContainer {
+  height: 528px;
   margin-right: 30px;
 }
+
+.asideParteUm {
+  margin-left: 70px;
+}
+
 .banner {
-  
-  background-color:rgb(255, 253, 253);
+
+  background-color: rgb(255, 253, 253);
   margin-left: 30px;
 }
 
@@ -77,22 +96,18 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  
+
 }
 
 .banner .container p {
   font-size: 40px;
   color: rgb(0, 0, 0);
- height: 300px;
 }
+
 .banner .container span {
   font-size: 20px;
   color: rgb(0, 0, 0);
   height: 100px;
-}
-
-.banner .container span {
-  font-weight: 800;
 }
 
 .social {
@@ -163,16 +178,17 @@ body {
   background: none;
   color: #393d46af;
 }
-.container2{
+
+.container2 {
   width: 100%;
-  height: 800px;
+  height: 650px;
   background-color: white;
   display: flex;
 }
 
-.container2 p{
+.container2 p {
   color: rgb(44, 197, 197);
-  font-size:50px;
+  font-size: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: end;
   -webkit-text-stroke: rgb(44, 197, 197) 1px;
@@ -187,16 +203,16 @@ body {
 }
 
 .txtSobreContexto {
-  width: 300px;
+  width: 500px;
 }
 
 aside {
- width: 50%;
- height: 100%;
- display: flex;
- flex-direction: column;
- justify-content: space-evenly;
- align-items: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 article {
@@ -207,13 +223,15 @@ article {
   justify-content: space-evenly;
   align-items: center
 }
-.linhaContainer2{
+
+.linhaContainer2 {
   height: 5px;
   width: 100px;
   background-color: rgb(44, 197, 197);
   margin-top: 15px;
 }
-.barraContainer2{
+
+.barraContainer2 {
   width: 100%;
   height: 100px;
   background-color: black;
@@ -222,4 +240,62 @@ article {
 .textContainer2 {
   width: 500px;
   font-size: 40px;
+}
+
+.titulo3 {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 7vh;
+}
+
+.container3 {
+  background-color: #004AAD;
+  height: 500px;
+
+}
+
+.textContainer3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.containerCards {
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+
+}
+
+.cards {
+  height: 50vh;
+  width: 40vh;
+  background-color: #FFFFFF;
+  display: flex;
+  /* align-items: center; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.imgCard {
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+  border: solid 1px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgCard img {
+  height: 35px;
 }
