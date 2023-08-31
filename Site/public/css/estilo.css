@@ -6,26 +6,11 @@ body {
   font-size: 15px;
 }
 
-:root {
-  --tamanho-header: 60px;
-  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-footer: 65px;
-}
+/* COMEÇO HEADER */
 
 .container {
   display: flex;
   justify-content: space-between;
-}
-
-/* .container b {
-  width: 100vh;
-} */
-
-.asideParteUm b i {
-  width: 100%;
-
 }
 
 .container i {
@@ -51,10 +36,6 @@ body {
   color: #c211a1;
 }
 
-.agora {
-  font-weight: 800;
-}
-
 .navbar {
   width: 400px;
   display: flex;
@@ -77,6 +58,37 @@ body {
   margin-top: 10px;
 }
 
+/* FIM DO HEADER */
+
+
+/* COMEÇO TELA PARTE 1 */
+
+.buttonsSpan {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.getStarted {
+  height: 30px;
+  width: 120px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 50px;
+  background-color: #c211a1;
+  color: white;
+}
+
+.viewDemo {
+  height: 30px;
+  width: 120px;
+  margin-left: 15px;
+  border: 1px solid #c211a1;
+  border-radius: 50px;
+  background: none;
+  color: #393d46af;
+}
+
 .imgContainer {
   height: 528px;
   margin-right: 30px;
@@ -86,8 +98,11 @@ body {
   margin-left: 70px;
 }
 
-.banner {
+.asideParteUm b i {
+  width: 100%;
+}
 
+.banner {
   background-color: rgb(255, 253, 253);
   margin-left: 30px;
 }
@@ -110,9 +125,15 @@ body {
   height: 100px;
 }
 
+/* FIM DA TELA PARTE 1 */
+
+
+/* COMEÇO DA TELA OBJETIVOS E MÉTODO */
+
 .social {
   background-color: #3b065e;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .social aside {
@@ -130,7 +151,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 
 .txtImg {
@@ -172,31 +193,10 @@ body {
   text-align: start;
 }
 
-.buttonsSpan {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
+/* FIM OBJETIVOS E MÉTODO */
 
-.getStarted {
-  height: 30px;
-  width: 120px;
-  margin-left: 30px;
-  border: none;
-  border-radius: 50px;
-  background-color: #c211a1;
-  color: white;
-}
 
-.viewDemo {
-  height: 30px;
-  width: 120px;
-  margin-left: 15px;
-  border: 1px solid #c211a1;
-  border-radius: 50px;
-  background: none;
-  color: #393d46af;
-}
+/* COMEÇO SOBRE NÓS */
 
 .container2 {
   width: 100%;
@@ -212,6 +212,7 @@ body {
   text-align: end;
   -webkit-text-stroke: rgb(44, 197, 197) 1px;
 }
+
 
 .textSobreNos {
   display: flex;
@@ -261,6 +262,11 @@ article {
   font-size: 40px;
 }
 
+/* FIM DO SOBRE NÓS */
+
+
+/* COMEÇO CARDS FALE CONOSCO */
+
 .titulo3 {
   display: flex;
   color: white;
@@ -272,8 +278,10 @@ article {
 
 .container3 {
   background-color: #004AAD;
-  height: 500px;
-
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .textContainer3 {
@@ -295,14 +303,14 @@ article {
 
 .cards {
   height: 50vh;
-  width: 40vh;
+  width: 60vh;
   background-color: #FFFFFF;
   display: flex;
-  /* align-items: center; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 .imgCard {
@@ -318,3 +326,21 @@ article {
 .imgCard img {
   height: 35px;
 }
+
+/* FIM DOS CARDS FALE CONOSCO */
+
+
+/* COMEÇO DO FOOTER */
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #393d46;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FIM DO FOOTER */
