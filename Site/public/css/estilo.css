@@ -21,8 +21,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin-left: 30px;
-  margin-right: 30px;
   border-bottom: solid 2px black;
 }
 
@@ -63,39 +61,8 @@ body {
 
 /* COMEÇO TELA PARTE 1 */
 
-.buttonsSpan {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.getStarted {
-  height: 30px;
-  width: 120px;
-  margin-left: 30px;
-  border: none;
-  border-radius: 50px;
-  background-color: #c211a1;
-  color: white;
-}
-
-.viewDemo {
-  height: 30px;
-  width: 120px;
-  margin-left: 15px;
-  border: 1px solid #c211a1;
-  border-radius: 50px;
-  background: none;
-  color: #393d46af;
-}
-
 .imgContainer {
   height: 528px;
-  margin-right: 30px;
-}
-
-.asideParteUm {
-  margin-left: 70px;
 }
 
 .asideParteUm b i {
@@ -104,14 +71,14 @@ body {
 
 .banner {
   background-color: rgb(255, 253, 253);
-  margin-left: 30px;
 }
 
 .banner .container {
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
-
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .banner .container p {
@@ -298,7 +265,6 @@ article {
   align-items: center;
   justify-content: space-evenly;
   display: flex;
-
 }
 
 .cards {
@@ -344,3 +310,372 @@ article {
 }
 
 /* FIM DO FOOTER */
+
+
+/* INICIO RESPONSIVIDADE */
+
+@media only screen and (max-width:600px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
+  }
+
+
+  /* COMEÇO HEADER */
+
+  .header {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container i {
+    padding: 1%;
+  }
+
+  .header .container {
+    height: 40px;
+    border-bottom: solid 2px black;
+    width: 100%;
+  }
+
+  .header a {
+
+    color: #000000;
+    font-size: 12px;
+  }
+
+  .header a:hover {
+    color: #ad72a2;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: #e3b062;
+  }
+
+  .logo {
+    width: 20%;
+  }
+
+  /* FIM DO HEADER */
+
+
+  /* COMEÇO TELA PARTE 1 */
+
+  .buttonsSpan {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgContainer {
+    height: 150px;
+  }
+
+  .asideParteUm {
+    width: auto;
+    margin-left: 10px;
+  }
+
+  .banner {
+    background-color: rgb(255, 253, 253);
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .banner .container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 250px;
+  }
+
+  .banner .container p {
+    font-size: 15px;
+    width: 200px;
+    color: rgb(0, 0, 0);
+  }
+
+  .banner .container span {
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    height: 10px;
+  }
+
+  /* FIM DA TELA PARTE 1 */
+
+
+  /* COMEÇO DA TELA OBJETIVOS E MÉTODO */
+
+  .social {
+    background-color: #3b065e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+  }
+
+  .social article {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-top: 50px;
+  }
+
+  .social aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .txtImg {
+    color: #fff;
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .txtArticle {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .txtObjMt {
+    width: 70%;
+    text-align: center;
+    height: 50px;
+    margin-left: 0px;
+  }
+
+  .imgContainer2 {
+    height: 200px;
+  }
+
+  .txtTitulo {
+    width: 100%;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* FIM OBJETIVOS E MÉTODO */
+
+
+  /* COMEÇO SOBRE NÓS */
+
+  .container2 {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .imgContainer3 {
+    width: 100%;
+    height: 100px;
+  }
+
+  .container2 p {
+    color: rgb(44, 197, 197);
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+  }
+
+
+  .textSobreNos {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .txtSobreContexto {
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  aside {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+  }
+
+  .container3 article {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center
+  }
+
+  .linhaContainer2 {
+    height: 5px;
+    width: 100px;
+    background-color: rgb(44, 197, 197);
+    margin-top: 15px;
+  }
+
+  .barraContainer2 {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+  }
+
+  .textContainer2 {
+    width: 90%;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* FIM DO SOBRE NÓS */
+
+
+  /* COMEÇO CARDS FALE CONOSCO */
+
+  .titulo3 {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 7vh;
+    margin: 0;
+  }
+
+  .container3 {
+    background-color: #004AAD;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .faleTitulo {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .textContainer3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+  }
+
+  .containerCards {
+    width: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards {
+    height: 130px;
+    width: 70%;
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  .imgCard {
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    border: solid 1px grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgCard img {
+    height: 35px;
+  }
+
+  /* FIM DOS CARDS FALE CONOSCO */
+
+
+  /* COMEÇO DO FOOTER */
+
+  .footer {
+    width: 100%;
+    height: 80px;
+    background-color: #393d46;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

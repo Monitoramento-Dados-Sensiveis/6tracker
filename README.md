@@ -1,6 +1,6 @@
 # Conheça a 6TRACKER! :desktop_computer:
 
-![6tracker - banner](https://github.com/Monitoramento-LanHouse-Gamer/6tracker/assets/126482806/1615a5ac-47a7-436c-be4d-7a62e56857ce)
+![6tracker - banner](https://github.com/Monitoramento-Dados-Sensiveis/6tracker/assets/126482806/263a4310-7537-447b-b501-06ab8a2fb413)
 
 
 ## Nosso objetivo...
