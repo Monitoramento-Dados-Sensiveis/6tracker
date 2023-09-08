@@ -185,8 +185,8 @@ while True:
                 email_enviado = True  # Marca o email como enviado
 
 #Aqui estamos ATRIBUINDO os valores de detecção ao Banco
-        sqlUSB = "INSERT INTO dados (processador, memoriaRAM, disco, dataHora, deteccaoUSB, fkUnidade) VALUES (%s, %s, %s, %s, %s, %s)"
-        valuesUSB = (processador, memoriaRAM, uso_do_disco, dia.strftime('%Y-%m-%d %H:%M:%S'), conectadosql, fkUnidade)
+        sqlUSB = "INSERT INTO dados (processador, memoriaRAM, disco, dataHora, deteccaoUSB, fkUnidade, fkServidor) VALUES (%s ,%s, %s, %s, %s, %s, %s)"
+        valuesUSB = (processador, memoriaRAM, uso_do_disco, dia.strftime('%Y-%m-%d %H:%M:%S'), conectadosql, fkUnidade, 1)
         cursor.execute(sqlUSB, valuesUSB)
 
 # Aqui ele está INSERINDO os valores de detecção ao Banco
@@ -283,8 +283,8 @@ while True:
                 email_enviado = True  # Marca o email como enviado
 
 # Aqui estamos ATRIBUINDO os valores de detecção ao Banco
-                sqlUSB2 = "INSERT INTO dados (processador, memoriaRAM, disco, dataHora, deteccaoUSB, fkUnidade) VALUES (%s, %s, %s, %s, %s, %s)"
-                valuesUSB2 = (processador, memoriaRAM, uso_do_disco, dia.strftime('%Y-%m-%d %H:%M:%S'), conectadosql, fkUnidade)
+                sqlUSB2 = "INSERT INTO dados (processador, memoriaRAM, disco, dataHora, deteccaoUSB, fkUnidadefk, Servidor) VALUES (%s ,%s, %s, %s, %s, %s, %s)"
+                valuesUSB2 = (processador, memoriaRAM, uso_do_disco, dia.strftime('%Y-%m-%d %H:%M:%S'), conectadosql, fkUnidade, 1)
                 cursor.execute(sqlUSB2, valuesUSB2)
 
 # Aqui ele está INSERINDO os valores de detecção ao Banco
@@ -440,8 +440,8 @@ while True:
         print("Email de ALERTA DISCO")
 
     # SQL para inserir na tabela dados
-    sql = "INSERT INTO dados (processador, memoriaRAM, disco, dataHora, deteccaoUSB, fkUnidade) VALUES (%s, %s, %s, %s, %s, %s)"
-    values = (processador, memoriaRAM, uso_do_disco, dia.strftime('%Y-%m-%d %H:%M:%S'), conectadosql, fkUnidade)
+    sql = "INSERT INTO dados (processador, memoriaRAM, disco, dataHora, deteccaoUSB, fkUnidade, fkServidor) VALUES (%s ,%s, %s, %s, %s, %s, %s)"
+    values = (processador, memoriaRAM, uso_do_disco, dia.strftime('%Y-%m-%d %H:%M:%S'), conectadosql, fkUnidade, 1)
 
 #Aqui, independente do valor e dos alertas os dados serão inseridos
     try:
