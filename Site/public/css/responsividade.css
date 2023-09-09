@@ -103,75 +103,75 @@ FIM DO HEADER
 /* COMEÇO SOBRE NÓS */
 
 .container-sobre-nos {
-  flex-direction: column; /* Empilhar elementos verticalmente em telas menores */
-  align-items: center; /* Centralizar elementos verticalmente em telas menores */
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .container-sobre-nos p {
-  font-size: 30px; /* Reduzir o tamanho da fonte em telas menores */
-  text-align: center; /* Centralizar texto em telas menores */
+  font-size: 30px; 
+  text-align: center; 
 }
 
 .textSobreNos {
-  width: 90%; /* Ocupar toda a largura em telas menores */
-  font-size: 16px; /* Reduzir o tamanho da fonte em telas menores */
-  text-align: center; /* Centralizar texto em telas menores */
+  width: 90%; 
+  font-size: 16px; 
+  text-align: center; 
 }
 
 .container-sobre-nos aside {
-  width: 90%; /* Ocupar toda a largura em telas menores */
-  margin-left: 0; /* Remover a margem esquerda em telas menores */
+  width: 90%; 
+  margin-left: 0; 
 }
 
 .container-sobre-nos article {
-  width: 90%; /* Ocupar toda a largura em telas menores */
+  width: 90%; 
 }
 
 .linha-container-sobre-nos {
-  width: 30%; /* Reduzir a largura da linha em telas menores */
-  margin-top: 10px; /* Espaçamento menor em telas menores */
+  width: 30%; 
+  margin-top: 10px; 
 }
 
 .text-container-sobre-nos {
-  width: 90%; /* Ocupar toda a largura em telas menores */
-  font-size: 20px; /* Reduzir o tamanho da fonte em telas menores */
-  text-align: center; /* Centralizar texto em telas menores */
+  width: 90%; 
+  font-size: 20px; 
+  text-align: center; 
 }
 
 .img-container-sobre-nos {
   margin-top: 5%;
-  width: 100%; /* Ocupar toda a largura em telas menores */
-  max-width: 300px; /* Reduzir o tamanho da imagem em telas menores */
+  width: 100%; 
+  max-width: 300px; 
 }
 /* FIM DO SOBRE NÓS */
 
 /* COMEÇO DESENVOLVEDORES */
 
 .banner-desenvolvedores {
-  height: auto; /* Ajustar altura automaticamente em telas menores */
+  height: auto; 
 }
 
 .content-cards {
-  margin-top: 10px; /* Espaçamento menor em telas menores */
+  margin-top: 10px; 
 }
 
 .content-cards h1 {
-  font-size: 30px; /* Reduzir o tamanho da fonte em telas menores */
+  font-size: 30px; 
 }
 
 .card {
-  width: 100%; /* Ocupar toda a largura em telas menores */
-  margin: 10px; /* Espaçamento menor entre os cards em telas menores */
+  width: 100%; 
+  margin: 10px; 
 }
 
 .card img {
-  width: 100px; /* Reduzir o tamanho da imagem em telas menores */
+  width: 100px; 
   height: 100px;
 }
 
 .card h2,
 .card p {
-  font-size: 16px; /* Reduzir o tamanho da fonte em telas menores */
+  font-size: 16px; 
 }
 
 /* FIM DESENVOLVEDORES */
@@ -183,12 +183,12 @@ FIM DO HEADER
 }
 
 .formulario input{
-  width: 80%; /* Ocupar toda a largura em telas menores */
+  width: 80%; 
   margin-left: 9%;
 }
 
 .button-enviar {
-  width: 70%; /* Ocupar toda a largura em telas menores */
+  width: 70%; 
   margin: 10px;
   margin-left: 15%;
 }
@@ -223,11 +223,11 @@ FIM DO HEADER
 }
 
 .container-footer {
-  flex-direction: line; /* Empilhe os elementos em telas menores */
+  flex-direction: line; 
 }
 .footer-info {
-  width: 90%; /* Reduza a largura dos elementos em telas menores */
-  margin: 10px; /* Adicione uma margem uniforme em todos os lados em telas menores */
+  width: 90%; 
+  margin: 10px; 
 }
 
 
