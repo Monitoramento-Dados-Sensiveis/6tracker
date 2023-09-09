@@ -1,367 +1,234 @@
-
-
-/* INICIO RESPONSIVIDADE */
-
-@media only screen and (max-width:600px) {
-
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: rgb(255, 255, 255);
-    font-size: 10px;
-  }
-
-
-  /* COMEÇO HEADER */
-
-  .header {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .container i {
-    padding: 1%;
-  }
-
-  .header .container {
-    height: 40px;
-    border-bottom: solid 2px black;
-    width: 100%;
-  }
-
-  .header a {
-
-    color: #000000;
-    font-size: 12px;
-  }
-
-  .header a:hover {
-    color: #ad72a2;
+@media only screen and (max-width: 600px) {
+/*
+COMEÇO DO HEADER
+*/
+  .container-header {
+    flex-direction: line;
+    align-items: center; 
   }
 
   .navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    color: #e3b062;
+    flex-direction: line; 
+    align-items: center; 
+  }
+
+  .header h1 {
+    margin: 10px 0; 
+  }
+
+  .header a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
   }
 
   .logo {
-    width: 20%;
-  }
-
-  /* FIM DO HEADER */
-
-
-  /* COMEÇO TELA PARTE 1 */
-
-  .buttonsSpan {
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .imgContainer {
-    height: 150px;
-  }
-
-  .asideParteUm {
-    width: auto;
-    margin-left: 10px;
-  }
-
-  .banner {
-    background-color: rgb(255, 253, 253);
-    height: 250px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-  }
-
-  .banner .container {
-    display: flex;
-    justify-content: space-evenly;
-    height: 250px;
-  }
-
-  .banner .container p {
-    font-size: 15px;
-    width: 200px;
-    color: rgb(0, 0, 0);
-  }
-
-  .banner .container span {
-    font-size: 10px;
-    color: rgb(0, 0, 0);
-    height: 10px;
-  }
-
-  /* FIM DA TELA PARTE 1 */
-
-
-  /* COMEÇO DA TELA OBJETIVOS E MÉTODO */
-
-  .social {
-    background-color: #3b065e;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 450px;
-  }
-
-  .social article {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
-    margin-top: 50px;
-  }
-
-  .social aside {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-
-  .txtImg {
-    color: #fff;
-    font-size: 25px;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  .txtArticle {
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .txtObjMt {
-    width: 70%;
-    text-align: center;
-    height: 50px;
-    margin-left: 0px;
-  }
-
-  .imgContainer2 {
-    height: 200px;
-  }
-
-  .txtTitulo {
-    width: 100%;
-    font-size: 15px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* FIM OBJETIVOS E MÉTODO */
-
-
-  /* COMEÇO SOBRE NÓS */
-
-  .container-sobre-nos {
-    width: 100%;
-    height: 400px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .imgContainer-sobre-nos {
-    width: 100%;
-    height: 100px;
-  }
-
-  .container-sobre-nos p {
-    color: rgb(44, 197, 197);
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-
-  }
-  .textSobreNos {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    font-size: 10px;
-  }
-
-  .txtSobreContexto {
-    width: 100%;
-    font-size: 10px;
-    text-align: center;
-  }
-
-  aside {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-  }
-
-  .container-sobre-nos article {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center
-  }
-
-  .linha-sobre-nos {
-    height: 5px;
     width: 100px;
-    background-color: rgb(44, 197, 197);
-    margin-top: 15px;
+    margin: 2%;
   }
+  /*
+FIM DO HEADER
+*/
 
-  .barra-sobre-nos {
-    width: 100%;
-    height: 100px;
-    background-color: black;
-  }
+/* COMEÇO DA TELA OBJETIVOS E MÉTODO */
 
-  .text-container-sobre-nos {
-    width: 90%;
-    font-size: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.imgContainer {
+  width: 80%; 
+}
 
-  /* FIM DO SOBRE NÓS */
+.asideParteUm {
+  width: 100%; 
+  margin-top: 3%; 
+}
+
+.button-inicial {
+  width: 50%; 
+  margin-top: 3%; 
+}
+
+.container-banner-inicial {
+  margin: 1%;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.container-banner-inicial h1 {
+  font-size: 30px; 
+}
+
+.container-banner-inicial span {
+  font-size: 16px; 
+}
+/* FIM DA TELA PARTE 1 */
+
+/* COMEÇO DA TELA OBJETIVOS E MÉTODO */
+
+.social {
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.social aside {
+  width: 20%; 
+  text-align: center; 
+  padding: 10px; 
+}
+
+.social article {
+  width: 100%; 
+  text-align: center; 
+  padding: -59px; 
+}
+
+.txtImg {
+  margin-top: 30%;
+  font-size: 30px; 
+  margin-bottom: 3%; 
+}
+
+.txtObjMt {
+  width: 80%; 
+  text-align: center; 
+  margin-left: 5%;
+  font-size: 15px; 
+}
+
+.txtTitulo {
+  font-size: 20px; 
+  text-align: center; 
+  margin-left: 5%;
+}
+/* FIM OBJETIVOS E MÉTODO */
+
+/* COMEÇO SOBRE NÓS */
+
+.container-sobre-nos {
+  flex-direction: column; /* Empilhar elementos verticalmente em telas menores */
+  align-items: center; /* Centralizar elementos verticalmente em telas menores */
+}
+
+.container-sobre-nos p {
+  font-size: 30px; /* Reduzir o tamanho da fonte em telas menores */
+  text-align: center; /* Centralizar texto em telas menores */
+}
+
+.textSobreNos {
+  width: 90%; /* Ocupar toda a largura em telas menores */
+  font-size: 16px; /* Reduzir o tamanho da fonte em telas menores */
+  text-align: center; /* Centralizar texto em telas menores */
+}
+
+.container-sobre-nos aside {
+  width: 90%; /* Ocupar toda a largura em telas menores */
+  margin-left: 0; /* Remover a margem esquerda em telas menores */
+}
+
+.container-sobre-nos article {
+  width: 90%; /* Ocupar toda a largura em telas menores */
+}
+
+.linha-container-sobre-nos {
+  width: 30%; /* Reduzir a largura da linha em telas menores */
+  margin-top: 10px; /* Espaçamento menor em telas menores */
+}
+
+.text-container-sobre-nos {
+  width: 90%; /* Ocupar toda a largura em telas menores */
+  font-size: 20px; /* Reduzir o tamanho da fonte em telas menores */
+  text-align: center; /* Centralizar texto em telas menores */
+}
+
+.img-container-sobre-nos {
+  margin-top: 5%;
+  width: 100%; /* Ocupar toda a largura em telas menores */
+  max-width: 300px; /* Reduzir o tamanho da imagem em telas menores */
+}
+/* FIM DO SOBRE NÓS */
+
+/* COMEÇO DESENVOLVEDORES */
+
+.banner-desenvolvedores {
+  height: auto; /* Ajustar altura automaticamente em telas menores */
+}
+
+.content-cards {
+  margin-top: 10px; /* Espaçamento menor em telas menores */
+}
+
+.content-cards h1 {
+  font-size: 30px; /* Reduzir o tamanho da fonte em telas menores */
+}
+
+.card {
+  width: 100%; /* Ocupar toda a largura em telas menores */
+  margin: 10px; /* Espaçamento menor entre os cards em telas menores */
+}
+
+.card img {
+  width: 100px; /* Reduzir o tamanho da imagem em telas menores */
+  height: 100px;
+}
+
+.card h2,
+.card p {
+  font-size: 16px; /* Reduzir o tamanho da fonte em telas menores */
+}
+
+/* FIM DESENVOLVEDORES */
+
+/* COMEÇO DO FORMULÁRIO DE CONTATO */
+
+.container-cards {
+  width: 90%; /* Reduzir a largura em telas menores */
+}
+
+.formulario input{
+  width: 80%; /* Ocupar toda a largura em telas menores */
+  margin-left: 9%;
+}
+
+.button-enviar {
+  width: 70%; /* Ocupar toda a largura em telas menores */
+  margin: 10px;
+  margin-left: 15%;
+}
+/* FIM DO FORMULÁRIO DE CONTATO */
+
+/* COMEÇO CARDS FALE CONOSCO */
+
+.cards {
+  width: 30%; 
+}
+
+.imgCard img {
+  width: 25px;
+  height: 25px;
+}
+
+.cards span{
+  font-size: 8px;
+}
+
+.textContainer-fale-conosco {
+  display: flex;
+  color: #FFFFFF;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 5%
+}
+
+/* FIM DOS CARDS FALE CONOSCO */
+
+.footer-left img {
+  width: 130px;
+}
+
+.container-footer {
+  flex-direction: line; /* Empilhe os elementos em telas menores */
+}
+.footer-info {
+  width: 90%; /* Reduza a largura dos elementos em telas menores */
+  margin: 10px; /* Adicione uma margem uniforme em todos os lados em telas menores */
+}
 
 
-  /* COMEÇO CARDS FALE CONOSCO */
-
-  .titulo3 {
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 7vh;
-    margin: 0;
-  }
-
-  .container3 {
-    background-color: #004AAD;
-    height: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .faleTitulo {
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-
-  .textContainer3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-  }
-
-  .containerCards {
-    width: auto;
-    align-items: center;
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .cards {
-    height: 130px;
-    width: 70%;
-    margin-top: 10px;
-    background-color: #FFFFFF;
-    display: flex;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-  }
-
-  .imgCard {
-    height: 60px;
-    width: 60px;
-    border-radius: 100px;
-    border: solid 1px grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .imgCard img {
-    height: 35px;
-  }
-
-  /* FIM DOS CARDS FALE CONOSCO */
-
-
-  /* COMEÇO DO FOOTER */
-
-  .footer {
-    width: 100%;
-    height: 80px;
-    background-color: #393d46;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 }

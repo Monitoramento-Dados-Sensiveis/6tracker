@@ -56,6 +56,11 @@ body {
   justify-content: center;
 }
 
+.imgContainer2{
+  margin-top: 2%;
+  width: 300px;
+}
+
 .container-footer{
   display: flex;
   width: 90%;
