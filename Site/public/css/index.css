@@ -1,0 +1,395 @@
+
+/* COMEÇO HEADER */
+.banner {
+  width: 100%;
+  height: 105vh;
+  background-image: url(../img/bg-white.jpg);
+  background-size: cover;
+}
+
+/* COMEÇO TELA PARTE 1 */
+
+.imgContainer {
+  width: 37%;
+}
+
+.asideParteUm {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+.button-inicial{
+  width: 25%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #c211a1;
+  color: #FFFFFF;
+  border: none;
+  margin-top: 5%;
+  box-shadow: 0.5px 0.5px 10px #ffffff;
+}
+.container-banner-inicial {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.container-banner-inicial h1 {
+  font-size: 60px;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  text-shadow: rgb(255, 255, 255) 0.0em 0.0em 0.2em;
+}
+.color{
+  color: #c211a1;
+  font-weight: 700;
+}
+
+.container-banner-inicial span {
+  font-size: 20px;
+  color: rgb(99, 99, 99);
+}
+
+/* FIM DA TELA PARTE 1 */
+
+
+/* COMEÇO DA TELA OBJETIVOS E MÉTODO */
+
+.social {
+  background-image: linear-gradient(to bottom right, #3b065e, #b011c2);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.social aside {
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.social article {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.txtImg {
+  color: #fff;
+  font-size: 60px;
+  width: 100%;
+  -webkit-text-stroke: white 2px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.txtArticle {
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.txtObjMt {
+  width: 70%;
+  text-align: start;
+  margin-left: 5%;
+  font-size: 16px;
+}
+
+.txtTitulo {
+  width: 100%;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  text-align: start;
+}
+
+/* FIM OBJETIVOS E MÉTODO */
+
+
+/* COMEÇO SOBRE NÓS */
+
+.container-sobre-nos {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  background-size: cover;
+  display: flex;
+}
+.container-sobre-nos p {
+  color: #c211a1;
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-text-stroke: #c211a1;
+  margin-bottom: 5%;
+}
+
+.textSobreNos {
+  display: flex;
+  width: 70%;
+  font-size: 20px;
+}
+
+.container-sobre-nos aside {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10%;
+}
+
+.container-sobre-nos article {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.linha-container-sobre-nos {
+  height: 5px;
+  width: 35%;
+  background-color: rgb(44, 197, 197);
+  margin-top: 15px;
+}
+
+.barra-container-sobre-nos {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+}
+
+.text-container-sobre-nos {
+  width: 500px;
+  font-size: 40px;
+}
+.img-container-sobre-nos{
+  width: 450px;
+}
+
+/* FIM DO SOBRE NÓS */
+
+/* COMEÇO DESENVOLVEDORES */
+.banner-desenvolvedores{
+  width: 100%;
+  height: 140vh;
+  background-image: url(../img/bg-purple.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-cards{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+.content-cards h1{
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: rgb(43, 43, 43) 0.1em 0.1em 0.8em;
+}
+
+/*Cards da equipe*/
+
+.card{
+  background-color: rgb(255, 255, 255);
+  margin: 30px;
+  width: 18%;
+  height: 45vh;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card img{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+.card a{
+  color: #009EA3;
+}
+.card h2, p{
+  color:#3B3538;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.part02, .part01{
+display: flex;
+justify-content: center;
+}
+
+/* FIM DOS DESENVOLVEDORES */
+
+/* COMEÇO DO FORMULÁRIO DE CONTATO */
+
+.contato {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 90vh;
+}
+
+.container-contato {
+  width: 90%;
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.container-cards{
+  box-shadow: 1px 1px 10px rgba(91, 91, 91, 0.77);
+  width: 70vw;
+  height: auto;
+  display: flex;
+  border-radius: 20px;
+}
+
+.card-contato{
+  width: 100%;
+  height: 60vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-imagem{
+  width: 100%;
+  height: 60vh;
+  background-image: url(../img/grupo-devs.jpg);
+  background-size: cover;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card-contato{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.formulario{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formulario input{
+  background-color: #f7f7f7;
+  width: 350px;
+  height: 28px;
+  border-radius: 5px;
+  border: 1px solid #cfcece;
+}
+.formulario textarea{
+  background-color: #f7f7f7;
+  width: 350px;
+  height: 90px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #cfcece;
+}
+::placeholder{
+  color: #979797;
+}
+
+.button-enviar{
+  background-color: #c211a1;
+  color: #ffffff;
+  font-size: 15px;
+  width: 354px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+}
+/* FIM DO FORMULÁRIO DE CONTATO */
+
+
+/* COMEÇO CARDS FALE CONOSCO */
+
+.titulo-fale-conosco {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 7vh;
+}
+
+.container-fale-conosco {
+  background-image: linear-gradient(to bottom right, #b011c2, #004AAD);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.textContainer-fale-conosco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 0%;
+}
+
+.containerCards {
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.cards {
+  height: 50vh;
+  width: 60vh;
+  background-color: #FFFFFF;
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.imgCard {
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+  border: solid 1px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgCard img {
+  height: 35px;
+}
+
+/* FIM DOS CARDS FALE CONOSCO */
