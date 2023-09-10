@@ -56,6 +56,7 @@ body {
   justify-content: center;
 }
 
+<<<<<<< HEAD
 .container{
   display: flex;
   width: 100%;
@@ -63,6 +64,11 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+=======
+.imgContainer2{
+  margin-top: 2%;
+  width: 300px;
+>>>>>>> d8c8d8bb833e6dd07d67f2d8c602d2937c1c8980
 }
 
 .container-footer{
