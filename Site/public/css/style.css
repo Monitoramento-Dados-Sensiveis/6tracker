@@ -56,6 +56,15 @@ body {
   justify-content: center;
 }
 
+.container{
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
 .container-footer{
   display: flex;
   width: 90%;

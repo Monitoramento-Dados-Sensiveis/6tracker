@@ -393,3 +393,12 @@ justify-content: center;
 }
 
 /* FIM DOS CARDS FALE CONOSCO */
+
+.campo{
+margin-top: 10px;
+background-color: #f7f7f7;
+width: 350px;
+height: 28px;
+border-radius: 5px;
+border: 1px solid #cfcece;
+}
