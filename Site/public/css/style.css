@@ -13,6 +13,8 @@ body {
   margin-right: 5%;
 }
 
+
+
 .header a {
   text-decoration: none;
   color: #000000;
@@ -41,7 +43,27 @@ body {
   margin: 2%
 }
 
+.botao{
+  margin-top: 10px;
+  height: 28px;
+  width: 120px;
+  border: 2px;
+  border-color: #393D46;
+  border-radius: 3px;
+}
+
 /* FIM DO HEADER */
+
+
+.loading-div{
+  display: block;
+}
+
+#loading-gif{
+  display: block;
+  height: 40px;
+  width: 40px;
+}
 
 
 
@@ -50,25 +72,20 @@ body {
 .footer {
   width: 100%;
   background-color: #ffffff;
-  height: 250px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-<<<<<<< HEAD
 .container{
   display: flex;
   width: 100%;
+  background-color: rgb(129, 111, 206);
   height: auto;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-=======
-.imgContainer2{
-  margin-top: 2%;
-  width: 300px;
->>>>>>> d8c8d8bb833e6dd07d67f2d8c602d2937c1c8980
 }
 
 .container-footer{
@@ -77,6 +94,11 @@ body {
   height: auto;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer-left img{
+  height: 150px;
+  width: 150px;
 }
 
 .footer-info {
