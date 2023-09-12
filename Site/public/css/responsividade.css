@@ -235,6 +235,7 @@ FIM DO HEADER
 @media screen and (max-width: 600px) {
   .card-imagem {
     display: none; 
+    
   }
 }
 
