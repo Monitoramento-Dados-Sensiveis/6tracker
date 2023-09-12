@@ -218,6 +218,26 @@ FIM DO HEADER
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-left: 5%
 }
+.dados{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.dados .msgDados{
+  width: 260px;
+}
+.card-imagem {
+  display: block; 
+}
+
+
+@media screen and (max-width: 600px) {
+  .card-imagem {
+    display: none; 
+  }
+}
+
 
 /* FIM DOS CARDS FALE CONOSCO */
 
