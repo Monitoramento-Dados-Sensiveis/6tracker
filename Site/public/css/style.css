@@ -4,7 +4,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: rgb(255, 255, 255);
   font-size: 15px;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 } 
 .container-header {
   display: flex;
@@ -55,15 +55,6 @@ body {
 /* FIM DO HEADER */
 
 
-.loading-div{
-  display: block;
-}
-
-#loading-gif{
-  display: block;
-  height: 40px;
-  width: 40px;
-}
 
 
 
