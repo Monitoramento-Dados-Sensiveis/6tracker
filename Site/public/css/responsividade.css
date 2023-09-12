@@ -5,11 +5,13 @@ COMEÇO DO HEADER
   .container-header {
     flex-direction: line;
     align-items: center; 
+    width: auto;
   }
 
   .navbar {
     flex-direction: line; 
     align-items: center; 
+    
   }
 
   .header h1 {
@@ -47,13 +49,15 @@ FIM DO HEADER
 }
 
 .container-banner-inicial {
-  margin: 1%;
+  margin: 0;
   flex-direction: column; 
   align-items: center; 
+  width: 90%;
 }
 
 .container-banner-inicial h1 {
   font-size: 30px; 
+  width: 90%;
 }
 
 .container-banner-inicial span {
@@ -97,17 +101,20 @@ FIM DO HEADER
 }
 
 .txtTitulo {
+  width: 50%;
   font-size: 20px; 
   text-align: center; 
-  margin-left: 5%;
 }
 /* FIM OBJETIVOS E MÉTODO */
 
 /* COMEÇO SOBRE NÓS */
 
 .container-sobre-nos {
+  display: flex;
   flex-direction: column; 
   align-items: center; 
+  justify-content: center;
+  text-align: center ;
 }
 
 .container-sobre-nos p {
@@ -124,11 +131,31 @@ FIM DO HEADER
 .container-sobre-nos aside {
   width: 90%; 
   margin-left: 0; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  text-align: center ;
 }
 
 .container-sobre-nos article {
   width: 90%; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  text-align: center ;
 }
+
+.container-sobre-nos article span {
+  width: 90%; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  text-align: center ;
+}
+
 
 .linha-container-sobre-nos {
   width: 30%; 
@@ -139,6 +166,10 @@ FIM DO HEADER
   width: 90%; 
   font-size: 20px; 
   text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .img-container-sobre-nos {
@@ -200,7 +231,8 @@ FIM DO HEADER
 /* COMEÇO CARDS FALE CONOSCO */
 
 .cards {
-  width: 30%; 
+  width: 70%; 
+  height: 20vh;
 }
 
 .imgCard img {
@@ -216,8 +248,17 @@ FIM DO HEADER
   display: flex;
   color: #FFFFFF;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-left: 5%
+  margin: 0;
+  justify-content: center;
+  text-align: center;
 }
+
+.containerCards {
+  display: flex;
+  height: 110%;
+  flex-direction: column;
+}
+
 .dados{
   width: 100%;
   display: flex;
