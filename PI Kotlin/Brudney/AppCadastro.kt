@@ -3,8 +3,7 @@ import kotlin.random.Random
 
 fun main() {
     println("\r\n▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ 6TRACKER ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
-    var usuario = CadastroUsuario()
-    val listaUsuarios = mutableListOf<CadastroUsuario>()
+    var usuario = Cadastro_Usuario()
 
     while (true) {
         println(
@@ -57,10 +56,10 @@ fun main() {
                         println("Sua senha é Válida")
                         usuario.senha = senha
                         senhaInvalida = true
-                    }
                     println("\r\n▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
                     println("\r\n                      Cadastro Realizado com sucesso!")
                     println("\r\n▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀")
+                    }
                 }
             }
 
