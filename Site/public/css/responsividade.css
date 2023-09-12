@@ -69,7 +69,7 @@ FIM DO HEADER
 }
 
 .social aside {
-  width: 20%; 
+  width: 50%; 
   text-align: center; 
   padding: 10px; 
 }
@@ -84,6 +84,9 @@ FIM DO HEADER
   margin-top: 30%;
   font-size: 30px; 
   margin-bottom: 3%; 
+}
+.imgContainer2{
+  width: 300px;
 }
 
 .txtObjMt {

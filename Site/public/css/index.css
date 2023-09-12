@@ -417,3 +417,238 @@ width: 350px;
 border-radius: 5px; 
 /* border: 1px solid #cfcece; */
 }
+
+@media only screen and (max-width: 600px) {
+/*
+COMEÇO DO HEADER
+*/
+  .container-header {
+    flex-direction: line;
+    align-items: center; 
+  }
+
+  .navbar {
+    flex-direction: line; 
+    align-items: center; 
+  }
+
+  .header h1 {
+    margin: 10px 0; 
+  }
+
+  .header a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 100px;
+    margin: 2%;
+  }
+  /*
+FIM DO HEADER
+*/
+
+/* COMEÇO DA TELA OBJETIVOS E MÉTODO */
+
+.imgContainer {
+  width: 80%; 
+}
+
+.asideParteUm {
+  width: 100%; 
+  margin-top: 3%; 
+}
+
+.button-inicial {
+  width: 50%; 
+  margin-top: 3%; 
+}
+
+.container-banner-inicial {
+  margin: 1%;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.container-banner-inicial h1 {
+  font-size: 30px; 
+}
+
+.container-banner-inicial span {
+  font-size: 16px; 
+}
+/* FIM DA TELA PARTE 1 */
+
+/* COMEÇO DA TELA OBJETIVOS E MÉTODO */
+
+.social {
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.social aside {
+  width: 20%; 
+  text-align: center; 
+  padding: 10px; 
+}
+
+.social article {
+  width: 100%; 
+  text-align: center; 
+  padding: -59px; 
+}
+
+.txtImg {
+  margin-top: 30%;
+  font-size: 30px; 
+  margin-bottom: 3%; 
+}
+
+.txtObjMt {
+  width: 80%; 
+  text-align: center; 
+  margin-left: 5%;
+  font-size: 15px; 
+}
+
+.txtTitulo {
+  font-size: 20px; 
+  text-align: center; 
+  margin-left: 5%;
+}
+/* FIM OBJETIVOS E MÉTODO */
+
+/* COMEÇO SOBRE NÓS */
+
+.container-sobre-nos {
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.container-sobre-nos p {
+  font-size: 30px; 
+  text-align: center; 
+}
+
+.textSobreNos {
+  width: 90%; 
+  font-size: 16px; 
+  text-align: center; 
+}
+
+.container-sobre-nos aside {
+  width: 90%; 
+  margin-left: 0; 
+}
+
+.container-sobre-nos article {
+  width: 90%; 
+}
+
+.linha-container-sobre-nos {
+  width: 30%; 
+  margin-top: 10px; 
+}
+
+.text-container-sobre-nos {
+  width: 90%; 
+  font-size: 20px; 
+  text-align: center; 
+}
+
+.img-container-sobre-nos {
+  margin-top: 5%;
+  width: 100%; 
+  max-width: 300px; 
+}
+/* FIM DO SOBRE NÓS */
+
+/* COMEÇO DESENVOLVEDORES */
+
+.banner-desenvolvedores {
+  height: auto; 
+}
+
+.content-cards {
+  margin-top: 10px; 
+}
+
+.content-cards h1 {
+  font-size: 30px; 
+}
+
+.card {
+  width: 100%; 
+  margin: 10px; 
+}
+
+.card img {
+  width: 100px; 
+  height: 100px;
+}
+
+.card h2,
+.card p {
+  font-size: 16px; 
+}
+
+/* FIM DESENVOLVEDORES */
+
+/* COMEÇO DO FORMULÁRIO DE CONTATO */
+
+.container-cards {
+  width: 90%; /* Reduzir a largura em telas menores */
+}
+
+.formulario input{
+  width: 80%; 
+  margin-left: 9%;
+}
+
+.button-enviar {
+  width: 70%; 
+  margin: 10px;
+  margin-left: 15%;
+}
+/* FIM DO FORMULÁRIO DE CONTATO */
+
+/* COMEÇO CARDS FALE CONOSCO */
+
+.cards {
+  width: 30%; 
+}
+
+.imgCard img {
+  width: 25px;
+  height: 25px;
+}
+
+.cards span{
+  font-size: 8px;
+}
+
+.textContainer-fale-conosco {
+  display: flex;
+  color: #FFFFFF;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 5%
+}
+
+/* FIM DOS CARDS FALE CONOSCO */
+
+.footer-left img {
+  width: 130px;
+}
+
+.container-footer {
+  flex-direction: line; 
+}
+.footer-info {
+  width: 90%; 
+  margin: 10px; 
+}
+
+
+}
