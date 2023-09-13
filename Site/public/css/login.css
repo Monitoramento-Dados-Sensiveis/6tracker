@@ -21,18 +21,19 @@
   .container-header {
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
     margin-right: 5%;
   }
   
+  
+  
   .header a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-size: 20px;
   }
   
   .header a:hover {
-    color: #3b065e;
+    color: #c211a1;
   }
   
   .navbar {
@@ -44,13 +45,8 @@
   }
   
   .header h1 {
+    margin-left: 30px;
     margin-right: 30px;
-    /* text-shadow: 2px 2px 5px rgb(0, 0, 0); */
-  }
-  
-  .container h1 {
-    color: white;
-    text-shadow: 2px 2px 5px rgb(46, 0, 77);
   }
   
   .logo {
@@ -92,7 +88,7 @@
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
   
-  .card-inputs {
+  .card-inputs-login {
     width: 35%;
     height: 40vh;
     background-color: rgb(255, 255, 255);
