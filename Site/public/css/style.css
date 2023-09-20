@@ -4,12 +4,12 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: rgb(255, 255, 255);
   font-size: 15px;
-  overflow-x: hidden; 
-} 
+  overflow-x: hidden;
+}
+
 .container-header {
   display: flex;
   justify-content: space-between;
-  margin-left: 5%;
   margin-right: 5%;
 }
 
@@ -43,7 +43,7 @@ body {
   margin: 2%
 }
 
-.botao{
+.botao {
   margin-top: 10px;
   height: 28px;
   width: 120px;
@@ -69,7 +69,7 @@ body {
   justify-content: center;
 }
 
-.container{
+.container {
   display: flex;
   width: 100%;
   background-color: rgb(129, 111, 206);
@@ -79,7 +79,7 @@ body {
   flex-direction: column;
 }
 
-.container-footer{
+.container-footer {
   display: flex;
   width: 90%;
   height: auto;
@@ -87,7 +87,7 @@ body {
   align-items: center;
 }
 
-.footer-left img{
+.footer-left img {
   height: 150px;
   width: 150px;
 }
