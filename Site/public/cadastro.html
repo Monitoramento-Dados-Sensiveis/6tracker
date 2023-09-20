@@ -8,7 +8,7 @@
 
   <title>6TRACKER | Cadastro</title>
 
-  <script src="./js/sessao.js"></script>
+  <script src="./js/funcoes.js"></script>
 
   <link rel="icon" href="../public/img/logo-sf-vertical-preta.png" />
   <link rel="stylesheet" href="./css/index.css" />
@@ -21,7 +21,7 @@
     rel="stylesheet" />
 </head>
 
-<body onload="listar()">
+<body>
   <!--header inicio-->
   <div class="header">
     <div class="container-header">
@@ -44,7 +44,6 @@
   <!--header fim-->
 
   <div class="login">
-
     <div class="container">
       <div class="alerta_erro">
         <div class="card_erro" id="cardErro">
@@ -60,29 +59,45 @@
         <div class="card-inputs">
 
           <div class="campo">
-            <span>Nome:</span>
-            <input id="nome_input" type="text" placeholder="Seu nome" />
+            <span>Nome da Empresa:</span>
+            <input id="nomeEmp_input" type="text" placeholder="Nome da sua empresa" />
           </div>
 
           <div class="campo">
-            <span>E-mail:</span>
-            <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
+            <span>CNPJ:</span>
+            <input id="cnpj_input" type="number" placeholder="CNPJ" />
           </div>
 
           <div class="campo">
-            <span>Senha:</span>
-            <input id="senha_input" type="password" placeholder="******" />
+            <span>CEP:</span>
+            <input id="cep_input" type="number" oninput="buscarCep()" placeholder="CEP" />
           </div>
 
           <div class="campo">
-            <span>Confirmação da Senha:</span>
-            <input id="confirmacao_senha_input" type="password" placeholder="******" />
+            <span>Estado:</span>
+            <input id="estado_input" type="text" oninput="buscarCep()" placeholder="UF" />
           </div>
 
           <div class="campo">
-            <span>Empresa:</span>
-            <input id="empresa_input" type="text" type="enterprise" placeholder="minhaempresa" />
+            <span>Rua:</span>
+            <input id="rua_input" oninput="buscarCep()" type="text" placeholder="Nome da rua" />
           </div>
+
+          <div class="campo">
+            <span>Número:</span>
+            <input id="numero_input" type="number" placeholder="Número" />
+          </div>
+
+          <div class="campo">
+            <span>Bairro:</span>
+            <input id="bairro_input" oninput="buscarCep()" type="text" placeholder="Bairro da empresa"/>
+          </div>
+
+          <div class="campo">
+            <span>Cidade:</span>
+            <input id="cidade_input" oninput="buscarCep()" type="text" placeholder="Cidade"/>
+          </div>
+      
 
           <button id="botao_cadastro" onclick="cadastrar()">Cadastrar</button>
 
@@ -101,122 +116,246 @@
     </div>
   </div>
 
-  <!--footer inicio-->
-  <div class="footer">
-    <div class="container-footer">
-
-      <div class="footer-left">
-        <img src="./img/logo-sf-vertical-preta.png" alt="logo" width="200px">
+    <!--footer inicio-->
+    <div class="footer">
+      <div class="container-footer">
+  
+        <div class="footer-left">
+          <img src="./img/logo-sf-vertical-preta.png" alt="logo" width="200px">
+        </div>
+  
+        <div class="footer-info">
+          <h1>Compania</h1>
+          <a class="footer-nav" href="index.html">Home</a>
+          <a class="footer-nav" href="index.html">Login</a>
+          <a class="footer-nav" href="index.html">Cadastro</a>
+        </div>
+  
+        <div class="footer-info">
+          <h1>Social</h1>
+          <a class="footer-nav" href="index.html">GitHub</a>
+          <a class="footer-nav" href="index.html">Linkedln</a>
+          <a class="footer-nav" href="index.html">Instagram</a>
+        </div>
+  
       </div>
-
-      <div class="footer-info">
-        <h1>Compania</h1>
-        <a class="footer-nav" href="index.html">Home</a>
-        <a class="footer-nav" href="index.html">Login</a>
-        <a class="footer-nav" href="index.html">Cadastro</a>
-      </div>
-
-      <div class="footer-info">
-        <h1>Social</h1>
-        <a class="footer-nav" href="index.html">GitHub</a>
-        <a class="footer-nav" href="index.html">Linkedln</a>
-        <a class="footer-nav" href="index.html">Instagram</a>
-      </div>
-
     </div>
-  </div>
-  <!--footer fim-->
+    <!--footer fim-->
+
+
 </body>
 
 </html>
 
 <script>
-  function cadastrar() {
-    aguardar();
+    function cadastrar() {
+        aguardar();
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var empresaVar = listaEmpresas.value
-    if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      empresaVar == ""
-    ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeEmpVar = nomeEmp_input.value;
+        var cnpjVar = cnpj_input.value;
+        var cepVar = cep_input.value;
+        var estadoVar = estado_input.value;
+        var ruaVar = rua_input.value;
+        var numeroVar = numero_input.value;
+        var bairroVar = bairro_input.value;
+        var cidadeVar = cidade_input.value;
 
-      finalizarAguardar();
-      return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
+
+        if (nomeEmpVar == "" || cnpjVar == "" || cepVar == "" || estadoVar == "" || ruaVar == "" || numeroVar == "" || bairroVar == "" || cidadeVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Todos os Campos são Obrigatórios";
+
+            setTimeout(function () {
+                cardErro.style.display = "none";
+                    }, 3000);
+
+            finalizarAguardar();
+            return false;
+        }
+
+        if (cnpjVar.length != 14 ) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "CNPJ Inválido";
+
+            setTimeout(function () {
+                cardErro.style.display = "none";
+                    }, 3000);
+
+            finalizarAguardar();
+            return false;
+        }
+
+        if (cepVar.length != 8 ) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "CPF Inválido";
+
+            setTimeout(function () {
+                cardErro.style.display = "none";
+                    }, 3000);
+
+            finalizarAguardar();
+            return false;
+        }
+
+        if (estadoVar.length != 2 ) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "CPF Inválido";
+
+            setTimeout(function () {
+                cardErro.style.display = "none";
+                    }, 3000);
+
+            finalizarAguardar();
+            return false;
+        }
+
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeEmpServer: nomeEmpVar,
+                cnpjServer: cnpjVar,
+                cepServer: cepVar,
+                estadoServer: estadoVar,
+                ruaServer: ruaVar,
+                numeroServer: numeroVar,
+                bairroServer: bairroVar,
+                cidadeServer: cidadeVar
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro da empresa realizado com sucesso! Redirecionando para tela de cadastro ADM...";
+
+                sessionStorage.NOME_EMPRESA = nomeEmpVar;
+                buscaridEmpresa()
+
+                setTimeout(() => {
+                    window.location = "cadastroADM.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
     }
 
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        empresaServer: empresaVar
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
 
-        if (resposta.ok) {
-          cardErro.style.display = "block";
+    function buscarCep() {
+        var cep = cep_input.value;
+        var url = `https://viacep.com.br/ws/${cep}/json/`;
 
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+        if (cep.length >= 8) {
 
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
+            console.log(
+                fetch(url)
+            )
 
-          limparFormulario();
-          finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+            fetch(url)
+                .then(
+                    function (resposta) {
+                        console.log("DEU CERTO!");
+                        console.log("Resposta: ", resposta);
+
+                        resposta.json()
+                            .then(
+                                function (respostaJson) {
+                                    console.log("JSON: ", respostaJson);
+                                    console.log("Logradouro: " + respostaJson.logradouro);
+
+                        rua_input.value = respostaJson.logradouro;
+                        estado_input.value = respostaJson.uf;
+                        bairro_input.value = respostaJson.bairro;
+                        cidade_input.value = respostaJson.localidade;
+
+                        
+
+
+                                }
+                            )
+                    }
+                )
+                .catch(
+                    function (erro) {
+                        console.log("DEU ERRO!");
+                        console.log(erro)
+                    }
+                )
         }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
+    }
 
-    return false;
-  }
+    function buscaridEmpresa() {
+        aguardar();
 
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-          });
+        var nomeEmpreVar = sessionStorage.NOME_EMPRESA;
+
+        fetch("/usuarios/buscaridEmpresa", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeEmpresaServer: nomeEmpreVar,
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+
+                if (resposta.status == 204) {
+                        var feed = document.getElementById("lista_treino");
+                        var mensagem = document.createElement("span");
+                        mensagem.innerHTML = "Nenhum Treino Feito"
+                        feed.appendChild(mensagem);
+                        throw "Nenhum Local encontrado!!";
+                    }
+
+                    resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    sessionStorage.idEmpresa = resposta[0].idUnidadeEmpresa;
+
+                    finalizarAguardar();
+                });
+
+            } else {
+                throw ("Houve um erro ao tentar realizar A pesquisa!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
         });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-  }
 
-  function sumirMensagem() {
-    cardErro.style.display = "none";
-  }
+        return false;
+    }
+
 </script>
