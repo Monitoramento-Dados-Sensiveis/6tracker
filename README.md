@@ -4,13 +4,13 @@
 
 
 ## Nosso objetivo...
-- :technologist: Nossa empresa visa desenvolver uma plataforma de monitoramento de datatech no intuito de identificar possíveis vazamentos de dados sensíveis.
+- :technologist: Nossa empresa visa desenvolver uma plataforma de monitoramento para empresas de DataTech no intuito de identificar possíveis vazamentos de dados sensíveis.
 
 ## Nossa plataforma...
 
 - 💻: Para o acesso na plataforma o responsável pela empresa deve fazer seu cadastro, na qual as informações serão armazenadas em um banco de dados e validadas durante o login.
 - 💻: O responsável terá acesso a um formulário para cadastrar seus funcionários.
-- :computer: Nosso site disponbilizará uma plataforma onde o administrador terá acesso às informações de hardware do servidor do estado que a empresa se localiza e seus funcionários terão acesso ao ambiente do estado onde se encontram.
+- :computer: Nosso site disponibilizará uma plataforma onde o administrador terá acesso às informações de hardware do servidor, do estado que a empresa se localiza e seus funcionários terão acesso ao ambiente do estado onde se encontram.
 - :computer: O usuários receberão alertas quando um possível vazamento de dados ocorrer.
 
 ## Tecnologias utilizadas...
