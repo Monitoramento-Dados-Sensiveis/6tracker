@@ -4,7 +4,7 @@
 
 
 ## Nosso objetivo...
-- :technologist: Nossa empresa visa desenvolver uma plataforma de monitoramento de datatech no intuito de identificar possíveis vazamentos de dados sensíveis.
+- :technologist: Nossa empresa visa desenvolver uma plataforma de monitoramento para empresas de DataTech no intuito de identificar possíveis vazamentos de dados sensíveis.
 
 ## Nossa plataforma...
 
