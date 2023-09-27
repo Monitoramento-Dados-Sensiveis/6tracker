@@ -199,14 +199,23 @@
         <div class="card-contato">
           <h1>Contrate <span class="color">já!</span> </h1>
           <div class="formulario">
-           
-            <div class="dados">
-              <p><input id="ipt_nome" type="text" placeholder="Digite o seu nome"></p>
-              <p><input id="ipt_email" type="email" placeholder="Digite o seu e-mail"></p>
-              <p><textarea class="msgDados" id="ipt_mensagem" cols="30" rows="10" placeholder="Digite a mensagem que será enviada."></textarea></p>
+              <div class="campo">
+                <input id="email_input" type="text" class="input" required="required" />
+                <span>Nome</span>
+              </div>
+  
+              <div class="campo">
+                <input id="senha_input" type="email" class="input" required="required" />
+                <span>Email</span>
+              </div>
+
+              <div class="campo">
+                <input id="senha_input" type="password" class="input1" required="required" />
+                <span class="span1">Mensagem</span>
+              </div>
+
               <button onclick="enviar()" class="button-enviar">ENVIAR</button>
-            </div>
-          </div> <br>
+          </div>
 
         </div>
         <div class="card-imagem"></div>
