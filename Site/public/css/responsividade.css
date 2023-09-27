@@ -37,39 +37,58 @@ FIM DO HEADER
   /* COMEÇO DA TELA OBJETIVOS E MÉTODO */
 
   .banner {
-    height: 40vh;
+    height: 100vh;
   }
 
   .imgContainer {
-    width: 50%;
+    width: 80%;
+    position: relative;
+    bottom: 8rem;
   }
 
   .asideParteUm {
-    width: 50%;
-    margin-left: 5px;
-    margin-top: 3%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    bottom: 1rem; 
   }
 
   .button-inicial {
-    width: 50%;
+    width: 100%;
     margin-top: 3%;
+    position: relative;
+    top: 27rem;
+    font-weight: bold;
   }
 
   .container-banner-inicial {
-    margin: 0;
     display: flex;
-    flex-direction: row;
-    align-items: start;
     width: 100%;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .container-banner-inicial h1 {
-    font-size: 20px;
-    width: 100%;
+    font-size: 30px;
+    width: 70%;
+    position: relative;
+    bottom: 3rem;
   }
 
   .container-banner-inicial span {
-    font-size: 13px;
+    width: 70%;
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+    bottom: 2rem;
+  }
+
+  .container-banner-inicial a {
+    width: 70%;
   }
 
   /* FIM DA TELA PARTE 1 */
@@ -82,9 +101,11 @@ FIM DO HEADER
   }
 
   .social aside {
-    width: 50%;
+    width: 80%;
     text-align: center;
     padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .social article {
@@ -94,9 +115,9 @@ FIM DO HEADER
   }
 
   .txtImg {
-    margin-top: 30%;
     font-size: 30px;
-    margin-bottom: 3%;
+    width: 100%;
+    margin: 0;
   }
 
   .imgContainer2 {
@@ -156,6 +177,7 @@ FIM DO HEADER
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 70%;
   }
 
   .container-sobre-nos article span {
@@ -194,10 +216,13 @@ FIM DO HEADER
   /* COMEÇO DESENVOLVEDORES */
 
   .banner-desenvolvedores {
-    height: auto;
+    height: 80vh;
   }
 
   .content-cards {
+    display: flex;
+    justify-content: space-evenly;
+    height: 80vh;
     margin-top: 10px;
   }
 
@@ -208,16 +233,27 @@ FIM DO HEADER
   .card {
     width: 100%;
     margin: 10px;
+    height: 20vh;
   }
 
   .card img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .formulario{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .card h2,
   .card p {
     font-size: 16px;
+    margin: 0;
   }
 
   /* FIM DESENVOLVEDORES */
@@ -235,9 +271,7 @@ FIM DO HEADER
   }
 
   .button-enviar {
-    width: 70%;
-    margin: 10px;
-    margin-left: 15%;
+    width: 85%;
   }
 
   /* FIM DO FORMULÁRIO DE CONTATO */
@@ -367,6 +401,17 @@ FIM DO HEADER
     top: 5vh;
   }
 
+  .input1 {
+    width: 100%;
+    height: 14vh;
+    padding: 0.3rem;
+    background: whitesmoke;
+    outline: none;
+    border: 1px solid black;
+    font-size: 1em;
+    border-radius: 0.6rem;
+  }
+
   .card-inputsADM {
     width: 95%;
     height: 60vh;
@@ -394,8 +439,37 @@ FIM DO HEADER
     left: 7vw;
   }
 
+  .campo .span1 {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 0.9rem;
+    color: black;
+    text-transform: uppercase;
+    transition: 0.5s;
+    position: relative;
+    bottom: 8rem;
+    z-index: 1;
+    left: 2rem;
+  }
+
   .campo input:valid~span,
-.campo input:focus~span {
+  .campo input:focus~span {
+    color: whitesmoke;
+    background-color: #c211a1;
+    border-color: black;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    position: relative;
+    bottom: 3.2rem;
+    left: 3rem;
+    border-radius: 0.3rem; 
+}
+
+.campo .input1:valid~.span1,
+.campo .input1:focus~.span1 {
   color: whitesmoke;
   background-color: #c211a1;
   border-color: black;
@@ -403,9 +477,14 @@ FIM DO HEADER
   font-size: 0.85em;
   padding: 0 10px;
   position: relative;
-  bottom: 3.2rem;
+  bottom: 9.8rem;
   left: 3rem;
   border-radius: 0.3rem; 
+}
+
+.campo .input1:valid,
+.campo .input1:focus {
+  border-color: #8400a5;
 }
 
   .container {
