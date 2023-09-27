@@ -67,8 +67,76 @@
   #loading-gif {
     height: 40px;
     width: 40px;
+  }  
+  
+  .card-inputs-login {
+    width: 35%;
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
+    border: 10px;
+    border-radius: 12px;
+    box-shadow: 7px 5px #6b6367;
+    margin-bottom: 9vh;
+  }
+
+  .campo {
+    position: relative;
+    width: 20rem;
+    text-align: start;
+    align-self: center;
+    margin: 0;
+    position: relative;
+    top: 1rem;
   }
   
+  .campo input {
+    width: 100%;
+    padding: 0.3rem;
+    background: whitesmoke;
+    outline: none;
+    border: 1px solid black;
+    font-size: 1em;
+    border-radius: 0.6rem;
+  }
+  
+  .campo span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 0.9rem;
+    color: black;
+    text-transform: uppercase;
+    transition: 0.5s;
+    position: relative;
+    bottom: 2rem;
+    z-index: 1;
+  }
+  
+  .campo input:valid~span,
+  .campo input:focus~span {
+    color: whitesmoke;
+    background-color: #c211a1;
+    border-color: black;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    position: relative;
+    bottom: 3.2rem;
+    left: 0.5rem;
+    border-radius: 0.3rem; 
+  }
+  
+  .campo input:valid,
+  .campo input:focus {
+    border-color: #8400a5;
+  }
+
   #botao_cadastro {
     font-size: medium;
     margin-top: 5vh;
@@ -86,21 +154,6 @@
     background-color: #8400a5;
     color: rgb(255, 255, 255);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  .card-inputs-login {
-    width: 35%;
-    height: 40vh;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-color: black;
-    border: 10px;
-    border-radius: 12px;
-    box-shadow: 7px 5px #6b6367;
-    margin-bottom: 9vh;
   }
   
   .container {
