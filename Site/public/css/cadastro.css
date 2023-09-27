@@ -33,7 +33,7 @@ body {
 }
 
 .header a:hover {
-  color: #c211a1;
+  color: #ffffff;
 }
 
 .navbar {
@@ -186,7 +186,7 @@ body {
   text-transform: uppercase;
   transition: 0.5s;
   position: relative;
-  bottom: 2rem;
+  bottom: 1.5rem;
   z-index: 1;
 }
 
@@ -199,7 +199,7 @@ body {
   font-size: 0.85em;
   padding: 0 10px;
   position: relative;
-  bottom: 3.2rem;
+  bottom: 2.8rem;
   left: 0.5rem;
   border-radius: 0.3rem; 
 }
