@@ -50,42 +50,39 @@
           <span id="mensagem_erro"></span>
         </div>
       </div>
-
-
-      <center>
-        <h1>Bem-vindo!</h1>
+  
+        
       </center>
       <div class="formulario">
-        <div class="card-inputs">
-
+        <div class="card-inputsADM">
+          <h1>Bem-vindo!</h1>
           <div class="campo">
-            <span>Nome:</span>
-            <input id="nome_input" type="text" placeholder="Seu nome" />
+            <input id="nome_input" type="text" class="input" required="required" />
+            <span>Nome</span>
+          </div>
+          <div class="campo">            
+            <input id="cpf_input" type="text" class="input" required="required" />
+            <span>cpf</span>
           </div>
 
           <div class="campo">
-            <span>cpf:</span>
-            <input id="cpf_input" type="text" placeholder="000.000.000-00" />
+            <input id="email_input" class="input" required="required" />
+            <span>email</span>
           </div>
 
           <div class="campo">
-            <span>email:</span>
-            <input id="email_input" placeholder="meuemail@provedor.com" />
+            <input id="telefone_input" class="input" required="required"/>
+            <span>Telefone</span>
           </div>
 
           <div class="campo">
-            <span>Telefone:</span>
-            <input id="telefone_input" placeholder="(00)00000-0000" />
+            <input id="senha_input" type="password" class="input" required="required" />
+            <span>Senha</span>
           </div>
 
           <div class="campo">
-            <span>Senha:</span>
-            <input id="senha_input" type="password" placeholder="********" />
-          </div>
-
-          <div class="campo">
-            <span>Confirmação Senha:</span>
-            <input id="confirm_senha_input" type="password" placeholder="********" />
+            <input id="confirm_senha_input" type="password" class="input" required="required" />
+            <span>Confirmação Senha</span>
           </div>
       
 

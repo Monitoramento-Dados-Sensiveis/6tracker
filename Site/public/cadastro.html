@@ -49,53 +49,50 @@
         <div class="card_erro" id="cardErro">
           <span id="mensagem_erro"></span>
         </div>
-      </div>
-
-
-      <center>
-        <h1>Bem-vindo!</h1>
+      </div>     
+        
       </center>
-      <div class="formulario">
+      <div class="formulario">        
         <div class="card-inputs">
-
+          <h1>Bem-vindo!</h1>
           <div class="campo">
-            <span>Nome da Empresa:</span>
-            <input id="nomeEmp_input" type="text" placeholder="Nome da sua empresa" />
+            <input id="nomeEmp_input" type="text" class="input" required="required"/>
+            <span>Nome da Empresa</span>
           </div>
 
           <div class="campo">
-            <span>CNPJ:</span>
-            <input id="cnpj_input" type="number" placeholder="CNPJ" />
+            <input id="cnpj_input" type="number" class="input" required="required" />
+            <span>CNPJ</span>
           </div>
 
           <div class="campo">
-            <span>CEP:</span>
-            <input id="cep_input" type="number" oninput="buscarCep()" placeholder="CEP" />
+            <input id="cep_input" type="number" oninput="buscarCep()" class="input" required="required" />
+            <span>CEP</span>            
           </div>
 
           <div class="campo">
-            <span>Estado:</span>
-            <input id="estado_input" type="text" oninput="buscarCep()" placeholder="UF" />
+            <input id="estado_input" type="text" oninput="buscarCep()" class="input" required="required"/>
+            <span>Estado</span>
           </div>
 
           <div class="campo">
-            <span>Rua:</span>
-            <input id="rua_input" oninput="buscarCep()" type="text" placeholder="Nome da rua" />
+            <input id="rua_input" oninput="buscarCep()" type="text" class="input" required="required"/>
+            <span>Rua</span>
           </div>
 
           <div class="campo">
-            <span>Número:</span>
-            <input id="numero_input" type="number" placeholder="Número" />
+            <input id="numero_input" type="number" class="input" required="required"/>
+            <span>Número</span>
           </div>
 
           <div class="campo">
-            <span>Bairro:</span>
-            <input id="bairro_input" oninput="buscarCep()" type="text" placeholder="Bairro da empresa"/>
+            <input id="bairro_input" oninput="buscarCep()" type="text" class="input" required="required"/>
+            <span>Bairro</span>
           </div>
 
           <div class="campo">
-            <span>Cidade:</span>
-            <input id="cidade_input" oninput="buscarCep()" type="text" placeholder="Cidade"/>
+            <input id="cidade_input" oninput="buscarCep()" type="text" class="input" required="required"/>
+            <span>Cidade</span>
           </div>
       
 
