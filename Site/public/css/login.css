@@ -193,7 +193,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 5rem;
+    top: 10vh;
   }
   
   .container-footer {
