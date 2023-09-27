@@ -16,6 +16,7 @@
     overflow-x: hidden;
     background-image: url(../img/bg-login.jpg);
     background-size: cover;
+    height: 100vh;
   }
   
   .container-header {
@@ -68,6 +69,22 @@
     height: 40px;
     width: 40px;
   }  
+
+  .formulario{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .formulario input{
+    background-color: #f7f7f7;
+    width: 350px;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid #cfcece;
+  }
   
   .card-inputs-login {
     width: 35%;
@@ -81,7 +98,8 @@
     border: 10px;
     border-radius: 12px;
     box-shadow: 7px 5px #6b6367;
-    margin-bottom: 9vh;
+    position: relative;
+    bottom: 1rem;
   }
 
   .campo {
@@ -174,6 +192,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 5rem;
   }
   
   .container-footer {
