@@ -186,7 +186,7 @@
 /* COMEÇO DESENVOLVEDORES */
 .banner-desenvolvedores{
   width: 100%;
-  height: 140vh;
+  height: 160vh;
   background-image: url(../img/bg-purple.jpg);
   background-size: cover;
   display: flex;
@@ -200,7 +200,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 5px;
   
 }
 .content-cards h1{
@@ -215,9 +215,9 @@
 .card{
   background-color: rgb(255, 255, 255);
   margin: 30px;
-  width: 18%;
-  height: 45vh;
-  border-radius: 10px;
+  width: 20%;
+  height: 58vh;
+  border-radius: 20px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -232,6 +232,10 @@
 }
 .card a{ 
   color: #009EA3;
+}
+a:hover{
+  color: #000000;
+
 }
 .card h2, p{
   color:#3B3538;
