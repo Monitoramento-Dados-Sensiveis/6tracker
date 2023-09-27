@@ -364,7 +364,7 @@ FIM DO HEADER
     border-radius: 12px;
     box-shadow: 7px 5px #6b6367;
     position: relative;
-    top: 5vh;
+    top: 6vh;
   }
 
   .card-inputsADM {
@@ -380,7 +380,7 @@ FIM DO HEADER
     border-radius: 12px;
     box-shadow: 7px 5px #6b6367;
     position: relative;
-    bottom: 5vh;
+    top: 8vh;
   }
 
   .campo {
