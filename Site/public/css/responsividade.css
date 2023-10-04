@@ -12,7 +12,6 @@ COMEÇO DO HEADER
   .navbar {
     flex-direction: line;
     align-items: center;
-
   }
 
   .header h1 {
@@ -243,7 +242,6 @@ FIM DO HEADER
 
   .formulario{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -490,7 +488,6 @@ FIM DO HEADER
   .container {
     display: flex;
     width: 100%;
-    height: 95vh;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -501,7 +498,7 @@ FIM DO HEADER
   .footer {
     width: 100%;
     background-color: #ffffff;
-    height: 200px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -509,21 +506,23 @@ FIM DO HEADER
 
   .container-footer {
     display: flex;
-    width: 90%;
-    height: auto;
-    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
   }
 
   .footer-left img {
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
   }
 
   .footer-info {
     display: flex;
     flex-direction: column;
-    width: 15%;
+    width: 100%;
+    align-items: center;
   }
 
   .footer-info h1 {
@@ -537,6 +536,24 @@ FIM DO HEADER
     text-decoration: none;
   }
 
+  .footer-info2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-info2 h1 {
+    color: #393D46;
+    font-size: 20px;
+  }
+
+  .footer-info2 a {
+    color: #393D46;
+    margin: 5px;
+    text-decoration: none;
+  }
+
   .footer-nav:hover {
     font-weight: 800;
   }
@@ -545,7 +562,6 @@ FIM DO HEADER
 /* RESPONSIVIDADE LOGIN */
 
 @media only screen and (max-width: 600px) {
-
   .card-inputs-login {
     width: 75%;
     height: 40vh;
@@ -560,5 +576,102 @@ FIM DO HEADER
     box-shadow: 7px 5px #6b6367;
     margin-bottom: 9vh;
   }
+
+  .cadastroMobile {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 5;
+  }
+
+  .hamburger1 {
+    display: block;
+    z-index: 5;
+  }
+
+.nav-list {
+    height: 15vh;
+    clip-path: circle(30px at 90% -15%);
+    transition: 1s ease-out;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+    z-index: 3;
+    display: flex;
+}
+
+.nav-list a {
+    font-size: 1.5rem;
+    opacity: 0;
+}
+
+.nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+    text-align: center;
+}
+
+.nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+}
+
+.nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+}
+
+.nav-list li:nth-child(4) a {
+    transition: 0.5s 0.8s;
+}
+
+/* estilos active */
+.nav.active .nav-list {
+  clip-path: circle(2500px at 90% 15%);
+  pointer-events: all;
+  padding: 0;
+}
+
+.nav.active .nav-list a {
+  opacity: 1;
+}
+
+.nav.active .hamburger {
+  border-top-color: transparent;
+}
+
+.nav.active .hamburger::before {
+  transform: rotate(135deg);
+}
+
+.nav.active .hamburger::after {
+  transform: rotate(-135deg);
+  top: -7px;
+}   
+
+/* estilos active */
+.nav1.active .nav-list {
+  clip-path: circle(2500px at 90% 15%);
+  pointer-events: all;
+}
+
+.nav1.active .nav-list a {
+  opacity: 1;
+  text-align: center;
+}
+
+.nav1.active .hamburger1 {
+  border-top-color: transparent;
+}
+
+.nav1.active .hamburger1::before {
+  transform: rotate(135deg);
+}
+
+.nav1.active .hamburger1::after {
+  transform: rotate(-135deg);
+  top: -7px;
+}  
 
 }
