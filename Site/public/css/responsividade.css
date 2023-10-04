@@ -159,7 +159,9 @@ FIM DO HEADER
     font-size: 16px;
     text-align: center;
   }
-
+.container-sobre-nos{
+  height: 70vh;
+}
   .container-sobre-nos aside {
     width: 90%;
     margin-left: 0;
@@ -274,6 +276,14 @@ FIM DO HEADER
     width: 85%;
   }
 
+  .container-contato{
+    height: 70vh;
+  }
+
+  .contato{
+    height: 70vh;
+  }
+
   /* FIM DO FORMULÁRIO DE CONTATO */
 
   /* COMEÇO CARDS FALE CONOSCO */
@@ -289,7 +299,7 @@ FIM DO HEADER
   }
 
   .cards span {
-    font-size: 8px;
+    font-size: 1.5vh;
   }
 
   .textContainer-fale-conosco {
@@ -299,12 +309,37 @@ FIM DO HEADER
     margin: 0;
     justify-content: center;
     text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+
+  
+  .container-fale-conosco {
+      height: 95vh;
+  
+  }
+
+  .titulo-fale-conosco {
+    height: 5vh;
+    font-size: 5vh;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+  }
+
+  .faleTitulo{
+    height: 13vh;
   }
 
   .containerCards {
     display: flex;
-    height: 110%;
+    height: 65vh;
+    width: 60%;
     flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 2vh;
   }
 
   .dados {

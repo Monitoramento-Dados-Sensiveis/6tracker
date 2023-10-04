@@ -300,6 +300,11 @@ justify-content: center;
   /* margin-bottom: 4px; */
 }
 
+.card-contato h1{
+  margin-top: 2vh;
+  margin-top: 2vh;
+}
+
 .card-imagem{
   width: 100%;
   height: 60vh;
@@ -314,12 +319,16 @@ justify-content: center;
 
 .formulario{
   width: 100%;
-  height: 100%;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 10px;
+}
+.intro-faleconosco{
+  font-size: 5vh;
+  margin-top: 2vh;
 }
 
 .campo {
@@ -351,6 +360,8 @@ justify-content: center;
   border: 1px solid black;
   font-size: 1em;
   border-radius: 0.6rem;
+  position: relative;
+  bottom: 1rem;
 }
 
 .campo span {
@@ -366,6 +377,19 @@ justify-content: center;
   bottom: 2rem;
   z-index: 1;
 }
+.campo span2 {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 0.9rem;
+  color: black;
+  text-transform: uppercase;
+  transition: 0.5s;
+  position: relative;
+  bottom: 1.5rem;
+  z-index: 1;
+}
 
 .campo .span1 {
   position: absolute;
@@ -377,12 +401,26 @@ justify-content: center;
   text-transform: uppercase;
   transition: 0.5s;
   position: relative;
-  bottom: 7rem;
+  bottom: 8.5rem;
   z-index: 1;
 }
 
 .campo input:valid~span,
 .campo input:focus~span {
+  color: whitesmoke;
+  background-color: #c211a1;
+  border-color: black;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.85em;
+  padding: 0 10px;
+  position: relative;
+  bottom: 3.2rem;
+  left: 0.5rem;
+  border-radius: 0.3rem; 
+}
+
+.campo input:valid~span2,
+.campo input:focus~span2 {
   color: whitesmoke;
   background-color: #c211a1;
   border-color: black;
@@ -409,7 +447,7 @@ justify-content: center;
   font-size: 0.85em;
   padding: 0 10px;
   position: relative;
-  bottom: 8.5rem;
+  bottom: 10.1rem;
   left: 0.5rem;
   border-radius: 0.3rem; 
 }
@@ -431,7 +469,7 @@ justify-content: center;
   color: #979797;
 }
 
-.button-enviar{
+.button-enviar{  
   background-color: #c211a1;
   color: #ffffff;
   font-size: 15px;
@@ -439,7 +477,23 @@ justify-content: center;
   height: 40px;
   border-radius: 10px;
   border: none;
+  position: relative;
+  bottom: 0.5rem;
 }
+
+.button-enviar:hover{
+    background-color: #8400a5;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.5s;
+}
+
+#email_input{
+  position: relative;
+  bottom: 0.5rem;
+}
+
+
 /* FIM DO FORMULÁRIO DE CONTATO */
 
 
