@@ -298,6 +298,10 @@
     margin-right: 30%;
   }
 
+  .fa {
+    color: slateblue;
+  }
+
   .card_erro {
     display: none;
     background-color: #ff3366;
