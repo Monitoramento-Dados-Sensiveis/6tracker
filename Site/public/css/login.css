@@ -206,6 +206,10 @@
     list-style: none;
   }
 
+  .nav-list {
+    padding: 0;
+  }
+
   .container-footer {
     display: flex;
     width: 90%;
@@ -224,9 +228,10 @@
   .footer-info {
     display: flex;
     flex-direction: column;
-    width: 15%;    
     position: relative;
     top: 1vh;
+    align-items: center;
+    text-align: center;
   }
   
   .footer-info h1 {
@@ -242,9 +247,9 @@
 
   .footer-info2 {
     display: flex;
-    flex-direction: column;
-    width: 100%;  
+    flex-direction: column; 
     align-items: center;
+    text-align: center;
     position: relative;
     top: 2vh;  
   }
