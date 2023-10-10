@@ -202,7 +202,7 @@ function buscaridEmpresa(req, res) {
 
 module.exports = {
     entrar,
-    cadastrar,
+    cadastrar,    
     cadastrarADM,
     buscaridEmpresa,
     listar,

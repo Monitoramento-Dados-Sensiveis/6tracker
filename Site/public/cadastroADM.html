@@ -8,7 +8,7 @@
 
   <title>6TRACKER | Cadastro ADM</title>
 
-  <script src="./js/funcoes.js"></script>
+  <script src="./js/funcoes.js"></script>  
 
   <link rel="icon" href="../public/img/logo-sf-vertical-preta.png" />
   <link rel="stylesheet" href="./css/index.css" />
@@ -145,8 +145,8 @@
         var telefoneVar = telefone_input.value;
         var senhaVar = senha_input.value;
         var confirmSenhaVar = confirm_senha_input.value;
-        var fkempresa = sessionStorage.idEmpresa;
-        sessionStorage.fkempresa = fkempresa;
+        var fkempresa = sessionStorage.NOME_EMPRESA;
+         
 
         if (nomeVar == "" || cpfVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
