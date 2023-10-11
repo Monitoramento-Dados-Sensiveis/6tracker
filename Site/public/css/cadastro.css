@@ -120,10 +120,10 @@ body {
 }
 
 
-/* .card-inputs h1{
+.card-inputs h1{
   position: relative;
-  top: 5rem;
-} */
+  top: 3vh;
+}
 
 .card-inputs {
   width: 30vw;
@@ -177,6 +177,11 @@ body {
   border-radius: 0.6rem;
 }
 
+#email_input{
+  top: 0vh;
+}
+
+
 .campo span {
   position: absolute;
   left: 0;
@@ -205,6 +210,8 @@ body {
   border-radius: 0.3rem; 
 }
 
+
+
 .campo input:valid,
 .campo input:focus {
   border-color: #8400a5;
@@ -223,7 +230,7 @@ body {
   position: relative;
   padding: 0.5rem;
   right: 0.3vh;
-  top: 2.3rem;
+  top: 1rem;
 }
 
 #botao_cadastro:hover {
@@ -246,12 +253,12 @@ body {
 .footer {
   width: 100%;
   background-color: #ffffff;
-  height: 50vh;
+  height: 45vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   position: relative;
-  top: 15vh;
+  top: 8vh;
   flex-direction: column;
 }
 
@@ -283,16 +290,16 @@ li {
   height: 150px;
   width: 150px;
   position: relative;
-  top: 2vh;
+  top: 5vh;
 }
 
 .footer-info {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 1vh;
+  top: 5vh;
   align-items: center;
-  text-align: center;
+  text-align: center;  
 }
 
 .footer-info h1 {
@@ -306,13 +313,17 @@ li {
   text-decoration: none;
 }
 
+.footer-info a:hover{  
+  color: #8400a5;
+}
+
 .footer-info2 {
   display: flex;
   flex-direction: column; 
   align-items: center;
   text-align: center;
   position: relative;
-  top: 2vh;  
+  top: 5vh;  
 }
 
 .footer-info2 h1 {
@@ -324,11 +335,6 @@ li {
   color: #393D46;
   margin: 5px;
   text-decoration: none;
-}
-
-.footer-nav:hover {
-  font-weight: 800;
-  color: #c211a1;
 }
 
 .container2-footer {
