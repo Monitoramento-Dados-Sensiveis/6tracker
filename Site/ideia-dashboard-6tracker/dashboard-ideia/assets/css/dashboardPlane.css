@@ -428,7 +428,7 @@ Copyright (c) 2015 Daniel Eden
   .show > .btn-primary.dropdown-toggle,
   .show > .btn-primary.dropdown-toggle:focus,
   .show > .btn-primary.dropdown-toggle:hover {
-    background-color: #34b5b8 !important;
+    background-color: #b011c2 !important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .btn-primary:not([data-action]):hover {
@@ -1124,7 +1124,7 @@ fieldset[disabled]
 .input-group.no-border .form-control,
 .input-group.no-border .form-control + .input-group-prepend .input-group-text,
 .input-group.no-border .form-control + .input-group-append .input-group-text {
-  background-color: #D0DB97;
+  background-color: #F5F5F5;
   border: medium none; }
   .form-group.no-border .form-control:focus, .form-group.no-border .form-control:active, .form-group.no-border .form-control:active,
   .form-group.no-border .form-control + .input-group-prepend .input-group-text:focus,
@@ -1143,13 +1143,14 @@ fieldset[disabled]
   .input-group.no-border .form-control + .input-group-append .input-group-text:active,
   .input-group.no-border .form-control + .input-group-append .input-group-text:active {
     border: medium none;
-    background-color: #69B578; }
+    background-color: #b011c2; }
 
 .form-group.no-border .form-control:focus + .input-group-prepend .input-group-text,
 .form-group.no-border .form-control:focus + .input-group-append .input-group-text,
 .input-group.no-border .form-control:focus + .input-group-prepend .input-group-text,
 .input-group.no-border .form-control:focus + .input-group-append .input-group-text {
-  background-color: #69B578; }
+  background-color: #b011c2;
+  color: #FFFFFF; }
 
 .form-group.no-border .input-group-prepend .input-group-text,
 .form-group.no-border .input-group-append .input-group-text,
@@ -1462,7 +1463,7 @@ a.text-warning:focus, a.text-warning:hover {
 /*Troca a cor das nossas CPIs*/
 .text-cpi,
 a.text-danger:focus, a.text-danger:hover {
-  color: #3A7D44 !important; }
+  color: #c211a1 !important; }
 
 .text-gray,
 a.text-gray:focus, a.text-gray:hover {
@@ -1759,19 +1760,19 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
       color: #254D32; }
   .navbar.bg-white .input-group .form-control,
   .navbar.bg-white .input-group.no-border .form-control {
-    color: #66615B; }
+    color: #FFFFFF; }
     .navbar.bg-white .input-group .form-control::-moz-placeholder,
     .navbar.bg-white .input-group.no-border .form-control::-moz-placeholder {
-      color: #66615B; }
+      color: #FFFFFF; }
     .navbar.bg-white .input-group .form-control:-ms-input-placeholder,
     .navbar.bg-white .input-group.no-border .form-control:-ms-input-placeholder {
-      color: #66615B; }
+      color: #FFFFFF; }
     .navbar.bg-white .input-group .form-control::-webkit-input-placeholder,
     .navbar.bg-white .input-group.no-border .form-control::-webkit-input-placeholder {
-      color: #66615B; }
+      color: #FFFFFF; }
   .navbar.bg-white .input-group-prepend .input-group-text i,
   .navbar.bg-white .input-group-append .input-group-text i {
-    color: #66615B;
+    color: #FFFFFF;
     opacity: .5; }
   .navbar .form-group,
   .navbar .input-group {
@@ -1797,13 +1798,13 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
       color: #ffffff; }
       .navbar .form-group.no-border .form-control::-moz-placeholder,
       .navbar .input-group.no-border .form-control::-moz-placeholder {
-        color: #665b66; }
+        color: #fff; }
       .navbar .form-group.no-border .form-control:-ms-input-placeholder,
       .navbar .input-group.no-border .form-control:-ms-input-placeholder {
-        color: #66615B; }
+        color: #fff; }
       .navbar .form-group.no-border .form-control::-webkit-input-placeholder,
       .navbar .input-group.no-border .form-control::-webkit-input-placeholder {
-        color: #000000; }
+        color: #fff; }
   .navbar p {
     display: inline-block;
     margin: 0;
@@ -1900,12 +1901,12 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar .button-dropdown .navbar-toggler-bar:nth-child(2) {
     width: 17px; }
   .navbar.navbar-transparent {
-    background-color: transparent !important;
+    background-color: #FFFFFF !important;
     box-shadow: none;
     border-bottom: 1px solid #ddd; }
     /*Para mudar a cor da navbar*/
     .navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
-      color: #ffffff; }
+      color: #66615B; }
       .navbar.navbar-transparent a:not(.dropdown-item):not(.btn).disabled {
         opacity: .5;
         color: #ffffff; }
@@ -3200,7 +3201,7 @@ License - nucleoapp.com/license/
   .sidebar[data-color="white"]:after,
   .off-canvas-sidebar[data-color="white"]:after {
     /*Muda a cor principal da nav lateral com logo*/
-    background: #ebe9e9d0; }
+    background: #fff; }
   .sidebar[data-color="white"] .nav li a,
   .sidebar[data-color="white"] .nav li a i,
   .sidebar[data-color="white"] .nav li a[data-toggle="collapse"],
@@ -3310,7 +3311,7 @@ License - nucleoapp.com/license/
   .off-canvas-sidebar[data-active-color="danger"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon,
   .off-canvas-sidebar[data-active-color="danger"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a {
     /*Para trocar as cores da nav lateral em foco*/
-    color: #3A7D44;
+    color: #c211a1;
     opacity: 1; }
   .sidebar[data-active-color="default"] .nav li.active > a,
   .sidebar[data-active-color="default"] .nav li.active > a i,
@@ -3344,7 +3345,7 @@ License - nucleoapp.com/license/
   position: relative;
   float: right;
   width: calc(100% - 260px);
-  background-color: #9400b3; /*Muda o fundo da dash*/
+  background-color: #f2f2f7; /*Muda o fundo da dash*/
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1); }
   .main-panel > .content {
     padding: 0 30px 30px;
@@ -4145,7 +4146,7 @@ License - nucleoapp.com/license/
   .sidebar .sidebar-wrapper li.active > a:not([data-toggle="collapse"]):after,
   .sidebar .sidebar-wrapper li.active > [data-toggle="collapse"] + div .nav li:after {
     /*Muda a cor do triângulo na navbar lateral*/
-    border-right: 17px solid #3A7D44;
+    border-right: 17px solid #c211a1;
     border-top: 17px solid transparent;
     border-bottom: 17px solid transparent;
     content: "";
