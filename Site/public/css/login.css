@@ -95,7 +95,7 @@
     border-radius: 12px;
     box-shadow: 0rem 0rem 1.5rem 1rem #6b6367a0;
     position: relative;
-    bottom: 1rem;
+    bottom: 0rem;
   }
 
   .campo {
@@ -185,12 +185,12 @@
   .footer {
     width: 100%;
     background-color: #ffffff;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    top: 15vh;
+    top: 13vh;
     flex-direction: column;
   }
   
@@ -222,14 +222,14 @@
     height: 150px;
     width: 150px;
     position: relative;
-    top: 2vh;
+    top: 5vh;
   }
   
   .footer-info {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 1vh;
+    top: 5vh;
     align-items: center;
     text-align: center;
   }
@@ -251,7 +251,7 @@
     align-items: center;
     text-align: center;
     position: relative;
-    top: 2vh;  
+    top: 5vh;  
   }
   
   .footer-info2 h1 {
@@ -265,9 +265,9 @@
     text-decoration: none;
   }
   
-  .footer-nav:hover {
+  .footer-info a:hover {
     font-weight: 800;
-    color: #c211a1;
+    color: #8400a5;
   }
 
   .container2-footer {
@@ -353,3 +353,9 @@
     }
   }
   
+  @media screen and (max-width: 600px){
+    .footer{
+      display: flex;
+      top: 25vh;
+    }
+  }

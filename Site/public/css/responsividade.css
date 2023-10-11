@@ -458,7 +458,7 @@ FIM DO HEADER
     border-radius: 12px;
     box-shadow: 0rem 0rem 1.5rem 1rem #6b6367a0;
     position: relative;
-    top: 8vh;
+    bottom: 10vh;
   }
 
   .campo {
@@ -539,6 +539,15 @@ FIM DO HEADER
     justify-content: center;
   }
 
+  .footerAdm {
+    width: 100%;
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+  }
+
   .container-footer {
     display: flex;
     width: 100%;
@@ -609,21 +618,32 @@ FIM DO HEADER
     border: 10px;
     border-radius: 12px;
     box-shadow: 7px 5px #6b6367;
-    margin-bottom: 9vh;
+    margin-bottom: 5vh;
   }
 
+ 
   .cadastroMobile {
     display: block;
   }
 
   .hamburger {
     display: block;
-    z-index: 5;
+    z-index: 5;    
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 1rem;
+    border: 0.1rem solid #8400a5;
+    background-color: #8400a5;
   }
 
   .hamburger1 {
     display: block;
-    z-index: 5;
+    z-index: 5;    
+    padding-inline: 10px;
+    padding-block: 5px;
+    border-radius: 1rem;
+    border: 0.1rem solid #8400a5;
+    background-color: #8400a5;
   }
 
 .nav-list {

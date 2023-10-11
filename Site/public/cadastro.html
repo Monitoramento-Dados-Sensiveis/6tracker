@@ -123,7 +123,7 @@
 
       <div class="footer-info nav">
         <h1>Compania</h1>
-        <button class="hamburger"></button>
+        <button class="hamburger"></button>     
         <ul class="nav-list">
           <li><a class="footer-nav cadastroMobile" href="index.html">Home</a></li>
           <li><a class="footer-nav cadastroMobile" href="index.html">Login</a></li>
@@ -160,6 +160,19 @@
 </body>
 
 </html>
+
+<script>
+  const hamburger = document.querySelector(".hamburger")
+  const nav = document.querySelector(".nav")
+  const hamburger1 = document.querySelector(".hamburger1")
+  const nav1 = document.querySelector(".nav1")
+
+  hamburger.addEventListener("click",() =>
+  nav.classList.toggle("active"))
+  
+  hamburger1.addEventListener("click",() =>
+  nav1.classList.toggle("active"))
+</script>
 
 <script>
     function cadastrar() {     
