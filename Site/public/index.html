@@ -50,8 +50,8 @@
         <h1><b class="color">Monitorando</b> dados<br> de forma <b class="color">segura</b></h1>
         <span>Protegemos seus dados e garantimos sua integridade contra vazamentos, clonagens e outros crimes.</span>
 
-        <a href="cadastro.html">
-          <button class="button-inicial">Acesse aqui</button></a>
+       
+          <button class="button-inicial" onclick="linkCadastro()">Acesse aqui</button>
 
       </aside>
 
@@ -304,5 +304,9 @@
     var assunto = `Olá, meu nome é ` + ipt_nome.value;
     var corpo = ipt_mensagem.value;
     window.open("mailto:" + email + "?subject=" + assunto + "&body=" + corpo);
+  }
+
+  function linkCadastro(){
+    window.location = "cadastro.html";
   }
 </script>

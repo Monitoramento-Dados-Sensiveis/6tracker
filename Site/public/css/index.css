@@ -20,16 +20,25 @@
   margin-top: 5%;
 }
 .button-inicial{
-  width: 25%;
-  height: 40px;
+  width: 30%;
+  height: 50px;
   border-radius: 10px;
-  background-color: #c211a1;
+  background-color: #000000;
   color: #ffffff;
   font-size: 15px;
   border: none;
   margin-top: 5%;
   box-shadow: 0.5px 0.5px 10px #ffffff;
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
+
+.button-inicial:hover {
+  background-color: #b011c2;
+  color: white;
+
+}
+
 .container-banner-inicial {
   height: auto;
   width: 100%;
@@ -247,7 +256,6 @@
   color: whitesmoke; 
   border: 2px solid #b011c2;
   border-radius: 17px;
-  
 }
 
 .hover2:hover {
