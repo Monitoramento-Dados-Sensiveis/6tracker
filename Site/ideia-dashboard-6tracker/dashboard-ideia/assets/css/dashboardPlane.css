@@ -1143,13 +1143,13 @@ fieldset[disabled]
   .input-group.no-border .form-control + .input-group-append .input-group-text:active,
   .input-group.no-border .form-control + .input-group-append .input-group-text:active {
     border: medium none;
-    background-color: #b011c2; }
+    background-color: #c211a1; }
 
 .form-group.no-border .form-control:focus + .input-group-prepend .input-group-text,
 .form-group.no-border .form-control:focus + .input-group-append .input-group-text,
 .input-group.no-border .form-control:focus + .input-group-prepend .input-group-text,
 .input-group.no-border .form-control:focus + .input-group-append .input-group-text {
-  background-color: #b011c2;
+  background-color: #c211a1;
   color: #FFFFFF; }
 
 .form-group.no-border .input-group-prepend .input-group-text,
