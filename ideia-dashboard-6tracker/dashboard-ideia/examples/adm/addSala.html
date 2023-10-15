@@ -21,7 +21,7 @@ Coded by www.creative-tim.com
   <link rel="icon" type="image/png" href="../../assets/img/6Tracker/logo-sf-vertical-preta.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Adicionar coloboradores
+    Add Salas
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -59,7 +59,7 @@ Coded by www.creative-tim.com
               <p>Dashboard - principal</p>
             </a>
           </li>
-          <li class="active">
+          <li>
             <a href="./addUser.html">
               <i class="nc-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
@@ -82,7 +82,7 @@ Coded by www.creative-tim.com
             </a>
           </li>
 
-          <li>
+          <li class="active">
             <a href="./addSala.html">
               <i class="nc-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
@@ -93,7 +93,7 @@ Coded by www.creative-tim.com
               <p>Add Salas</p>
             </a>
           </li>
-          
+         
           <li>
             <a href="./tables.html">
               <i class="nc-icon nc-tile-56"></i>
@@ -125,7 +125,7 @@ Coded by www.creative-tim.com
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Informações do colaborador</a>
+            <a class="navbar-brand" href="javascript:;">Salas</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -283,83 +283,63 @@ Coded by www.creative-tim.com
           <div class="col-md-12">
             <div class="card card-user">
               <div class="card-header">
-                <h5 class="card-title">Adicionar coloborador</h5>
+                <h5 class="card-title">Adicionar Salas</h5>
               </div>
               <div class="card-body">
                 <form>
                   <div class="row">
                     <div class="col-md-5 pr-1">
                       <div class="form-group">
-                        <label>Sua empresa: </label>
-                        <input type="text" class="form-control" placeholder="Nome da empresa">
+                        <label>Empresa: </label>
+                        <input type="text" class="form-control" placeholder="Empresa">
                       </div>
                     </div>
                     <div class="col-md-3 px-1">
                       <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" placeholder="Apelido do coloborador no sistema" >
+                        <label>Identificação da Sala:</label>
+                        <input type="text" class="form-control" placeholder="Modelo da Sala">
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Email: </label>
-                        <input type="email" class="form-control" placeholder="Email do colaborador">
+                        <label for="exampleInputEmail1">Número da Sala: </label>
+                        <input type="text" class="form-control" placeholder="Número da Sala: ">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
-                        <label>Nome completo: </label>
-                        <input type="text" class="form-control" placeholder="Nome completo">
+                        <label>Especificação:  </label>
+                        <input type="text" class="form-control" placeholder="Série da Sala" >
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
-                        <label>Cargo:</label>
-                        <input type="text" class="form-control" placeholder="Cargo">
+                        <label>Andar da Sala:</label>
+                        <input type="text" class="form-control" placeholder="Andar">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Endereço: </label>
-                        <input type="text" class="form-control" placeholder="Endereço">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-4 pr-1">
-                      <div class="form-group">
-                        <label>Telefone: </label>
-                        <input type="text" class="form-control" placeholder="Telefone">
-                      </div>
-                    </div>
-                    <div class="col-md-4 px-1">
-                      <div class="form-group">
-                        <label>Setor: </label>
-                        <input type="text" class="form-control" placeholder="Setor">
-                      </div>
-                    </div>
-                    <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label>Sua equipe: </label>
-                        <input type="number" class="form-control" placeholder="Quantidade de membros da sua equipe">
+                        <label>Nome: </label>
+                        <input type="text" class="form-control" placeholder="Nome da Sala">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Descrição: </label>
-                        <textarea class="form-control textarea" placeholder="A descrição do colaborador em sua função"></textarea>
+                        <label>Descrição sobre a Sala: </label>
+                        <textarea class="form-control textarea" placeholder="Adicione dados importantes sobre a Sala."></textarea>
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Adicionar colaborador</button>
+                      <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Adicionar Sala</button>
                     </div>
                   </div>
                 </form>
