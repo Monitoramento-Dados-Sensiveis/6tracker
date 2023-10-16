@@ -1,10 +1,3 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/*
-comandos para mysql - banco local - ambiente de desenvolvimento
-*/
 Create DATABASE sixtracker;
 use sixtracker;
 
@@ -129,14 +122,14 @@ desc TipoComponente;
 -- Função Cadastro Empresa--
 
 -- Insere dados na tabela Empresa --
-insert into Empresa (nome, CNPJ) values(
- 'Nubank', '123456789012345678'
+ insert into Empresa values(
+ null, 'Nubank', '123456789012345678', '12345678901'
  );
  
  -- insere o endereço da empresa na tabela Endereco --
- insert into Endereco (CEP, estado, rua, numero, bairro, cidade) values (
-	'04742040', 'São Paulo', 'Santa Zoe', '243', 'Santo Amaro', 'São Paulo'
-	);
+ insert into Endereco values(
+ null, '04742040', 'São Paulo', 'Santa Zoe', '243', 'Santo Amaro', 'São Paulo', 1
+ );
  
 -- Teste -- 
  select * 
@@ -157,7 +150,7 @@ null, 'Admin', 1
 
 -- Adiciona as informações do Funcionário Admin -- 
 insert into Funcionario values(
-null, 'Guilherme', '008.539.263-18', 'guilherme.gsantos@sptech.school', '11982206065','Guigon89!', 1, 1
+null, 'Guilherme', '008.539.263-18', 'guilherme.gsantos@sptech.school', '11982206065','Guigon89', 1, 1
 );
 
 -- Teste -- 
@@ -278,17 +271,6 @@ select
 				on Servidor.idServidor = Componente.fkServidor
 			group by Servidor.idServidor, Servidor.nome, Componente.nomeComponente, Componente.modeloComponente 
 			order by Servidor.idServidor, Componente.nomeComponente;
--- /*
--- comandos para criar usuário em banco de dados azure, sqlserver,
--- com permissão de insert + update + delete + select
--- */
-
--- CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
--- WITH PASSWORD = '#Gf_senhaParaAPIWebDataViz',
--- DEFAULT_SCHEMA = dbo;
-
--- EXEC sys.sp_addrolemember @rolename = N'db_datawriter',
--- @membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
-
--- EXEC sys.sp_addrolemember @rolename = N'db_datareader',
--- @membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+	
+ 
+ 
