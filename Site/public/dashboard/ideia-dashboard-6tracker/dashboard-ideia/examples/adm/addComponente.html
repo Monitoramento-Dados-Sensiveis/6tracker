@@ -113,7 +113,7 @@ Coded by www.creative-tim.com
             </a>
           </li>
           <li>
-            <a href="../inicioAdm/tables.html">
+            <a href="../inicioAdm/user2.html">
               <i class="nc-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
@@ -300,16 +300,16 @@ Coded by www.creative-tim.com
               <div class="card-body">
                 <form>
                   <div class="row">
-                    <div class="col-md-5 pr-1">
+                    <div class="col-md-6 pr -1">
                       <div class="form-group">
-                        <label>Empresa fornecedora: </label>
-                        <input type="text" class="form-control" placeholder="Fornecedor">
+                        <label>Nome: </label>
+                        <input type="text" class="form-control" placeholder="Nome do componente">
                       </div>
                     </div>
                     <div class="col-md-3 px-1">
                       <div class="form-group">
-                        <label>Identificação do componente:</label>
-                        <input type="text" class="form-control" placeholder="Modelo do componente">
+                        <label>Empresa fornecedora:</label>
+                        <input type="text" class="form-control" placeholder="Fornecedor">
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
@@ -320,24 +320,44 @@ Coded by www.creative-tim.com
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-6 pr-1">
+                    <div class="col-md-3">
                       <div class="form-group">
-                        <label>Especificação:  </label>
-                        <input type="text" class="form-control" placeholder="série do componente" >
+                        <label>Métrica Minima:</label>
+                        <input type="text" class="form-control" placeholder="Métrica Minima">
                       </div>
                     </div>
-                    <div class="col-md-6 pl-1">
+                    <div class="col-md-69 pr -1">
                       <div class="form-group">
-                        <label>Arquitetura específica:</label>
-                        <input type="text" class="form-control" placeholder="Arquitetura">
+                        <label>Métrica Máxima: </label>
+                        <input type="text" class="form-control" placeholder="Métrica Máxima">
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Valor Total: </label>
+                        <input type="text" class="form-control" placeholder="Valor Total">
                       </div>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6 pr -1">
                       <div class="form-group">
-                        <label>Nome: </label>
-                        <input type="text" class="form-control" placeholder="Nome do componente">
+                        <label>Servidor: </label>
+                        <select class="form-control" id="servidorSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                          <option value="">Servidores</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-3 px-1">
+                      <div class="form-group">
+                        <label>Unidade de medida:</label>
+                        <select class="form-control" ></select>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Tipo de componente: </label>
+                        <select class="form-control" ></select>
                       </div>
                     </div>
                   </div>
@@ -400,3 +420,56 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
+<script>
+  var idServidor = sessionStorage.getItem('ID_EMPRESA')
+    fetch(`/componente/buscar/${idServidor}`)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var servidores = json
+
+                    var selectElement = document.getElementById('servidorSelect');
+
+                    // Itera sobre o array de empresas e cria as opções do select
+                    for (let i = 0; i < servidores.length; i++) {
+                        const servidor = servidores[i];
+                        const servidorNome = servidor.nome;
+
+                        // Cria um novo elemento de opção em cada iteração
+                        const optionElement = document.createElement('option');
+                        optionElement.value = '../Dashboard.html';
+                        optionElement.text = servidorNome;
+
+                        selectElement.appendChild(optionElement);
+
+                        // Cria outro novo elemento de opção
+                        const optionElement2 = document.createElement('option');
+                        optionElement2.value = servidor.fkServidor;
+                        optionElement2.text = servidorNome;
+                        selectElement2.appendChild(optionElement2);
+
+                        // Cria um terceiro novo elemento de opção
+                        const optionElement3 = document.createElement('option');
+                        optionElement3.value = servidor.fkEmp;
+                        optionElement3.text = servidorNome;
+
+                        selectElement3.appendChild(optionElement3);
+                    }
+
+
+                });
+
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "O Login está inválido";
+        })
+</script>

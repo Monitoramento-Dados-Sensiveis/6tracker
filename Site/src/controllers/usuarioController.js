@@ -168,6 +168,58 @@ function cadastrarADM(req, res) {
     }
 }
 
+function cadastrarUser(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    // nomeServer: nomeVar,
+    // cpfServer: cpfVar,
+    // emailServer: emailVar,
+    // nivelPermissaoServer: nivelPermissaoVar,
+    // telefoneServer: telefoneVar,
+    // senhaServer: senhaVar,
+    // fkempresaServer: fkempresa,
+
+    var nome = req.body.nomeServer;
+    var cpf = req.body.cpfServer;
+    var email = req.body.emailServer;
+    var nivelPermissao = req.body.nivelPermissaoServer;
+    var telefone = req.body.telefoneServer;
+    var senha = req.body.senhaServer;
+    var fkempresa = req.body.fkempresaServer
+
+    // Faça as validações dos valores
+    if (nome == undefined) {
+        res.status(400).send("O nome está undefined!");
+    } else if (cpf == undefined) {
+        res.status(400).send("O cpf está undefined!");
+    } else if (email == undefined) {
+        res.status(400).send("O email está undefined!");
+    } else if (nivelPermissao == undefined) {
+        res.status(400).send("O nivelPermissao está undefined!");
+    }else if (telefone == undefined) {
+        res.status(400).send("O telefone está undefined!");
+    }else if (senha == undefined) {
+        res.status(400).send("A senha está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrarUser(nome, cpf, email, nivelPermissao, telefone, senha, fkempresa)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro do Usuário! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 function buscaridEmpresa(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
 

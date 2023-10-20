@@ -189,6 +189,8 @@
         var bairroVar = bairro_input.value;
         var cidadeVar = cidade_input.value;
 
+        sessionStorage.NOME_EMPRESA = nomeEmpVar;
+
 
         if (nomeEmpVar == "" || cnpjVar == "" || cepVar == "" || estadoVar == "" || ruaVar == "" || numeroVar == "" || bairroVar == "" || cidadeVar == "") {
             cardErro.style.display = "block"
@@ -216,7 +218,7 @@
 
         if (cepVar.length != 8 ) {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "CPF Inválido";
+            mensagem_erro.innerHTML = "cep Inválido";
 
             setTimeout(function () {
                 cardErro.style.display = "none";
@@ -228,7 +230,7 @@
 
         if (estadoVar.length != 2 ) {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "CPF Inválido";
+            mensagem_erro.innerHTML = "estado Inválido";
 
             setTimeout(function () {
                 cardErro.style.display = "none";
