@@ -32,19 +32,20 @@ Coded by www.creative-tim.com
   <link href="../../assets/css/dashboardPlane.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../../assets/demo/demo.css" rel="stylesheet" />
+  <script src="../../../../../js/funcoes.js"></script>  
 </head>
 
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="principalDashAdm.html" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="../../assets/img/6Tracker/logo-sf-vertical-preta.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="principalDashAdm.html" class="simple-text logo-normal">
           6Tracker
           <!-- <div class="logo-image-big">
             <img src="../../assets/img/logo-big.png">
@@ -126,6 +127,7 @@ Coded by www.creative-tim.com
       </div>
     </div>
     <div class="main-panel">
+      
        <!-- Navbar -->
        <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
         <div class="container-fluid">
@@ -192,6 +194,7 @@ Coded by www.creative-tim.com
         </div>
       </nav>
       <!-- End Navbar --> 
+      
       <div class="content">
         <div class="row">
           <div class="col-md-4">
@@ -295,83 +298,77 @@ Coded by www.creative-tim.com
           <div class="col-md-12">
             <div class="card card-user">
               <div class="card-header">
-                <h5 class="card-title">Adicionar coloborador</h5>
+                <h5 class="card-title">Adicionar Usuário</h5>
               </div>
               <div class="card-body">
                 <form>
                   <div class="row">
                     <div class="col-md-5 pr-1">
                       <div class="form-group">
-                        <label>Sua empresa: </label>
-                        <input type="text" class="form-control" placeholder="Nome da empresa">
+                        <label>Nome Completo: </label>
+                        <input id="nome_input" type="text" class="form-control" placeholder="Nome do Usuário">
                       </div>
                     </div>
                     <div class="col-md-3 px-1">
                       <div class="form-group">
-                        <label>Username</label>
-                        <input type="text" class="form-control" placeholder="Apelido do coloborador no sistema" >
+                        <label>CPF: </label>
+                        <input id="cpf_input" type="text" class="form-control" placeholder="CPF do Usuário" >
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Email: </label>
-                        <input type="email" class="form-control" placeholder="Email do colaborador">
+                        <label for="exampleInputEmail1">Telefone: </label>
+                        <input id="telefone_input" type="number" class="form-control" placeholder="(XX) XXXX-XXXX">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
-                        <label>Nome completo: </label>
-                        <input type="text" class="form-control" placeholder="Nome completo">
+                        <label>Email: </label>
+                        <input id="email_input" type="email" class="form-control" placeholder="Email do colaborador">
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label>Cargo:</label>
-                        <input type="text" class="form-control" placeholder="Cargo">
+                        <input id="nivelPermissao_input" type="text" class="form-control" placeholder="SELECT">
                       </div>
                     </div>
                   </div>
-                  <div class="row">
+                  <!-- <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Endereço: </label>
                         <input type="text" class="form-control" placeholder="Endereço">
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="row">
-                    <div class="col-md-4 pr-1">
+                    <div class="col-md-4 pr-1" >
                       <div class="form-group">
-                        <label>Telefone: </label>
-                        <input type="text" class="form-control" placeholder="Telefone">
+                        <label>Senha: </label>
+                        <input id="senha_input" type="password" class="form-control" placeholder="Senha">
                       </div>
                     </div>
-                    <div class="col-md-4 px-1">
+                    <div class="col-md-4 px-1" id="confirmacaoSenha">
                       <div class="form-group">
-                        <label>Setor: </label>
-                        <input type="text" class="form-control" placeholder="Setor">
+                        <label>Confirmação Senha: </label>
+                        <input id="confirm_senha_input" type="password" class="form-control" placeholder="Confirme a Senha">
                       </div>
-                    </div>
-                    <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label>Sua equipe: </label>
-                        <input type="number" class="form-control" placeholder="Quantidade de membros da sua equipe">
-                      </div>
-                    </div>
+                    </div>                    
                   </div>
-                  <div class="row">
+                  <!-- <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Descrição: </label>
                         <textarea class="form-control textarea" placeholder="A descrição do colaborador em sua função"></textarea>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Adicionar colaborador</button>
+                      <button type="submit" class="btn btn-primary btn-round" id="btn-user" style="background-color: #c211a1;" onclick="cadastrarUser()">Adicionar Usuário</button>
                     </div>
                   </div>
                 </form>
@@ -380,6 +377,13 @@ Coded by www.creative-tim.com
           </div>
         </div>
       </div>
+      <div class="login">
+        <div class="container">
+          <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+              <span id="mensagem_erro"></span>
+            </div>
+          </div>
       <footer class="footer footer-black  footer-white ">
         <div class="container-fluid">
           <div class="row">
@@ -420,3 +424,142 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
+
+<script>
+  function cadastrarUser() {
+      aguardar();
+
+      //Recupere o valor da nova input pelo nome do id
+      // Agora vá para o método fetch logo abaixo
+      var nomeVar = nome_input.value;
+      var cpfVar = cpf_input.value;
+      var telefoneVar = telefone_input.value;
+      var emailVar = email_input.value;  
+      var nivelPermissaoVar = nivelPermissao_input.value;    
+      var senhaVar = senha_input.value;
+      var confirmSenhaVar = confirm_senha_input.value;
+      var fkempresa = sessionStorage.NOME_EMPRESA;
+       
+
+      if (nomeVar == "" || cpfVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "" || confirmSenhaVar == "" || nivelPermissaoVar == "") {
+          cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "Todos os campos são obrigatórios";
+          setTimeout(function () {
+              cardErro.style.display = "none";
+                  }, 3000);
+          finalizarAguardar();
+          return false;
+      }
+
+      if (senhaVar != confirmSenhaVar) {
+          cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "Senhas diferentes!";
+
+          setTimeout(function () {
+              cardErro.style.display = "none";
+                  }, 3000);
+
+          finalizarAguardar();
+          return false;
+      }
+
+      if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.indexOf("@") > emailVar.indexOf(".com")) {
+          cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "Email Inválido!";
+
+          setTimeout(function () {
+              cardErro.style.display = "none";
+                  }, 3000);
+
+          finalizarAguardar();
+          return false;
+      }
+
+      if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(senhaVar) || senhaVar.length < 8) {
+          cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "Senha Inválida!";
+
+          setTimeout(function () {
+              cardErro.style.display = "none";
+                  }, 3000);
+
+          finalizarAguardar();
+          return false;
+      }
+
+      if (telefoneVar.length != 11) {
+          cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "Número de telefone inválido!";
+
+          setTimeout(function () {
+              cardErro.style.display = "none";
+                  }, 3000);
+
+          finalizarAguardar();
+          return false;
+      }
+
+      if (cpfVar.length != 11) {
+          cardErro.style.display = "block"
+          mensagem_erro.innerHTML = "CPF inválido!";
+
+          setTimeout(function () {
+              cardErro.style.display = "none";
+                  }, 3000);
+
+          finalizarAguardar();
+          return false;
+      }
+
+      else {
+          setInterval(sumirMensagem, 5000)
+      }
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/addUser", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+              // crie um atributo que recebe o valor recuperado aqui
+              // Agora vá para o arquivo routes/usuario.js
+              nomeServer: nomeVar,
+              cpfServer: cpfVar,
+              emailServer: emailVar,
+              nivelPermissaoServer: nivelPermissaoVar,
+              telefoneServer: telefoneVar,
+              senhaServer: senhaVar,
+              fkempresaServer: fkempresa,
+          })
+      }).then(function (resposta) {
+
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+              cardErro.style.display = "block";
+
+              mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+              setTimeout(() => {
+                  window.location = "login.html";
+              }, "2000")
+
+              limparFormulario();
+              finalizarAguardar();
+          } else {
+              throw ("Houve um erro ao tentar realizar o cadastro!");
+          }
+      }).catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          finalizarAguardar();
+      });
+
+      return false;
+  }
+
+  function sumirMensagem() {
+      cardErro.style.display = "none"
+  }
+
+</script>

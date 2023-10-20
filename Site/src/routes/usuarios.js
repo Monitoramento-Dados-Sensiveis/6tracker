@@ -20,6 +20,10 @@ router.post("/cadastrarADM", function (req, res) {
     usuarioController.cadastrarADM(req, res);
 })
 
+router.post("/addUser", function (req, res) {
+    usuarioController.cadastrarUser(req, res);
+})
+
 router.post("/buscaridEmpresa", function (req, res) {
     usuarioController.buscaridEmpresa(req, res);
 })

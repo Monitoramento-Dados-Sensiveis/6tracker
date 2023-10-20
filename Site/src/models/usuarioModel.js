@@ -110,6 +110,36 @@ async function cadastrarADM(nome, cpf, email, telefone, senha, fkempresa) {
     }
 }
 
+async function cadastrarUser(nome, cpf, email, nivelPermissao, telefone, senha, fkempresa) {
+    console.log("ACESSEI O USUARIO MODEL - function cadastrarUser():", nome, cpf, email, nivelPermissao, telefone, senha, fkempresa);
+
+    const buscarEmpresa = `
+        SELECT idEmpresa FROM Empresa WHERE nome = '${fkempresa}';
+    `;
+
+    try {
+        const resultadoEmpresa = await database.executar(buscarEmpresa);
+
+        if (resultadoEmpresa && resultadoEmpresa.length > 0) {
+            // Extraia o ID da empresa do resultado da consulta
+            const userId = resultadoEmpresa[0].idEmpresa;
+
+            var instrucao = `
+                INSERT INTO Funcionario (nome, cpf, email, telefone, senha, fkEmpresa, fkNivelAcesso) VALUES ('${nome}', '${cpf}', '${email}', '${telefone}', '${senha}', ${userId},${nivelPermissao});
+            `;
+            console.log("Executando a instrução SQL: \n" + instrucao);
+
+            return database.executar(instrucao);
+        } else {
+            console.error("Nenhum resultado encontrado para a empresa com o nome:", fkempresa);
+            throw new Error("Erro ao cadastrar.");
+        }
+    } catch (erro) {
+        console.error("Erro ao realizar o cadastro:", erro);
+        throw erro;
+    }
+}
+
 
 
 
@@ -118,6 +148,7 @@ module.exports = {
             entrar,
             cadastrar,            
             cadastrarADM,
+            cadastrarUser,
             buscaridEmpresa,
             listar,
         };
