@@ -197,103 +197,8 @@ Coded by www.creative-tim.com
       
       <div class="content">
         <div class="row">
-          <div class="col-md-4">
-            <!-- <div class="card card-user">
-              <div class="image">
-                <img src="../../assets/img/faces/sptech.jpg" alt="...">
-              </div>
-              <div class="card-body">
-                <div class="author">
-                  <a href="#">
-                    <img class="avatar border-gray" src="../../assets/img/faces/frizza.jpg" alt="...">
-                    <h5 class="title" style="color: #254D32;">Claudio Frizzarini</h5>
-                  </a>
-                  <p class="description">
-                    @frizza
-                  </p>
-                </div>
-                <p class="description text-center">
-                  Sou tão bom em T.I. que consigo até fazer o computador da minha mãe funcionar.</br> 
-                  E isso é um feito, acredite em mim.
-                </p>
-              </div>
-              <div class="card-footer"> -->
-                <hr>
-                <!-- <div class="button-container">
-                  <div class="row">
-                    <div class="col-lg-3 col-md-6 col-6 ml-auto">
-                      <h5>12<br><small>Files</small></h5>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-6 ml-auto mr-auto">
-                      <h5>2GB<br><small>Used</small></h5>
-                    </div>
-                    <div class="col-lg-3 mr-auto">
-                      <h5>24,6$<br><small>Spent</small></h5>
-                    </div>
-                  </div>
-                </div> -->
-             <!--  </div>
-            </div> -->
-            <!-- <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Membros da equipe</h4>
-              </div>
-              <div class="card-body">
-                <ul class="list-unstyled team-members">
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                          <img src="../../assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                        </div>
-                      </div>
-                      <div class="col-md-7 col-7">
-                        DJ Khaled
-                        <br />
-                        <span class="text-muted"><small>Offline</small></span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                          <img src="../../assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                        </div>
-                      </div>
-                      <div class="col-md-7 col-7">
-                        Creative Tim
-                        <br />
-                        <span class="text-success"><small>Available</small></span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                          <img src="../../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                        </div>
-                      </div>
-                      <div class="col-ms-7 col-7">
-                        Flume
-                        <br />
-                        <span class="text-danger"><small>Busy</small></span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div> -->
+          <div class="col-md-4">       
+                               
           </div>
           <div class="col-md-12">
             <div class="card card-user">
@@ -368,7 +273,7 @@ Coded by www.creative-tim.com
                   </div> -->
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round" id="btn-user" style="background-color: #c211a1;" onclick="cadastrarUser()">Adicionar Usuário</button>
+                      <button  class="btn btn-primary btn-round" id="btn-user" style="background-color: #c211a1;" onclick="cadastrarUser()">Adicionar Usuário</button>
                     </div>
                   </div>
                 </form>
@@ -408,158 +313,19 @@ Coded by www.creative-tim.com
     </div>
   </div>
   <!--   Core JS Files   -->
+  <script src="../../assets/js/addUser.js"></script>
   <script src="../../assets/js/core/jquery.min.js"></script>
   <script src="../../assets/js/core/popper.min.js"></script>
   <script src="../../assets/js/core/bootstrap.min.js"></script>
   <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
   <!-- Chart JS -->
   <script src="../../assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
   <script src="../../assets/js/plugins/bootstrap-notify.js"></script>
-  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc --> 
   <script src="../../assets/demo/demo.js"></script>
 </body>
 
 </html>
-
-<script>
-  function cadastrarUser() {
-      aguardar();
-
-      //Recupere o valor da nova input pelo nome do id
-      // Agora vá para o método fetch logo abaixo
-      var nomeVar = nome_input.value;
-      var cpfVar = cpf_input.value;
-      var telefoneVar = telefone_input.value;
-      var emailVar = email_input.value;  
-      var nivelPermissaoVar = nivelPermissao_input.value;    
-      var senhaVar = senha_input.value;
-      var confirmSenhaVar = confirm_senha_input.value;
-      var fkempresa = sessionStorage.NOME_EMPRESA;
-       
-
-      if (nomeVar == "" || cpfVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "" || confirmSenhaVar == "" || nivelPermissaoVar == "") {
-          cardErro.style.display = "block"
-          mensagem_erro.innerHTML = "Todos os campos são obrigatórios";
-          setTimeout(function () {
-              cardErro.style.display = "none";
-                  }, 3000);
-          finalizarAguardar();
-          return false;
-      }
-
-      if (senhaVar != confirmSenhaVar) {
-          cardErro.style.display = "block"
-          mensagem_erro.innerHTML = "Senhas diferentes!";
-
-          setTimeout(function () {
-              cardErro.style.display = "none";
-                  }, 3000);
-
-          finalizarAguardar();
-          return false;
-      }
-
-      if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.indexOf("@") > emailVar.indexOf(".com")) {
-          cardErro.style.display = "block"
-          mensagem_erro.innerHTML = "Email Inválido!";
-
-          setTimeout(function () {
-              cardErro.style.display = "none";
-                  }, 3000);
-
-          finalizarAguardar();
-          return false;
-      }
-
-      if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(senhaVar) || senhaVar.length < 8) {
-          cardErro.style.display = "block"
-          mensagem_erro.innerHTML = "Senha Inválida!";
-
-          setTimeout(function () {
-              cardErro.style.display = "none";
-                  }, 3000);
-
-          finalizarAguardar();
-          return false;
-      }
-
-      if (telefoneVar.length != 11) {
-          cardErro.style.display = "block"
-          mensagem_erro.innerHTML = "Número de telefone inválido!";
-
-          setTimeout(function () {
-              cardErro.style.display = "none";
-                  }, 3000);
-
-          finalizarAguardar();
-          return false;
-      }
-
-      if (cpfVar.length != 11) {
-          cardErro.style.display = "block"
-          mensagem_erro.innerHTML = "CPF inválido!";
-
-          setTimeout(function () {
-              cardErro.style.display = "none";
-                  }, 3000);
-
-          finalizarAguardar();
-          return false;
-      }
-
-      else {
-          setInterval(sumirMensagem, 5000)
-      }
-
-      // Enviando o valor da nova input
-      fetch("/usuarios/addUser", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-              // crie um atributo que recebe o valor recuperado aqui
-              // Agora vá para o arquivo routes/usuario.js
-              nomeServer: nomeVar,
-              cpfServer: cpfVar,
-              emailServer: emailVar,
-              nivelPermissaoServer: nivelPermissaoVar,
-              telefoneServer: telefoneVar,
-              senhaServer: senhaVar,
-              fkempresaServer: fkempresa,
-          })
-      }).then(function (resposta) {
-
-          console.log("resposta: ", resposta);
-
-          if (resposta.ok) {
-              cardErro.style.display = "block";
-
-              mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-              setTimeout(() => {
-                  window.location = "login.html";
-              }, "2000")
-
-              limparFormulario();
-              finalizarAguardar();
-          } else {
-              throw ("Houve um erro ao tentar realizar o cadastro!");
-          }
-      }).catch(function (resposta) {
-          console.log(`#ERRO: ${resposta}`);
-          finalizarAguardar();
-      });
-
-      return false;
-  }
-
-  function sumirMensagem() {
-      cardErro.style.display = "none"
-  }
-
-</script>
