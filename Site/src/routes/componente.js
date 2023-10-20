@@ -1,8 +1,11 @@
 var express = require("express");
 var router = express.Router();
 
-router.get("/buscar/:idServidor", function (req, res) {
-    localController.buscarServidor(req, res);
+var componenteController = require("../controllers/componenteController");
+
+
+router.get("/buscar/", function (req, res) {
+    componenteController.buscarServidores(req, res);
 })
 
 module.exports = router;

@@ -421,8 +421,9 @@ Coded by www.creative-tim.com
 
 </html>
 <script>
-  var idServidor = sessionStorage.getItem('ID_EMPRESA')
-    fetch(`/componente/buscar/${idServidor}`)
+  sessionStorage.ID_SERVIDOR = 1
+  var idServidor = sessionStorage.getItem('ID_SERVIDOR')
+    fetch(`/componente/buscar/`)
         .then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
 
@@ -450,17 +451,17 @@ Coded by www.creative-tim.com
                         selectElement.appendChild(optionElement);
 
                         // Cria outro novo elemento de opção
-                        const optionElement2 = document.createElement('option');
-                        optionElement2.value = servidor.fkServidor;
-                        optionElement2.text = servidorNome;
-                        selectElement2.appendChild(optionElement2);
+                        // const optionElement2 = document.createElement('option');
+                        // optionElement2.value = servidor.fkServidor;
+                        // optionElement2.text = servidorNome;
+                        // selectElement2.appendChild(optionElement2);
 
-                        // Cria um terceiro novo elemento de opção
-                        const optionElement3 = document.createElement('option');
-                        optionElement3.value = servidor.fkEmp;
-                        optionElement3.text = servidorNome;
+                        // // Cria um terceiro novo elemento de opção
+                        // const optionElement3 = document.createElement('option');
+                        // optionElement3.value = servidor.fkEmp;
+                        // optionElement3.text = servidorNome;
 
-                        selectElement3.appendChild(optionElement3);
+                        // selectElement3.appendChild(optionElement3);
                     }
 
 

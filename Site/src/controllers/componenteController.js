@@ -1,10 +1,10 @@
-function buscarServidores(req, res){
+var componenteModel = require("../models/componenteModel");
 
-    var idEmpresa = req.params.idEmpresa;
+function buscarServidores(req, res){
 
     console.log(`Recuperando medidas em tempo real`);
 
-    localModel.buscarServidores(idEmpresa).then(function (resultado) {
+    componenteModel.buscarServidores().then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

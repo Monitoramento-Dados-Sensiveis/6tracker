@@ -1,10 +1,14 @@
 var database = require("../database/config");
 
-function buscarServidor(idServidor){
+function buscarServidores(){
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-       instrucaoSql = `select * from Componente WHERE fkServidor = '${idServidor}'`;
+       instrucaoSql = `select 
+       Servidor.nome 
+           from Componente 
+               join Servidor 
+                   on Servidor.idServidor = Componente.fkServidor;`;
    } else {
        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
        return
@@ -15,5 +19,5 @@ function buscarServidor(idServidor){
 }
 
 module.exports = {
-    buscarServidor,
+    buscarServidores,
 };
