@@ -204,12 +204,12 @@ Coded by www.creative-tim.com
                 <h5 class="card-title">Adicionar servidor</h5>
               </div>
               <div class="card-body">
-                <form>
+                <form id="form_postagem" method="post" onsubmit="return publicar()">
                     <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
                             <label>Nome: </label>
-                            <input type="text" class="form-control" placeholder="Identificação do servidor">
+                            <input name="nome" id="nome" maxlength="100" type="text" class="form-control" placeholder="Identificação do servidor">
                           </div>
                         </div>
                       </div>
@@ -218,13 +218,13 @@ Coded by www.creative-tim.com
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
                             <label>Código:  </label>
-                            <input type="text" class="form-control" placeholder="Código do servidor:" >
+                            <input name="codigo" id="codigo" type="text" class="form-control" placeholder="Código do servidor:" >
                           </div>
                         </div>
                         <div class="col-md-6 pl-1">
                           <div class="form-group">
                             <label>Sistema Operacional:</label>
-                            <input type="text" class="form-control" placeholder="S.O. utilizado">
+                            <input name="so" id="so" type="text" class="form-control" placeholder="S.O. utilizado">
                           </div>
                         </div>
                       </div>
@@ -232,13 +232,13 @@ Coded by www.creative-tim.com
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
                             <label>USB:  </label>
-                            <input type="text" class="form-control" placeholder="Conexão USB" >
+                            <input name="usb" id="usb" type="text" class="form-control" placeholder="Conexão USB" >
                           </div>
                         </div>
                         <div class="col-md-6 pl-1">
                           <div class="form-group">
                             <label>Sala:</label>
-                            <input type="text" class="form-control" placeholder="Localização">
+                            <input name="sala" id="sala" type="text" class="form-control" placeholder="Localização">
                           </div>
                         </div>
                       </div>
@@ -246,6 +246,18 @@ Coded by www.creative-tim.com
                       <div class="row">
                         <div class="update ml-auto mr-auto">
                           <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Adicionar servidor</button>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="update ml-auto mr-auto">
+                          <button onclick="publicar()" type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Exibir servidores</button>
+                        </div>
+                        <div class="update ml-auto mr-auto">
+                          <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Editar servidor</button>
+                        </div>
+                        <div class="update ml-auto mr-auto">
+                          <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Excluir servidor</button>
                         </div>
                       </div>
 
@@ -350,3 +362,87 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
+
+<script>
+  // function limparFormulario() {
+  //       document.getElementById("form_postagem").reset();
+  //   }
+
+    function publicar() {
+        // var idUsuario = 1
+
+        var corpo = {
+            nome: form_postagem.nome.value,
+            codigo: form_postagem.codigo.value,
+            so: form_postagem.so.value,
+            usb: form_postagem.usb.value,
+            sala: form_postagem.sala.value,
+        }
+
+        fetch(`/servidor/publicar`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Servidor cadastrado com sucesso!");
+                window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addServidor.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+
+    }
+
+    // function deletar(idServidor) {
+    //     console.log("Criar função de apagar servidor escolhido - ID" + idServidor);
+    //     fetch(`/servidor/deletar/${idServidor}`, {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
+    //     }).then(function (resposta) {
+
+    //         if (resposta.ok) {
+    //             window.alert("Servidor deletado com sucesso pelo usuario de ID: " + idUsuario + "!");
+    //             window.location = "/dashboard/mural.html"
+    //         } else if (resposta.status == 404) {
+    //             window.alert("Deu 404!");
+    //         } else {
+    //             throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //     });
+    // }
+
+  function testar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+
+        var divResultado = document.getElementById("div_feed");
+
+        divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
+        divResultado.innerHTML = formulario.get("descricao");
+
+        finalizarAguardar();
+
+        return false;
+    }
+
+</script>
