@@ -22,7 +22,8 @@ var mySqlConfig = {
     host: "localhost",
     database: "sixtracker",
     user: "root",
-}
+    password: "271815"
+};
 
 function executar(instrucao) {
     // VERIFICA A VARIÁVEL DE AMBIENTE SETADA EM app.js
