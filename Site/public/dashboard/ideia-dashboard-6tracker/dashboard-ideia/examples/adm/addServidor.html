@@ -238,10 +238,15 @@ Coded by www.creative-tim.com
                         <div class="col-md-6 pl-1">
                           <div class="form-group">
                             <label>Sala:</label>
-                            <input name="sala" id="sala" type="text" class="form-control" placeholder="Localização">
+                            <select class="form-control" id="salaSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                              <option value="">Salas</option>
+                            </select>
                           </div>
                         </div>
                       </div>
+
+
+        
 
                       <div class="row">
                         <div class="update ml-auto mr-auto">
@@ -367,6 +372,60 @@ Coded by www.creative-tim.com
   // function limparFormulario() {
   //       document.getElementById("form_postagem").reset();
   //   }
+
+  sessionStorage.ID_SALA = 1
+  var idSala = sessionStorage.getItem('ID_SALA')
+    fetch(`/servidor/buscar/`)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var salas = json
+
+                    var selectElement = document.getElementById('salaSelect');
+
+                    // Itera sobre o array de empresas e cria as opções do select
+                    for (let i = 0; i < salas.length; i++) {
+                        const sala = salas[i];
+                        const salaNome = sala.nome;
+
+                        // Cria um novo elemento de opção em cada iteração
+                        const optionElement = document.createElement('option');
+                        optionElement.value = '../Dashboard.html';
+                        optionElement.text = salaNome;
+
+                        selectElement.appendChild(optionElement);
+
+                        // Cria outro novo elemento de opção
+                        // const optionElement2 = document.createElement('option');
+                        // optionElement2.value = servidor.fkServidor;
+                        // optionElement2.text = servidorNome;
+                        // selectElement2.appendChild(optionElement2);
+
+                        // // Cria um terceiro novo elemento de opção
+                        // const optionElement3 = document.createElement('option');
+                        // optionElement3.value = servidor.fkEmp;
+                        // optionElement3.text = servidorNome;
+
+                        // selectElement3.appendChild(optionElement3);
+                    }
+
+
+                });
+
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "O Login está inválido";
+        })
+
 
     function publicar() {
         // var idUsuario = 1

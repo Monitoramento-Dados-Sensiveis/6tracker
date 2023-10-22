@@ -32,4 +32,11 @@ router.post("/publicar", function (req, res) {
 //     avisoController.deletar(req, res);
 // });
 
+
+
+router.get("/buscar/", function (req, res) {
+    servidorController.buscarSalas(req, res);
+})
+
+
 module.exports = router;
