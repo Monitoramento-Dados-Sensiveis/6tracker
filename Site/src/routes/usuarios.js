@@ -20,7 +20,7 @@ router.post("/cadastrarADM", function (req, res) {
     usuarioController.cadastrarADM(req, res);
 })
 
-router.post("/addUser", function (req, res) {
+router.post("/cadastrarUser", function (req, res) {
     usuarioController.cadastrarUser(req, res);
 })
 

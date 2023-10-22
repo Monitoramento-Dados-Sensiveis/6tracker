@@ -169,14 +169,7 @@ function cadastrarADM(req, res) {
 }
 
 function cadastrarUser(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    // nomeServer: nomeVar,
-    // cpfServer: cpfVar,
-    // emailServer: emailVar,
-    // nivelPermissaoServer: nivelPermissaoVar,
-    // telefoneServer: telefoneVar,
-    // senhaServer: senhaVar,
-    // fkempresaServer: fkempresa,
+  
 
     var nome = req.body.nomeServer;
     var cpf = req.body.cpfServer;
@@ -256,6 +249,7 @@ module.exports = {
     entrar,
     cadastrar,    
     cadastrarADM,
+    cadastrarUser,
     buscaridEmpresa,
     listar,
     testar
