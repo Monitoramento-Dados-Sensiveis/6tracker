@@ -25,7 +25,7 @@ Coded by www.creative-tim.com
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
-
+    
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -39,6 +39,7 @@ Coded by www.creative-tim.com
   <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
+
 <body class="">
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
@@ -51,7 +52,7 @@ Coded by www.creative-tim.com
         </a>
         <a href="./principalDashAdm.html" class="simple-text logo-normal">
           6Tracker
-
+          
           <!-- <div class="logo-image-big">
             <img src="../assets/img/logo-big.png">
           </div> -->
@@ -61,10 +62,10 @@ Coded by www.creative-tim.com
         <ul class="nav">
           <li>
             <a href="./principalDashAdm.html">
+              <!-- <div class="hover-palavras"> -->
               <i class="nc-icon nc-layout-11"></i>
-              <div class="hover-palavras">
                 <p>Dashboard - principal</p>
-              </div>
+              <!-- </div> -->
             </a>
           </li>
           <li>
@@ -441,6 +442,7 @@ Coded by www.creative-tim.com
       </div>
     </div>
     <!--   Core JS Files   -->
+    
     <script src="../assets/js/core/jquery.min.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
@@ -458,3 +460,32 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
+<!-- <script>
+ sessionStorage.ID_GERAL = 1
+  var idGeral = sessionStorage.getItem('ID_SALA')
+    fetch(``)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var id = json
+
+                    var selectElement = document.getElementById('idSelect');
+
+                    for (let i = 0; i < func.length; i++) {
+                        const id = id[i];
+                        const pssNome = funcionario.nome;
+                        const optionElement = document.createElement('option');
+                        optionElement.value = '../Dashboard.html';
+                        optionElement.text = pssNome;
+
+                        selectElement.appendChild(optionElement);
+
+
+</script> -->
