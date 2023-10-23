@@ -393,7 +393,7 @@ Coded by www.creative-tim.com
                     // Itera sobre o array de empresas e cria as opções do select
                     for (let i = 0; i < salas.length; i++) {
                         const sala = salas[i];
-                        const salaNome = sala.nome;
+                        const salaNome = salas[i].nomeSala;
 
                         // Cria um novo elemento de opção em cada iteração
                         const optionElement = document.createElement('option');
