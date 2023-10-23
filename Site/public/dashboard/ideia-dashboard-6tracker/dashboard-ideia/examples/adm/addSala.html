@@ -413,3 +413,140 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
+<script>
+  // function limparFormulario() {
+  //       document.getElementById("form_postagem").reset();
+  //   }
+
+  sessionStorage.ID_SALA = 1
+  var idSala = sessionStorage.getItem('ID_SALA')
+    fetch(`/servidor/buscar/`)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var salas = json
+
+                    var selectElement = document.getElementById('salaSelect');
+
+                    // Itera sobre o array de empresas e cria as opções do select
+                    for (let i = 0; i < salas.length; i++) {
+                        const sala = salas[i];
+                        const salaNome = sala.nome;
+
+                        // Cria um novo elemento de opção em cada iteração
+                        const optionElement = document.createElement('option');
+                        optionElement.value = '../Dashboard.html';
+                        optionElement.text = salaNome;
+
+                        selectElement.appendChild(optionElement);
+
+                        // Cria outro novo elemento de opção
+                        // const optionElement2 = document.createElement('option');
+                        // optionElement2.value = servidor.fkServidor;
+                        // optionElement2.text = servidorNome;
+                        // selectElement2.appendChild(optionElement2);
+
+                        // // Cria um terceiro novo elemento de opção
+                        // const optionElement3 = document.createElement('option');
+                        // optionElement3.value = servidor.fkEmp;
+                        // optionElement3.text = servidorNome;
+
+                        // selectElement3.appendChild(optionElement3);
+                    }
+
+
+                });
+
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "O Login está inválido";
+        })
+
+
+    function publicar() {
+        // var idUsuario = 1
+
+        var corpo = {
+            nome: form_postagem.nome.value,
+            codigo: form_postagem.codigo.value,
+            so: form_postagem.so.value,
+            usb: form_postagem.usb.value,
+            sala: form_postagem.sala.value,
+        }
+
+        fetch(`/servidor/publicar`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Servidor cadastrado com sucesso!");
+                window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addServidor.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+
+    }
+
+    // function deletar(idServidor) {
+    //     console.log("Criar função de apagar servidor escolhido - ID" + idServidor);
+    //     fetch(`/servidor/deletar/${idServidor}`, {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
+    //     }).then(function (resposta) {
+
+    //         if (resposta.ok) {
+    //             window.alert("Servidor deletado com sucesso pelo usuario de ID: " + idUsuario + "!");
+    //             window.location = "/dashboard/mural.html"
+    //         } else if (resposta.status == 404) {
+    //             window.alert("Deu 404!");
+    //         } else {
+    //             throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //     });
+    // }
+
+  function testar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+
+        var divResultado = document.getElementById("div_feed");
+
+        divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
+        divResultado.innerHTML = formulario.get("descricao");
+
+        finalizarAguardar();
+
+        return false;
+    }
+
+</script>
