@@ -314,8 +314,8 @@ Coded by www.creative-tim.com
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Código do componente: </label>
-                        <input type="text" class="form-control" placeholder="Código do componente: ">
+                        <label for="exampleInputEmail1">Modelo do componente: </label>
+                        <input type="text" class="form-control" placeholder="Modelo do componente: ">
                       </div>
                     </div>
                   </div>
@@ -351,13 +351,17 @@ Coded by www.creative-tim.com
                     <div class="col-md-3 px-1">
                       <div class="form-group">
                         <label>Unidade de medida:</label>
-                        <select class="form-control" ></select>
+                        <select class="form-control" id="medidaSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                          <option value="">Unidade de medida</option>
+                        </select>
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Tipo de componente: </label>
-                        <select class="form-control" ></select>
+                        <select class="form-control" id="componenteSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                          <option value="">Tipo de componente</option>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -421,8 +425,7 @@ Coded by www.creative-tim.com
 
 </html>
 <script>
-  sessionStorage.ID_SERVIDOR = 1
-  var idServidor = sessionStorage.getItem('ID_SERVIDOR')
+  // BUSCAR SERVIDORES
     fetch(`/componente/buscar/`)
         .then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
@@ -449,19 +452,84 @@ Coded by www.creative-tim.com
                         optionElement.text = servidorNome;
 
                         selectElement.appendChild(optionElement);
+                    }
 
-                        // Cria outro novo elemento de opção
-                        // const optionElement2 = document.createElement('option');
-                        // optionElement2.value = servidor.fkServidor;
-                        // optionElement2.text = servidorNome;
-                        // selectElement2.appendChild(optionElement2);
 
-                        // // Cria um terceiro novo elemento de opção
-                        // const optionElement3 = document.createElement('option');
-                        // optionElement3.value = servidor.fkEmp;
-                        // optionElement3.text = servidorNome;
+                });
 
-                        // selectElement3.appendChild(optionElement3);
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "O Login está inválido";
+        })
+
+  // BUSCAR UNIDADE DE MEDIDA
+        fetch(`/componente/unidade/`)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var medidas = json
+
+                    var selectElement = document.getElementById('medidaSelect');
+
+                    // Itera sobre o array de empresas e cria as opções do select
+                    for (let i = 0; i < medidas.length; i++) {
+                        const medida = medidas[i];
+                        const medidaNome = medida.unidadeMedida;
+
+                        // Cria um novo elemento de opção em cada iteração
+                        const optionElement = document.createElement('option');
+                        optionElement.value = '../Dashboard.html';
+                        optionElement.text = medidaNome;
+
+                        selectElement.appendChild(optionElement);
+                    }
+
+
+                });
+
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "O Login está inválido";
+        })
+
+  // BUSCAR TIPOS DE COMPONENTES
+        fetch(`/componente/tipo/`)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var componentes = json
+
+                    var selectElement = document.getElementById('componenteSelect');
+
+                    // Itera sobre o array de empresas e cria as opções do select
+                    for (let i = 0; i < componentes.length; i++) {
+                        const componente = componentes[i];
+                        const componenteNome = componente.tipoComponente;
+
+                        // Cria um novo elemento de opção em cada iteração
+                        const optionElement = document.createElement('option');
+                        optionElement.value = '../Dashboard.html';
+                        optionElement.text = componenteNome;
+
+                        selectElement.appendChild(optionElement);
                     }
 
 
