@@ -1,8 +1,8 @@
 var servidorModel = require("../models/servidorModel");
 
 function testar(req, res) {
-    console.log("ENTRAMOS NO servidorController");
-    res.send("ENTRAMOS NO SERVIDOR CONTROLLER");
+    console.log("ENTRAMOS NO salaController");
+    res.send("ENTRAMOS NO SALA CONTROLLER");
 }
 
 // function listar(req, res) {

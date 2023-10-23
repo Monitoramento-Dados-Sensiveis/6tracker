@@ -494,8 +494,8 @@ Coded by www.creative-tim.com
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                window.alert("Servidor cadastrado com sucesso!");
-                window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addServidor.html";
+                window.alert("Sala cadastrada com sucesso!");
+                window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addSala.html";
                 limparFormulario();
                 finalizarAguardar();
             } else if (resposta.status == 404) {
@@ -512,27 +512,27 @@ Coded by www.creative-tim.com
 
     }
 
-    // function deletar(idServidor) {
-    //     console.log("Criar função de apagar servidor escolhido - ID" + idServidor);
-    //     fetch(`/servidor/deletar/${idServidor}`, {
-    //         method: "DELETE",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         }
-    //     }).then(function (resposta) {
+    function deletar(idSala) {
+        console.log("Criar função de apagar sala escolhido - ID" + idSala);
+        fetch(`/servidor/deletar/${idSala}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
 
-    //         if (resposta.ok) {
-    //             window.alert("Servidor deletado com sucesso pelo usuario de ID: " + idUsuario + "!");
-    //             window.location = "/dashboard/mural.html"
-    //         } else if (resposta.status == 404) {
-    //             window.alert("Deu 404!");
-    //         } else {
-    //             throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-    //         }
-    //     }).catch(function (resposta) {
-    //         console.log(`#ERRO: ${resposta}`);
-    //     });
-    // }
+            if (resposta.ok) {
+                window.alert("Sala deletado com sucesso pelo usuario de ID: " + idUsuario + "!");
+                window.location = "/dashboard/mural.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
 
   function testar() {
         aguardar();
