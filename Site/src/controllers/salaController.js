@@ -77,11 +77,11 @@ function publicar(req, res) {
         res.status(400).send("O nome está indefinido!");
     } else if (andarSala == undefined) {
         res.status(400).send("O andarSala está indefinido!");
-    } else if (fkEmpresa != sessionStorage) {
-        res.status(403).send("O fkEmpresa está indefinido!");
+    } else if (fkEmpresa == undefined) {
+        res.status(400).send("O fkEmpresa está indefinido!");
     } 
     else {
-        salaModel.publicar(nome, andarSala)
+        salaModel.publicar(nomeSala, andarSala, fkEmpresa)
             .then(
                 function (resultado) {
                     res.json(resultado);

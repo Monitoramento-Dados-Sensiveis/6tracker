@@ -20,7 +20,6 @@ router.get("/", function (req, res) {
 // });
 
 router.post("/publicar", function (req, res) {
-    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     salaController.publicar(req, res);
 });
 
@@ -31,8 +30,6 @@ router.put("/editar/:idSala", function (req, res) {
 router.delete("/deletar/:idSala", function (req, res) {
     salaController.deletar(req, res);
 });
-
-
 
 router.get("/buscar/", function (req, res) {
     salaController.buscarSalas(req, res);

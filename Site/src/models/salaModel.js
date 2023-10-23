@@ -51,10 +51,10 @@ var database = require("../database/config");
 //     return database.executar(instrucao);
 // }
 
-function publicar(nomeSala, andarSala) {
+function publicar(nomeSala, andarSala, fkEmpresa) {
     console.log("ACESSEI O SALA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", nomeSala, andarSala);
     var instrucao = `
-        INSERT INTO Salas (nomeSala, andarSala) VALUES ('${nomeSala}', '${andarSala}');
+        INSERT INTO Salas (nomeSala, andarSala, fkEmpresa) VALUES ('${nomeSala}', ${andarSala}, ${fkEmpresa});
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -63,7 +63,7 @@ function publicar(nomeSala, andarSala) {
 function editar(novaSala, idSala) {
     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function editar(): ", novaSala, idSala);
     var instrucao = `
-        UPDATE salas SET descricao = '${novaSala}' WHERE id = ${idSala};
+        UPDATE salas SET descricao = '${novaSala}' WHERE idSalas = ${idSala};
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -72,7 +72,7 @@ function editar(novaSala, idSala) {
 function deletar(idSala) {
     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function deletar():", idSala);
     var instrucao = `
-        DELETE FROM salas WHERE id = ${idSala};
+        DELETE FROM salas WHERE idSalas = ${idSala};
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
