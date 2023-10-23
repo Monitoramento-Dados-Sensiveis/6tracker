@@ -98,10 +98,11 @@ function publicar(req, res) {
 }
 
 function editar(req, res) {
-    var novaSala = req.body.novaSala;
+    var nomeSala = req.body.nomeSala;
+    var andarSala = req.body.andarSala;
     var idSala = req.params.idSala;
 
-    salaModel.editar(novaSala, idSala)
+    salaModel.editar(nomeSala, andarSala, idSala)
         .then(
             function (resultado) {
                 res.json(resultado);

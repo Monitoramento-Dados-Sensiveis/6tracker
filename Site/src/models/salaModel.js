@@ -60,10 +60,10 @@ function publicar(nomeSala, andarSala, fkEmpresa) {
     return database.executar(instrucao);
 }
 
-function editar(novaSala, idSala) {
-    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function editar(): ", novaSala, idSala);
+function editar(nomeSala, andarSala, idSala) {
+    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function editar(): ", idSala);
     var instrucao = `
-        UPDATE salas SET descricao = '${novaSala}' WHERE idSalas = ${idSala};
+        UPDATE salas SET nomeSala = '${nomeSala}', andarSala = ${andarSala} WHERE idSalas = ${idSala};
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

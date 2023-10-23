@@ -525,7 +525,7 @@ Coded by www.creative-tim.com
                           <td>
                             ${andarSala}
                               <i style="margin-left: 10vh; cursor:pointer"class="fa fa-edit" onclick="editarModal(${idSala}, '${nomeSala}', ${andarSala})"></i>
-                              <i style="margin-left: 5vh; cursor:pointer" class="fa fa-trash"></i>
+                              <i style="margin-left: 5vh; cursor:pointer" class="fa fa-trash" onclick="deletar(${idSala})"></i>
                           </td>
 
                         </tr>
@@ -541,7 +541,6 @@ Coded by www.creative-tim.com
 
 
         function publicar() {
-          alert(1)
           // var idUsuario = 1
 
           var corpo = {
@@ -549,7 +548,6 @@ Coded by www.creative-tim.com
               andarSala: inp_andar.value,
               fkEmpresa: sessionStorage.getItem("FK_EMPRESA")
           }
-          console.log(corpo)
 
           window.alert("publicando")
           fetch(`/sala/publicar`, {
@@ -583,17 +581,48 @@ Coded by www.creative-tim.com
 
 
     function deletar(idSala) {
-        console.log("Criar função de apagar sala escolhido - ID" + idSala);
-        fetch(`/servidor/deletar/${idSala}`, {
+        var promptConfimacao = prompt('Digite "deletar" para apagar a sala');
+
+        if (promptConfimacao != "deletar") {
+          window.alert("Você não digitou deletar então a sala não sera apagada")
+          return
+        }
+
+        fetch(`/sala/deletar/${idSala}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
             }
         }).then(function (resposta) {
-
             if (resposta.ok) {
-                window.alert("Sala deletada com sucesso pelo usuario de ID: " + idUsuario + "!");
-                window.location = "/dashboard/mural.html"
+                window.alert("Sala deletada com sucesso");
+                window.location = "addSala.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+    function editar(idSala) {
+          var corpo = {
+              nomeSala: inp_edit_name.value,
+              andarSala: inp_edit_andar.value
+          }
+
+        fetch(`/sala/editar/${idSala}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                window.alert("Sala editada com sucesso");
+                window.location = "addSala.html"
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
