@@ -7,19 +7,19 @@ Pesquisa & Inovação
 • Diagrama de Solução Técnica (Arquitetura Técnica) ✔
 
 Linguagem de Programação
-• Jar inicial do Projeto Console conectado no DB com Listar informações usando a biblioteca Looca ❌
+• Jar inicial do Projeto Console conectado no DB com Listar informações usando a biblioteca Looca ✔
 
 Análise de Requisitos
 • Caso de uso ✔
 • Product backlog de rastreabilidade ✔
 
 Sistemas Operacionais
-• Listar Processos via API ❌
+• Listar Processos via API ✔
 • Assistente de Instalação do Client (Wizard) ❌
 • VM na Nuvem AWS ✔
 
 Cálculo Computacional
 • Captura de processos (ETL) ✔
-• Mineração dos dados (Modelos analíticos) - R ❌
+• Mineração dos dados (Modelos analíticos) - R ✔
 • Gráfico/Dashboard ❌
 • Definição de Alertas e Métricas ✔

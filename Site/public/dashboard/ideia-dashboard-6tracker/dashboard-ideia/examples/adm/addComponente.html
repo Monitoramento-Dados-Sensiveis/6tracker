@@ -38,13 +38,13 @@ Coded by www.creative-tim.com
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="./principalDashAdm.html" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="../../assets/img/6Tracker/logo-sf-vertical-preta.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="./principalDashAdm.html" class="simple-text logo-normal">
           6Tracker
           <!-- <div class="logo-image-big">
             <img src="../../assets/img/logo-big.png">
@@ -113,7 +113,7 @@ Coded by www.creative-tim.com
             </a>
           </li>
           <li>
-            <a href="../inicioAdm/tables.html">
+            <a href="../inicioAdm/user2.html">
               <i class="nc-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
@@ -385,9 +385,9 @@ Coded by www.creative-tim.com
           <div class="row">
             <nav class="footer-nav">
               <ul>
-                <li><a href="https://www.creative-tim.com" target="_blank">Suporte</a></li>
-                <li><a href="https://www.creative-tim.com/blog" target="_blank">Comunicação</a></li>
-                <li><a href="https://www.creative-tim.com/license" target="_blank">Site institucional</a></li>
+                <li><a href="./principalDashAdm.html" target="_blank">Suporte</a></li>
+                <li><a href="./principalDashAdm.html/blog" target="_blank">Comunicação</a></li>
+                <li><a href="./principalDashAdm.html/license" target="_blank">Site institucional</a></li>
               </ul>
             </nav>
             <div class="credits ml-auto">
@@ -421,8 +421,9 @@ Coded by www.creative-tim.com
 
 </html>
 <script>
-  var idServidor = sessionStorage.getItem('ID_EMPRESA')
-    fetch(`/componente/buscar/${idServidor}`)
+  sessionStorage.ID_SERVIDOR = 1
+  var idServidor = sessionStorage.getItem('ID_SERVIDOR')
+    fetch(`/componente/buscar/`)
         .then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
 
@@ -450,17 +451,17 @@ Coded by www.creative-tim.com
                         selectElement.appendChild(optionElement);
 
                         // Cria outro novo elemento de opção
-                        const optionElement2 = document.createElement('option');
-                        optionElement2.value = servidor.fkServidor;
-                        optionElement2.text = servidorNome;
-                        selectElement2.appendChild(optionElement2);
+                        // const optionElement2 = document.createElement('option');
+                        // optionElement2.value = servidor.fkServidor;
+                        // optionElement2.text = servidorNome;
+                        // selectElement2.appendChild(optionElement2);
 
-                        // Cria um terceiro novo elemento de opção
-                        const optionElement3 = document.createElement('option');
-                        optionElement3.value = servidor.fkEmp;
-                        optionElement3.text = servidorNome;
+                        // // Cria um terceiro novo elemento de opção
+                        // const optionElement3 = document.createElement('option');
+                        // optionElement3.value = servidor.fkEmp;
+                        // optionElement3.text = servidorNome;
 
-                        selectElement3.appendChild(optionElement3);
+                        // selectElement3.appendChild(optionElement3);
                     }
 
 

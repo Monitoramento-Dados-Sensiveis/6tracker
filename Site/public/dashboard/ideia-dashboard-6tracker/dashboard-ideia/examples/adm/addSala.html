@@ -1,5 +1,4 @@
-<!--
-=========================================================
+<!--=========================================================
 * Paper Dashboard 2 - v2.0.1
 =========================================================
 
@@ -35,16 +34,94 @@ Coded by www.creative-tim.com
 </head>
 
 <body class="">
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Sala</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+              <div class="card-body">
+                <form>
+                  <div class="row">
+                    <div class="col-md-5 pr-1">
+                      <div class="form-group">
+                        <label>Nome da Sala:</label>
+                        <input id="inp_edit_name" type="text" class="form-control" placeholder="Nome sala">
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-3 px-1">
+                      <div class="form-group">
+                        <label>Andar da Sala</label>
+                        <input type="text" class="form-control" placeholder="Andar da Sala">
+                      </div>
+                    </div> -->
+                    <!-- <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Número da Sala: </label>
+                        <input type="text" class="form-control" placeholder="Número da Sala: ">
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
+                        <label>Andar da Sala</label>
+                        <input id="inp_edit_andar" type="Number" class="form-control" placeholder="Andar Sala" >
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <label>Andar da Sala:</label>
+                        <input type="text" class="form-control" placeholder="Andar">
+                      </div>
+                    </div> -->
+                  </div>
+                  <!-- <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Nome: </label>
+                        <input type="text" class="form-control" placeholder="Nome da Sala">
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Descrição sobre a Sala: </label>
+                        <textarea class="form-control textarea" placeholder="Adicione dados importantes sobre a Sala."></textarea>
+                      </div>
+                    </div>
+                  </div> -->
+
+
+                </form>
+          </div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button id="btn_edit" onclick="editar(this.value)" type="button" class="btn btn-primary" style="background-color: #cf41d1;">Salvar mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="./principalDashAdm.html" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="../../assets/img/6Tracker/logo-sf-vertical-preta.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="./principalDashAdm.html" class="simple-text logo-normal">
           6Tracker
           <!-- <div class="logo-image-big">
             <img src="../../assets/img/logo-big.png">
@@ -113,7 +190,7 @@ Coded by www.creative-tim.com
             </a>
           </li>
           <li>
-            <a href="../inicio/tables.html">
+            <a href="../inicioAdm/user2.html">
               <i class="nc-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
@@ -203,7 +280,7 @@ Coded by www.creative-tim.com
                 <div class="author">
                   <a href="#">
                     <img class="avatar border-gray" src="../../assets/img/faces/frizza.jpg" alt="...">
-                    <h5 class="title" style="color: #254D32;">Claudio Frizzarini</h5>
+                    <h5 class="title" style="color: #cf41d1;">Claudio Frizzarini</h5>
                   </a>
                   <p class="description">
                     @frizza
@@ -303,27 +380,15 @@ Coded by www.creative-tim.com
                     <div class="col-md-5 pr-1">
                       <div class="form-group">
                         <label>Nome da Sala:</label>
-                        <input type="text" class="form-control" placeholder="Nome sala">
+                        <input id="inp_name" type="text" class="form-control" placeholder="Nome sala">
                       </div>
                     </div>
-                    <!-- <div class="col-md-3 px-1">
-                      <div class="form-group">
-                        <label>Andar da Sala</label>
-                        <input type="text" class="form-control" placeholder="Andar da Sala">
-                      </div>
-                    </div> -->
-                    <!-- <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Número da Sala: </label>
-                        <input type="text" class="form-control" placeholder="Número da Sala: ">
-                      </div>
-                    </div> -->
                   </div>
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>Andar da Sala</label>
-                        <input type="text" class="form-control" placeholder="Andar Sala" >
+                        <input id="inp_andar" type="Number" class="form-control" placeholder="Andar Sala" >
                       </div>
                     </div>
                     <!-- <div class="col-md-6 pl-1">
@@ -351,10 +416,32 @@ Coded by www.creative-tim.com
                   </div> -->
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Adicionar Sala</button>
+                      <button onclick="publicar()" type="submit" class="btn btn-primary btn-round" style="background-color: #cf41d1;">Adicionar Sala</button>
                     </div>
                   </div>
+
+                  <div class="row">
+                  </div>
+
                 </form>
+
+                <div class="table" style="margin-top: 8vh;">
+                  <table class="table">
+                    <thead class=" text-primary">
+
+
+                    </thead>
+                    <tbody id="tb_sala">
+                      <tr>
+                        <th>
+                          Sala 
+                        </th>
+                        <th>
+                          Andar 
+                        </th>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
@@ -365,9 +452,9 @@ Coded by www.creative-tim.com
           <div class="row">
             <nav class="footer-nav">
               <ul>
-                <li><a href="https://www.creative-tim.com" target="_blank">Suporte</a></li>
-                <li><a href="https://www.creative-tim.com/blog" target="_blank">Comunicação</a></li>
-                <li><a href="https://www.creative-tim.com/license" target="_blank">Site institucional</a></li>
+                <li><a href="./principalDashAdm.html" target="_blank">Suporte</a></li>
+                <li><a href="./principalDashAdm.html/blog" target="_blank">Comunicação</a></li>
+                <li><a href="./principalDashAdm.html/license" target="_blank">Site institucional</a></li>
               </ul>
             </nav>
             <div class="credits ml-auto">
@@ -400,3 +487,165 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
+<script>
+  // function limparFormulario() {
+  //       document.getElementById("form_postagem").reset();
+  //   }
+    function editarModal(idSala, nome, sala) {
+      document.getElementById("inp_edit_name").value = nome;
+      document.getElementById("inp_edit_andar").value = sala;
+      document.getElementById("btn_edit").value = idSala;
+      $('#exampleModal').modal('show')
+    }
+
+    fetch(`/sala/buscar`)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    const dataSize = json.length;
+                    const tbody = document.getElementById("tb_sala");
+
+                    for (let i = 0; i < dataSize; i++) {
+                      var idSala = json[i]["idSalas"]
+                      var nomeSala = json[i]["nomeSala"]
+                      var andarSala = json[i]["andarSala"]
+
+                      tbody.innerHTML += `
+                        <tr>
+                          <td>
+                            ${nomeSala}
+                          </td>
+                          <td>
+                            ${andarSala}
+                              <i style="margin-left: 10vh; cursor:pointer"class="fa fa-edit" onclick="editarModal(${idSala}, '${nomeSala}', ${andarSala})"></i>
+                              <i style="margin-left: 5vh; cursor:pointer" class="fa fa-trash" onclick="deletar(${idSala})"></i>
+                          </td>
+
+                        </tr>
+                      `
+                    } 
+                });
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "O Login está inválido";
+        })
+
+
+        function publicar() {
+          // var idUsuario = 1
+
+          var corpo = {
+              nomeSala: inp_name.value,
+              andarSala: inp_andar.value,
+              fkEmpresa: sessionStorage.getItem("FK_EMPRESA")
+          }
+
+          window.alert("publicando")
+          fetch(`/sala/publicar`, {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(corpo)
+          }).then(function (resposta) {
+
+              console.log("resposta: ", resposta);
+
+              if (resposta.ok) {
+                  window.alert("Sala cadastrada com sucesso!");
+                  window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addSala.html";
+                  limparFormulario();
+                  finalizarAguardar();
+              } else if (resposta.status == 404) {
+                  window.alert("Deu 404!");
+              } else {
+                  throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+              }
+          }).catch(function (resposta) {
+              console.log(`#ERRO: ${resposta}`);
+              // finalizarAguardar();
+          });
+
+          return false;
+
+    }
+
+
+    function deletar(idSala) {
+        var promptConfimacao = prompt('Digite "deletar" para apagar a sala');
+
+        if (promptConfimacao != "deletar") {
+          window.alert("Você não digitou deletar então a sala não sera apagada")
+          return
+        }
+
+        fetch(`/sala/deletar/${idSala}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                window.alert("Sala deletada com sucesso");
+                window.location = "addSala.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+    function editar(idSala) {
+          var corpo = {
+              nomeSala: inp_edit_name.value,
+              andarSala: inp_edit_andar.value
+          }
+
+        fetch(`/sala/editar/${idSala}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                window.alert("Sala editada com sucesso");
+                window.location = "addSala.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
+  function testar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+
+        var divResultado = document.getElementById("div_feed");
+
+        divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
+        divResultado.innerHTML = formulario.get("descricao");
+
+        finalizarAguardar();
+
+        return false;
+    }
+
+</script>

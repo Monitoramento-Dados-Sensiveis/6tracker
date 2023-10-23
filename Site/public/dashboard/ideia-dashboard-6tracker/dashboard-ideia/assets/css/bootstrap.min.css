@@ -658,8 +658,9 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px
+    margin-right: 0vw;
+    margin-left: 0vh;
+    margin-top: 1vw;
 }
 
 .no-gutters {
@@ -1339,7 +1340,7 @@ pre code {
         flex: 0 0 50%;
         max-width: 40%
     }
-    
+
     .col-md-69 {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
@@ -1379,13 +1380,13 @@ pre code {
     .col-md-12 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
-        max-width: 100%;        
+        max-width: 100%;
     }
 
     .col-md-12-1 {
-        -ms-flex: 0 0 70%;
+
         flex: 0 0 45vw;
-        max-width: 70%
+        max-width: 45vw
     }
 
     .order-md-first {
@@ -2925,10 +2926,10 @@ fieldset:disabled a.btn {
 .btn-primary {
     color: #fff;
     background-color: #007bff;
-    border-color: #007bff;    
+    border-color: #007bff;
 }
 
-#btn-user{
+#btn-user {
     position: relative;
     top: 3rem;
 }
@@ -7067,7 +7068,7 @@ a.close.disabled {
     transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out
 }
 
-@media (prefers-reduced-motion:reduce) {        
+@media (prefers-reduced-motion:reduce) {
     .carousel-item {
         transition: none
     }
@@ -7593,17 +7594,17 @@ button.bg-dark:hover {
 }
 
 @media (min-width:576px) {
-    #btn-user {       
+    #btn-user {
         position: relative;
-        top: 0rem;  
-        right: 2.7vw;      
+        top: 0rem;
+        right: 2.7vw;
     }
 
-    #confirmacaoSenha{
+    #confirmacaoSenha {
         position: relative;
         left: 12.5vw;
     }
-    
+
     .d-sm-none {
         display: none !important
     }
@@ -7644,11 +7645,11 @@ button.bg-dark:hover {
 }
 
 @media (min-width:768px) {
-    #btn-user {        
+    #btn-user {
         position: relative;
         top: 3rem;
     }
-    
+
     .d-md-none {
         display: none !important
     }
@@ -8021,6 +8022,7 @@ button.bg-dark:hover {
     -ms-flex-item-align: stretch !important;
     align-self: stretch !important
 }
+
 .card_erro {
     display: none;
     background-color: #ff3366;
@@ -8046,32 +8048,32 @@ button.bg-dark:hover {
     animation: slideInFromRight 1s ease-in-out forwards;
     animation: slideInFromRight 1s ease-in-out forwards, slideOutToRight 1s ease-in-out 2s forwards;
     z-index: 9;
-  }
-  
-  @keyframes slideOutToRight {
+}
+
+@keyframes slideOutToRight {
     0% {
-      right: 10%;
-      /* Inicialmente, na posição desejada */
+        right: 10%;
+        /* Inicialmente, na posição desejada */
     }
-  
+
     100% {
-      right: -400px;
-      /* Volta para a direita após 5 segundos */
+        right: -400px;
+        /* Volta para a direita após 5 segundos */
     }
-  }
-  
-  @keyframes slideInFromRight {
+}
+
+@keyframes slideInFromRight {
     0% {
-      right: -400px;
-      /* Inicialmente, fora da tela à direita */
+        right: -400px;
+        /* Inicialmente, fora da tela à direita */
     }
-  
+
     100% {
-      right: 10%;
-      /* Desliza para a esquerda para uma posição desejada */
+        right: 10%;
+        /* Desliza para a esquerda para uma posição desejada */
     }
-  }
-    
+}
+
 
 @media (min-width:576px) {
     .flex-sm-row {
@@ -11518,13 +11520,14 @@ a.text-dark:hover {
 }
 
 @media screen and(max-width: 550px) {
-    #btn-user {       
+    #btn-user {
         position: relative;
         top: 0rem;
     }
+
     /* #confirmacaoSenha{
         position: relative;
         right: 13vw;
     } */
-    
+
 }

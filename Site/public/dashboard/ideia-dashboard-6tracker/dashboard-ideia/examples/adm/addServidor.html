@@ -38,13 +38,13 @@ Coded by www.creative-tim.com
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
-        <a href="https://www.creative-tim.com" class="simple-text logo-mini">
+        <a href="./principalDashAdm.html" class="simple-text logo-mini">
           <div class="logo-image-small">
             <img src="../../assets/img/6Tracker/logo-sf-vertical-preta.png">
           </div>
           <!-- <p>CT</p> -->
         </a>
-        <a href="https://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="./principalDashAdm.html" class="simple-text logo-normal">
           6Tracker
           <!-- <div class="logo-image-big">
             <img src="../../assets/img/logo-big.png">
@@ -113,7 +113,7 @@ Coded by www.creative-tim.com
             </a>
           </li>
           <li>
-            <a href="../inicio/tables.html">
+            <a href="../inicioAdm/user2.html">
               <i class="nc-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
@@ -204,12 +204,12 @@ Coded by www.creative-tim.com
                 <h5 class="card-title">Adicionar servidor</h5>
               </div>
               <div class="card-body">
-                <form>
+                <form id="form_postagem" method="post" onsubmit="return publicar()">
                     <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
                             <label>Nome: </label>
-                            <input type="text" class="form-control" placeholder="Identificação do servidor">
+                            <input name="nome" id="nome" maxlength="100" type="text" class="form-control" placeholder="Identificação do servidor">
                           </div>
                         </div>
                       </div>
@@ -218,13 +218,13 @@ Coded by www.creative-tim.com
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
                             <label>Código:  </label>
-                            <input type="text" class="form-control" placeholder="Código do servidor:" >
+                            <input name="codigo" id="codigo" type="text" class="form-control" placeholder="Código do servidor:" >
                           </div>
                         </div>
                         <div class="col-md-6 pl-1">
                           <div class="form-group">
                             <label>Sistema Operacional:</label>
-                            <input type="text" class="form-control" placeholder="S.O. utilizado">
+                            <input name="so" id="so" type="text" class="form-control" placeholder="S.O. utilizado">
                           </div>
                         </div>
                       </div>
@@ -232,20 +232,37 @@ Coded by www.creative-tim.com
                         <div class="col-md-6 pr-1">
                           <div class="form-group">
                             <label>USB:  </label>
-                            <input type="text" class="form-control" placeholder="Conexão USB" >
+                            <input name="usb" id="usb" type="text" class="form-control" placeholder="Conexão USB" >
                           </div>
                         </div>
                         <div class="col-md-6 pl-1">
                           <div class="form-group">
                             <label>Sala:</label>
-                            <input type="text" class="form-control" placeholder="Localização">
+                            <select class="form-control" id="salaSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                              <option value="">Salas</option>
+                            </select>
                           </div>
+                        </div>
+                      </div>
+
+
+        
+
+                      <div class="row">
+                        <div class="update ml-auto mr-auto">
+                          <button type="submit" class="btn btn-primary btn-round" style="background-color: #c211a1;">Adicionar servidor</button>
                         </div>
                       </div>
 
                       <div class="row">
                         <div class="update ml-auto mr-auto">
-                          <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Adicionar servidor</button>
+                          <button onclick="publicar()" type="submit" class="btn btn-primary btn-round" style="background-color: #c211a1;">Exibir servidores</button>
+                        </div>
+                        <div class="update ml-auto mr-auto">
+                          <button type="submit" class="btn btn-primary btn-round" style="background-color: #c211a1;">Editar servidor</button>
+                        </div>
+                        <div class="update ml-auto mr-auto">
+                          <button type="submit" class="btn btn-primary btn-round" style="background-color: #c211a1;">Excluir servidor</button>
                         </div>
                       </div>
 
@@ -315,9 +332,9 @@ Coded by www.creative-tim.com
           <div class="row">
             <nav class="footer-nav">
               <ul>
-                <li><a href="https://www.creative-tim.com" target="_blank">Suporte</a></li>
-                <li><a href="https://www.creative-tim.com/blog" target="_blank">Comunicação</a></li>
-                <li><a href="https://www.creative-tim.com/license" target="_blank">Site institucional</a></li>
+                <li><a href="./principalDashAdm.html" target="_blank">Suporte</a></li>
+                <li><a href="./principalDashAdm.html/blog" target="_blank">Comunicação</a></li>
+                <li><a href="./principalDashAdm.html/license" target="_blank">Site institucional</a></li>
               </ul>
             </nav>
             <div class="credits ml-auto">
@@ -350,3 +367,141 @@ Coded by www.creative-tim.com
 </body>
 
 </html>
+
+<script>
+  // function limparFormulario() {
+  //       document.getElementById("form_postagem").reset();
+  //   }
+
+  sessionStorage.ID_SALA = 1
+  var idSala = sessionStorage.getItem('ID_SALA')
+    fetch(`/servidor/buscar/`)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var salas = json
+
+                    var selectElement = document.getElementById('salaSelect');
+
+                    // Itera sobre o array de empresas e cria as opções do select
+                    for (let i = 0; i < salas.length; i++) {
+                        const sala = salas[i];
+                        const salaNome = salas[i].nomeSala;
+
+                        // Cria um novo elemento de opção em cada iteração
+                        const optionElement = document.createElement('option');
+                        optionElement.value = '../Dashboard.html';
+                        optionElement.text = salaNome;
+
+                        selectElement.appendChild(optionElement);
+
+                        // Cria outro novo elemento de opção
+                        // const optionElement2 = document.createElement('option');
+                        // optionElement2.value = servidor.fkServidor;
+                        // optionElement2.text = servidorNome;
+                        // selectElement2.appendChild(optionElement2);
+
+                        // // Cria um terceiro novo elemento de opção
+                        // const optionElement3 = document.createElement('option');
+                        // optionElement3.value = servidor.fkEmp;
+                        // optionElement3.text = servidorNome;
+
+                        // selectElement3.appendChild(optionElement3);
+                    }
+
+
+                });
+
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "O Login está inválido";
+        })
+
+
+    function publicar() {
+        // var idUsuario = 1
+
+        var corpo = {
+            nome: form_postagem.nome.value,
+            codigo: form_postagem.codigo.value,
+            so: form_postagem.so.value,
+            usb: form_postagem.usb.value,
+            sala: form_postagem.sala.value,
+        }
+
+        fetch(`/servidor/publicar`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(corpo)
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Servidor cadastrado com sucesso!");
+                window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addServidor.html";
+                limparFormulario();
+                finalizarAguardar();
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
+
+    }
+
+    // function deletar(idServidor) {
+    //     console.log("Criar função de apagar servidor escolhido - ID" + idServidor);
+    //     fetch(`/servidor/deletar/${idServidor}`, {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
+    //     }).then(function (resposta) {
+
+    //         if (resposta.ok) {
+    //             window.alert("Servidor deletado com sucesso pelo usuario de ID: " + idUsuario + "!");
+    //             window.location = "/dashboard/mural.html"
+    //         } else if (resposta.status == 404) {
+    //             window.alert("Deu 404!");
+    //         } else {
+    //             throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+    //         }
+    //     }).catch(function (resposta) {
+    //         console.log(`#ERRO: ${resposta}`);
+    //     });
+    // }
+
+  function testar() {
+        aguardar();
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+
+        var divResultado = document.getElementById("div_feed");
+
+        divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
+        divResultado.innerHTML = formulario.get("descricao");
+
+        finalizarAguardar();
+
+        return false;
+    }
+
+</script>

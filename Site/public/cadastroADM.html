@@ -214,7 +214,7 @@
 
         if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(senhaVar) || senhaVar.length < 8) {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "Senha Inválida!";
+            mensagem_erro.innerHTML = "Senha Inválida! Coloque um caracter especial e mais de 8 dígitos";
 
             setTimeout(function () {
                 cardErro.style.display = "none";
