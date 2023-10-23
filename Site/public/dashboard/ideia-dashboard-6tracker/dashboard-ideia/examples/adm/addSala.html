@@ -1,5 +1,4 @@
-<!--
-=========================================================
+<!--=========================================================
 * Paper Dashboard 2 - v2.0.1
 =========================================================
 
@@ -351,13 +350,13 @@ Coded by www.creative-tim.com
                   </div> -->
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round" style="background-color: #cf41d1;">Adicionar Sala</button>
+                      <button onclick="publicar()" type="submit" class="btn btn-primary btn-round" style="background-color: #cf41d1;">Adicionar Sala</button>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button onclick="publicar()" type="submit" class="btn btn-primary btn-round" style="background-color: #cf41d1;">Exibir Salas</button>
+                      <button   type="submit" class="btn btn-primary btn-round" style="background-color: #cf41d1;">Exibir Salas</button>
                     </div>
                     <div class="update ml-auto mr-auto">
                       <button type="submit" class="btn btn-primary btn-round" style="background-color: #cf41d1;">Editar Sala</button>
@@ -420,7 +419,8 @@ Coded by www.creative-tim.com
 
   sessionStorage.ID_SALA = 1
   var idSala = sessionStorage.getItem('ID_SALA')
-    fetch(`/servidor/buscar/`)
+
+    fetch(`/sala/buscar/`)
         .then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
 
@@ -472,18 +472,16 @@ Coded by www.creative-tim.com
         })
 
 
-    function publicar() {
+        function publicar() {
         // var idUsuario = 1
 
         var corpo = {
-            nome: form_postagem.nome.value,
-            codigo: form_postagem.codigo.value,
-            so: form_postagem.so.value,
-            usb: form_postagem.usb.value,
-            sala: form_postagem.sala.value,
+            nomeSala: form_postagem.nomeSala.value,
+            andarSala: form_postagem.andarSala.value,
+            
         }
 
-        fetch(`/servidor/publicar`, {
+        fetch(`/sala/publicar`, {
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -512,6 +510,7 @@ Coded by www.creative-tim.com
 
     }
 
+
     function deletar(idSala) {
         console.log("Criar função de apagar sala escolhido - ID" + idSala);
         fetch(`/servidor/deletar/${idSala}`, {
@@ -522,7 +521,7 @@ Coded by www.creative-tim.com
         }).then(function (resposta) {
 
             if (resposta.ok) {
-                window.alert("Sala deletado com sucesso pelo usuario de ID: " + idUsuario + "!");
+                window.alert("Sala deletada com sucesso pelo usuario de ID: " + idUsuario + "!");
                 window.location = "/dashboard/mural.html"
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");

@@ -13,7 +13,7 @@ var database = require("../database/config");
 //     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function pesquisarDescricao()");
 //     var instrucao = `
 //         SELECT 
-//             a.id AS idAviso,
+//             a.id AS idSala,
 //             a.titulo,
 //             a.descricao,
 //             a.fk_usuario,
@@ -34,7 +34,7 @@ var database = require("../database/config");
 //     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listarPorUsuario()");
 //     var instrucao = `
 //         SELECT 
-//             a.id AS idAviso,
+//             a.id AS idSala,
 //             a.titulo,
 //             a.descricao,
 //             a.fk_usuario,
@@ -51,32 +51,32 @@ var database = require("../database/config");
 //     return database.executar(instrucao);
 // }
 
-function publicar(nome, codigo, so, usb, sala) {
-    console.log("ACESSEI O SALA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", nome, codigo, so, usb, sala);
+function publicar(nomeSala, andarSala) {
+    console.log("ACESSEI O SALA MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", nomeSala, andarSala);
     var instrucao = `
-        INSERT INTO Salas (nomeSala, fkEmpresa) VALUES ('${nome}', '${codigo}',' ${so}', '${usb}', ${sala});
+        INSERT INTO Salas (nomeSala, andarSala) VALUES ('${nomeSala}', '${andarSala}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
-// function editar(novaDescricao, idAviso) {
-//     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function editar(): ", novaDescricao, idAviso);
-//     var instrucao = `
-//         UPDATE aviso SET descricao = '${novaDescricao}' WHERE id = ${idAviso};
-//     `;
-//     console.log("Executando a instrução SQL: \n" + instrucao);
-//     return database.executar(instrucao);
-// }
+function editar(novaSala, idSala) {
+    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function editar(): ", novaSala, idSala);
+    var instrucao = `
+        UPDATE salas SET descricao = '${novaSala}' WHERE id = ${idSala};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 
-// function deletar(idAviso) {
-//     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function deletar():", idAviso);
-//     var instrucao = `
-//         DELETE FROM aviso WHERE id = ${idAviso};
-//     `;
-//     console.log("Executando a instrução SQL: \n" + instrucao);
-//     return database.executar(instrucao);
-// }
+function deletar(idSala) {
+    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function deletar():", idSala);
+    var instrucao = `
+        DELETE FROM salas WHERE id = ${idSala};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 
 
 function buscarSalas(){
@@ -102,6 +102,6 @@ module.exports = {
     // listarPorUsuario,
     // pesquisarDescricao,
     publicar,
-    // editar,
-    // deletar
+    editar,
+    deletar
 }

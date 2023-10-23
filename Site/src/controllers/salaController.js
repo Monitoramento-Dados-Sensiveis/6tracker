@@ -1,4 +1,4 @@
-var servidorModel = require("../models/servidorModel");
+var salaModel = require("../models/salaModel");
 
 function testar(req, res) {
     console.log("ENTRAMOS NO salaController");
@@ -22,7 +22,7 @@ function testar(req, res) {
 // function listarPorUsuario(req, res) {
 //     var idUsuario = req.params.idUsuario;
 
-//     avisoModel.listarPorUsuario(idUsuario)
+//     salaModel.listarPorUsuario(idUsuario)
 //         .then(
 //             function (resultado) {
 //                 if (resultado.length > 0) {
@@ -47,7 +47,7 @@ function testar(req, res) {
 // function pesquisarDescricao(req, res) {
 //     var descricao = req.params.descricao;
 
-//     avisoModel.pesquisarDescricao(descricao)
+//     salaModel.pesquisarDescricao(descricao)
 //         .then(
 //             function (resultado) {
 //                 if (resultado.length > 0) {
@@ -66,25 +66,22 @@ function testar(req, res) {
 // }
 
 function publicar(req, res) {
-    var nome = req.body.nome;
-    var codigo = req.body.codigo;
-    var so = req.body.so;
-    var usb = req.body.usb;
-    var sala = req.body.sala;
+    var nomeSala = req.body.nomeSala;
+    var andarSala = req.body.andarSala;
+    var fkEmpresa = req.body.fkEmpresa;
+    // var usb = req.body.usb;
+    // var sala = req.body.sala;
     // var idUsuario = req.params.idUsuario;
 
-    if (nome == undefined) {
+    if (nomeSala == undefined) {
         res.status(400).send("O nome está indefinido!");
-    } else if (codigo == undefined) {
-        res.status(400).send("O codigo está indefinido!");
-    } else if (so == undefined) {
-        res.status(403).send("O SO está indefinido!");
-    } else if (usb == undefined) {
-        res.status(403).send("O usb está indefinido!");
-    } else if (sala == undefined) {
-        res.status(403).send("A sala está indefinida!");
-    } else {
-        servidorModel.publicar(nome, codigo, so, usb, sala)
+    } else if (andarSala == undefined) {
+        res.status(400).send("O andarSala está indefinido!");
+    } else if (fkEmpresa != sessionStorage) {
+        res.status(403).send("O fkEmpresa está indefinido!");
+    } 
+    else {
+        salaModel.publicar(nome, andarSala)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -101,10 +98,10 @@ function publicar(req, res) {
 }
 
 function editar(req, res) {
-    var novaDescricao = req.body.descricao;
-    var idAviso = req.params.idAviso;
+    var novaSala = req.body.novaSala;
+    var idSala = req.params.idSala;
 
-    avisoModel.editar(novaDescricao, idAviso)
+    salaModel.editar(novaSala, idSala)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -121,9 +118,9 @@ function editar(req, res) {
 }
 
 function deletar(req, res) {
-    var idAviso = req.params.idAviso;
+    var idSala = req.params.idSala;
 
-    avisoModel.deletar(idAviso)
+    salaModel.deletar(idSala)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -143,7 +140,7 @@ function buscarSalas(req, res){
 
     console.log(`Recuperando medidas em tempo real`);
 
-    servidorModel.buscarSalas().then(function (resultado) {
+    salaModel.buscarSalas().then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
