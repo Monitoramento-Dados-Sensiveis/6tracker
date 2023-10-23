@@ -20,6 +20,40 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2015 Daniel Eden
 */
+
+#div_erros_login {
+  display: none
+}
+
+.alerta_erro{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card_erro { 
+  display: none;
+  background-color: #ff3366;
+  /* Cor de fundo mais atraente */
+  color: #fff;
+  /* Texto em branco para contraste */
+  width: 17vw;
+  position: fixed;
+  border-radius: 10px;
+  border: 2px solid #e6005a;
+  /* Borda ligeiramente mais fina */
+  padding: 20px;
+  /* Maior espaçamento interno */
+  margin-left: 50%;
+  position: relative;
+  bottom: 75vh;    
+}
+
+.card_erro #mensagem_erro{
+  font-weight: bolder;
+  font-size: 1.15rem;
+}
+
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
