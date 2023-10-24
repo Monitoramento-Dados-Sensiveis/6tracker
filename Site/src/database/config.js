@@ -22,7 +22,7 @@ var mySqlConfig = {
     host: "localhost",
     database: "sixtracker",
     user: "root",
-    password: "liligatinha123"
+    password: "ScottPippen33"
 };
 
 function executar(instrucao) {
