@@ -83,7 +83,7 @@ function buscarSalas(){
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-       instrucaoSql = `select nomeSala from Salas`;
+       instrucaoSql = `select idSalas, nomeSala from Salas`;
    } else {
        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
        return
