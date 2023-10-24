@@ -274,7 +274,8 @@
 
             if (resposta.ok) {
                 cardErro.style.display = "block";
-
+                cardErro.style.backgroundColor = "#02b41a";
+                cardErro.style.borderColor = "#02b41a";
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {

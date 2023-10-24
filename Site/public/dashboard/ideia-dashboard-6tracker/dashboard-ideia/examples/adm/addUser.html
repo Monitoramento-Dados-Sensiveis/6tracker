@@ -233,7 +233,7 @@ Coded by www.creative-tim.com
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Telefone: </label>
-                        <input id="telefone_input" type="number" class="form-control" placeholder="(XX) XXXX-XXXX">
+                        <input id="telefone_input" type="number" class="form-control" placeholder="(XX) XXXXX-XXXX">
                       </div>
                     </div>
                   </div>
@@ -412,75 +412,75 @@ Coded by www.creative-tim.com
     if (nivelPermissaoVar == "Admin") { nivelPermissaoVar = 1 }
     console.log(nivelPermissaoVar)
 
-    // if (nomeVar == "" || cpfVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "") {
-    //   cardErro.style.display = "block"
-    //   mensagem_erro.innerHTML = "Todos os campos são obrigatórios";
-    //   setTimeout(function () {
-    //     cardErro.style.display = "none";
-    //   }, 3000);
-    //   finalizarAguardar();
-    //   return false;
-    // }
+    if (nomeVar == "" || cpfVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "") {
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "Todos os campos são obrigatórios";
+      setTimeout(function () {
+        cardErro.style.display = "none";
+      }, 3000);
+      finalizarAguardar();
+      return false;
+    }
 
-    // if (senhaVar != confirmSenhaVar) {
-    //   cardErro.style.display = "block"
-    //   mensagem_erro.innerHTML = "Senhas diferentes!";
+    if (senhaVar != confirmSenhaVar) {
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "Senhas diferentes!";
 
-    //   setTimeout(function () {
-    //     cardErro.style.display = "none";
-    //   }, 3000);
+      setTimeout(function () {
+        cardErro.style.display = "none";
+      }, 3000);
 
-    //   finalizarAguardar();
-    //   return false;
-    // }
+      finalizarAguardar();
+      return false;
+    }
 
-    // if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.indexOf("@") > emailVar.indexOf(".com")) {
-    //   cardErro.style.display = "block"
-    //   mensagem_erro.innerHTML = "Email Inválido!";
+    if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.indexOf("@") > emailVar.indexOf(".com")) {
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "Email Inválido!";
 
-    //   setTimeout(function () {
-    //     cardErro.style.display = "none";
-    //   }, 3000);
+      setTimeout(function () {
+        cardErro.style.display = "none";
+      }, 3000);
 
-    //   finalizarAguardar();
-    //   return false;
-    // }
+      finalizarAguardar();
+      return false;
+    }
 
-    // if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(senhaVar) || senhaVar.length < 8) {
-    //   cardErro.style.display = "block"
-    //   mensagem_erro.innerHTML = "Senha Inválida! Coloque um caracter especial e mais de 8 dígitos";
+    if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(senhaVar) || senhaVar.length < 8) {
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "Senha Inválida! Coloque um caracter especial e mais de 8 dígitos";
 
-    //   setTimeout(function () {
-    //     cardErro.style.display = "none";
-    //   }, 3000);
+      setTimeout(function () {
+        cardErro.style.display = "none";
+      }, 3000);
 
-    //   finalizarAguardar();
-    //   return false;
-    // }
+      finalizarAguardar();
+      return false;
+    }
 
-    // if (telefoneVar.length != 11) {
-    //   cardErro.style.display = "block"
-    //   mensagem_erro.innerHTML = "Número de telefone inválido!";
+    if (telefoneVar.length != 11) {
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "Número de telefone inválido!";
 
-    //   setTimeout(function () {
-    //     cardErro.style.display = "none";
-    //   }, 3000);
+      setTimeout(function () {
+        cardErro.style.display = "none";
+      }, 3000);
 
-    //   finalizarAguardar();
-    //   return false;
-    // }
+      finalizarAguardar();
+      return false;
+    }
 
-    // if (cpfVar.length != 11) {
-    //   cardErro.style.display = "block"
-    //   mensagem_erro.innerHTML = "CPF inválido!";
+    if (cpfVar.length != 11) {
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "CPF inválido!";
 
-    //   setTimeout(function () {
-    //     cardErro.style.display = "none";
-    //   }, 3000);
+      setTimeout(function () {
+        cardErro.style.display = "none";
+      }, 3000);
 
-    //   finalizarAguardar();
-    //   return false;
-    // }    
+      finalizarAguardar();
+      return false;
+    }    
 
     console.log("Entrando no fetch");
     
@@ -505,11 +505,11 @@ Coded by www.creative-tim.com
 
       console.log("resposta: ", resposta);
 
-      if (resposta.ok) {
-        window.alert("Servidor cadastrado com sucesso!");
-        window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addUser.html";
-        limparFormulario();
-        finalizarAguardar();
+      if (resposta.ok) {        
+        cardErro.style.display = "block";
+        cardErro.style.backgroundColor = "#02b41a";
+        cardErro.style.borderColor = "#02b41a";
+        mensagem_erro.innerHTML = "Usuário adicionado com sucesso";        
       } else if (resposta.status == 404) {
         window.alert("Deu 404!");
       } else {
@@ -517,7 +517,7 @@ Coded by www.creative-tim.com
       }
     }).catch(function (resposta) {
       console.log(`#ERRO: ${resposta}`);
-      // finalizarAguardar();
+      finalizarAguardar();
     });
 
     return false;

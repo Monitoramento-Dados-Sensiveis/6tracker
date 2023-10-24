@@ -61,7 +61,7 @@
           </div>
 
           <div class="campo">
-            <input id="cnpj_input" type="number" class="input" required="required" />
+            <input id="cnpj_input" type="number" class="input" required="required"/>
             <span>CNPJ</span>
           </div>
 
@@ -269,7 +269,8 @@
 
       if (resposta.ok) {
         cardErro.style.display = "block";
-
+        cardErro.style.backgroundColor = "#02b41a";
+        cardErro.style.borderColor = "#02b41a";
         mensagem_erro.innerHTML = "Cadastro da empresa realizado com sucesso! Redirecionando para tela de cadastro ADM...";
 
         sessionStorage.NOME_EMPRESA = nomeEmpVar;
