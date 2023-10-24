@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/responsividade.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -267,8 +268,7 @@
   <!-- FIM DO FALE CONOSCO -->
 
 
-  <!-- COMEÇO DO FOOTER -->
-
+  <!--footer inicio-->
   <div class="footer">
     <div class="container-footer">
 
@@ -276,26 +276,54 @@
         <img src="./img/logo-sf-vertical-preta.png" alt="logo" width="200px">
       </div>
 
-      <div class="footer-info">
+      <div class="footer-info nav">
         <h1>Compania</h1>
-        <a class="footer-nav" href="index.html">Home</a>
-        <a class="footer-nav" href="index.html">Login</a>
-        <a class="footer-nav" href="index.html">Cadastro</a>
+        <button class="hamburger"></button>
+        <ul class="nav-list">
+          <li><a class="footer-nav cadastroMobile" href="index.html">Home</a></li>
+          <li><a class="footer-nav cadastroMobile" href="index.html">Login</a></li>
+          <li><a class="footer-nav cadastroMobile" href="index.html">Cadastro</a></li>
+        </ul>
       </div>
 
-      <div class="footer-info">
-        <h1>Social</h1>
-        <a class="footer-nav" href="index.html">GitHub</a>
-        <a class="footer-nav" href="index.html">Linkedln</a>
-        <a class="footer-nav" href="index.html">Instagram</a>
+      <div class="footer-info2 nav1">
+        <h1>Informações</h1>
+        <button class="hamburger1"></button>
+        <ul class="nav-list">
+          <li><a class="footer-nav cadastroMobile" href="index.html">Rua Haddock Lobo, 595 - São Paulo, Brasil</a></li>
+          <li><a class="footer-nav cadastroMobile" href="index.html">(00) 12345-6789</a></li>
+          <li><a class="footer-nav cadastroMobile" href="index.html">6tracker.contato@email.com</a></li>
+        </ul>
       </div>
 
     </div>
-  </div>
 
-  <!-- FIM DO FOOTER -->
+    <div class="container2_footer">
+      <div class="footer-direitos">© 2023 Copyrights by 6TRACKER. All Rights Reserved.</div>
+      <div class="icons-footer">
+        <a href="https://twitter.com/SptechSchool"><i class="fa fa-twitter-square"></i></a>
+        <a href="https://web.facebook.com/sptech.school/"><i class="fa fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/sptech.school/"><i class="fa fa-instagram"></i></a>
+        <a href="https://br.linkedin.com/school/sptechschool/"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+
+  </div>
+  <!--footer fim-->
 
 </html>
+<script>
+  const hamburger = document.querySelector(".hamburger")
+  const nav = document.querySelector(".nav")
+  const hamburger1 = document.querySelector(".hamburger1")
+  const nav1 = document.querySelector(".nav1")
+
+  hamburger.addEventListener("click",() =>
+  nav.classList.toggle("active"))
+  
+  hamburger1.addEventListener("click",() =>
+  nav1.classList.toggle("active"))
+</script>
 
 <script>
   function enviar() {
