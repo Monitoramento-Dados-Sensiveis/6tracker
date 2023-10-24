@@ -204,7 +204,6 @@ Coded by www.creative-tim.com
                 <h5 class="card-title">Adicionar servidor</h5>
               </div>
               <div class="card-body">
-                <form id="form_postagem" method="post" onsubmit="return publicar()">
                     <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
@@ -238,7 +237,7 @@ Coded by www.creative-tim.com
                         <div class="col-md-6 pl-1">
                           <div class="form-group">
                             <label>Sala:</label>
-                            <select class="form-control" id="salaSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                            <select class="form-control" id="salaSelect" name="unidade">
                               <option value="">Salas</option>
                             </select>
                           </div>
@@ -250,7 +249,7 @@ Coded by www.creative-tim.com
 
                       <div class="row">
                         <div class="update ml-auto mr-auto">
-                          <button type="submit" class="btn btn-primary btn-round" style="background-color: #c211a1;">Adicionar servidor</button>
+                          <button class="btn btn-primary btn-round" onclick="publicar()" style="background-color: #c211a1;">Adicionar servidor</button>
                         </div>
                       </div>
 
@@ -321,7 +320,6 @@ Coded by www.creative-tim.com
                       <button type="submit" class="btn btn-primary btn-round" style="background-color: #254D32;">Adicionar componente</button>
                     </div>
                   </div> -->
-                </form>
               </div>
             </div>
           </div>
@@ -375,7 +373,7 @@ Coded by www.creative-tim.com
 
   sessionStorage.ID_SALA = 1
   var idSala = sessionStorage.getItem('ID_SALA')
-    fetch(`/servidor/buscar/`)
+    fetch(`http://localhost:3333/servidor/buscar/`)
         .then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
 
@@ -397,7 +395,7 @@ Coded by www.creative-tim.com
 
                         // Cria um novo elemento de opção em cada iteração
                         const optionElement = document.createElement('option');
-                        optionElement.value = '../Dashboard.html';
+                        optionElement.value = salas[i].idSalas;
                         optionElement.text = salaNome;
 
                         selectElement.appendChild(optionElement);
@@ -429,14 +427,15 @@ Coded by www.creative-tim.com
 
     function publicar() {
         // var idUsuario = 1
-
         var corpo = {
-            nome: form_postagem.nome.value,
-            codigo: form_postagem.codigo.value,
-            so: form_postagem.so.value,
-            usb: form_postagem.usb.value,
-            sala: form_postagem.sala.value,
+            nome: nome.value,
+            codigo: codigo.value,
+            so: so.value,
+            usb: usb.value,
+            sala: salaSelect.value,
         }
+
+        console.log(corpo)
 
         fetch(`/servidor/publicar`, {
             method: "post",
