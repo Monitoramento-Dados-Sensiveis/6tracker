@@ -107,6 +107,49 @@ constraint FkComponenteRegistro foreign key (fkComponente)
 	references Componente (idComponente)    
 );
 
+select * from registro;
+
+CREATE TABLE rede (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nomeRede VARCHAR(50),
+            bytesEnviados LONG,
+            bytesRecebidos LONG,
+            dataHora TIMESTAMP,
+            fkServidor int,
+            constraint fkServidorRede foreign key (fkServidor) 
+			references Servidor(idServidor)
+        );
+       
+        select * from rede;
+	
+        
+ CREATE TABLE janelas (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nomeJanelaJson VARCHAR(1000),
+            quantidade INT,
+            dataHora TIMESTAMP,
+            fkServidor int,
+            constraint fkServidorJanelas foreign key (fkServidor) 
+			references Servidor (idServidor)
+        );
+        
+        
+        
+        select * from janelas;
+       
+        
+        CREATE TABLE  usb (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            idExclusivo varchar(30),
+            nomeUSB VARCHAR(50),
+            dataHora TIMESTAMP,
+            fkServidor int not null,
+            constraint fkServidor foreign key (fkServidor) 
+			references Servidor (idServidor)
+        );
+        
+        select * from usb;
+
 desc Permissao;
 desc NivelAcesso;
 desc Funcionario;
