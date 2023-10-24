@@ -21,6 +21,8 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
 
+
+
 #div_erros_login {
   display: none
 }
@@ -606,6 +608,14 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
   background-color: #51cbce;
   color: #FFFFFF;
 }
+
+.btn-primary1 {
+  position: relative;
+  top: 5vh;
+  right: 0.5vw;
+}
+
+
 
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2862,6 +2872,18 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   color: #fff;
 }
 
+.form-group1{
+  position: relative;
+  left: 12vw;
+  top: 1vh;
+}
+
+.form-group10{
+  position: relative;
+  left: 12.1vw;
+  top: 3vh;
+}
+
 .navbar p {
   display: inline-block;
   margin: 0;
@@ -3431,6 +3453,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   left: 30px !important;
   right: auto;
 }
+
 
 @media screen and (min-width: 768px) {
   .navbar-form {

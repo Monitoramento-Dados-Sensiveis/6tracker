@@ -22,7 +22,8 @@ Coded by www.creative-tim.com
   <title>
     Add Salas
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -36,82 +37,48 @@ Coded by www.creative-tim.com
 <body class="">
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Sala</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar Sala</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
 
-              <div class="card-body">
-                <form>
-                  <div class="row">
-                    <div class="col-md-5 pr-1">
-                      <div class="form-group">
-                        <label>Nome da Sala:</label>
-                        <input id="inp_edit_name" type="text" class="form-control" placeholder="Nome sala">
-                      </div>
-                    </div>
-                    <!-- <div class="col-md-3 px-1">
-                      <div class="form-group">
-                        <label>Andar da Sala</label>
-                        <input type="text" class="form-control" placeholder="Andar da Sala">
-                      </div>
-                    </div> -->
-                    <!-- <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Número da Sala: </label>
-                        <input type="text" class="form-control" placeholder="Número da Sala: ">
-                      </div>
-                    </div> -->
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-5 pr-1">
+                  <div class="form-group1">
+                    <label>Nome da Sala:</label>
+                    <input id="inp_edit_name" type="text" class="form-control" placeholder="Nome sala">
                   </div>
-                  <div class="row">
-                    <div class="col-md-6 pr-1">
-                      <div class="form-group">
-                        <label>Andar da Sala</label>
-                        <input id="inp_edit_andar" type="Number" class="form-control" placeholder="Andar Sala" >
-                      </div>
-                    </div>
-                    <!-- <div class="col-md-6 pl-1">
-                      <div class="form-group">
-                        <label>Andar da Sala:</label>
-                        <input type="text" class="form-control" placeholder="Andar">
-                      </div>
-                    </div> -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group1">
+                    <label>Andar da Sala</label>
+                    <input id="inp_edit_andar" type="Number" class="form-control" placeholder="Andar Sala">
                   </div>
-                  <!-- <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Nome: </label>
-                        <input type="text" class="form-control" placeholder="Nome da Sala">
-                      </div>
-                    </div>
-                  </div> -->
-                  <!-- <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Descrição sobre a Sala: </label>
-                        <textarea class="form-control textarea" placeholder="Adicione dados importantes sobre a Sala."></textarea>
-                      </div>
-                    </div>
-                  </div> -->
-
-
-                </form>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button id="btn_edit" onclick="editar(this.value)" type="button" class="btn btn-primary" style="background-color: #cf41d1;">Salvar mudanças</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button id="btn_edit" onclick="editar(this.value)" type="button" class="btn btn-primary"
+            style="background-color: #cf41d1;">Salvar mudanças</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
   <div class="wrapper ">
     <div class="sidebar" data-color="white" data-active-color="danger">
       <div class="logo">
@@ -139,9 +106,12 @@ Coded by www.creative-tim.com
           <li>
             <a href="./addUser.html">
               <i class="nc-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
-                  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-                  <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-person-add" viewBox="0 0 16 16">
+                  <path
+                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                  <path
+                    d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z" />
                 </svg>
               </i>
               <p>Adicionar usuários</p>
@@ -150,9 +120,11 @@ Coded by www.creative-tim.com
           <li>
             <a href="./addComponente.html">
               <i class="nc-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-plus-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                 </svg>
               </i>
               <p>Add componentes</p>
@@ -162,9 +134,11 @@ Coded by www.creative-tim.com
           <li class="active">
             <a href="./addSala.html">
               <i class="nc-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-plus-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                 </svg>
               </i>
               <p>Add Salas</p>
@@ -174,15 +148,17 @@ Coded by www.creative-tim.com
           <li>
             <a href="./addServidor.html">
               <i class="nc-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                  class="bi bi-plus-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                  <path
+                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                 </svg>
               </i>
               <p>Add servidor</p>
             </a>
           </li>
-         
+
           <li>
             <a href="./tables.html">
               <i class="nc-icon nc-tile-56"></i>
@@ -192,8 +168,10 @@ Coded by www.creative-tim.com
           <li>
             <a href="../inicioAdm/user2.html">
               <i class="nc-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                  class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
                 </svg>
               </i>
               <p>Voltar</p>
@@ -203,8 +181,8 @@ Coded by www.creative-tim.com
       </div>
     </div>
     <div class="main-panel">
-       <!-- Navbar -->
-       <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
         <div class="container-fluid">
           <div class="navbar-wrapper">
             <div class="navbar-toggle">
@@ -268,7 +246,7 @@ Coded by www.creative-tim.com
           </div>
         </div>
       </nav>
-      <!-- End Navbar --> 
+      <!-- End Navbar -->
       <div class="content">
         <div class="row">
           <div class="col-md-4-1">
@@ -292,8 +270,8 @@ Coded by www.creative-tim.com
                 </p>
               </div>
               <div class="card-footer"> -->
-                <hr>
-                <!-- <div class="button-container">
+            <hr>
+            <!-- <div class="button-container">
                   <div class="row">
                     <div class="col-lg-3 col-md-6 col-6 ml-auto">
                       <h5>12<br><small>Files</small></h5>
@@ -306,7 +284,7 @@ Coded by www.creative-tim.com
                     </div>
                   </div>
                 </div> -->
-             <!--  </div>
+            <!--  </div>
             </div> -->
             <!-- <div class="card">
               <div class="card-header">
@@ -378,7 +356,7 @@ Coded by www.creative-tim.com
                 <form>
                   <div class="row">
                     <div class="col-md-5 pr-1">
-                      <div class="form-group">
+                      <div class="form-group1">
                         <label>Nome da Sala:</label>
                         <input id="inp_name" type="text" class="form-control" placeholder="Nome sala">
                       </div>
@@ -386,9 +364,9 @@ Coded by www.creative-tim.com
                   </div>
                   <div class="row">
                     <div class="col-md-6 pr-1">
-                      <div class="form-group">
+                      <div class="form-group10">
                         <label>Andar da Sala</label>
-                        <input id="inp_andar" type="Number" class="form-control" placeholder="Andar Sala" >
+                        <input id="inp_andar" type="Number" class="form-control" placeholder="Andar Sala">
                       </div>
                     </div>
                     <!-- <div class="col-md-6 pl-1">
@@ -416,7 +394,8 @@ Coded by www.creative-tim.com
                   </div> -->
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button onclick="publicar()" type="submit" class="btn btn-primary btn-round" style="background-color: #cf41d1;">Adicionar Sala</button>
+                      <button onclick="publicar()" type="submit" class="btn btn-primary1 btn-round"
+                        style="background-color: #cf41d1;">Adicionar Sala</button>
                     </div>
                   </div>
 
@@ -434,10 +413,10 @@ Coded by www.creative-tim.com
                     <tbody id="tb_sala">
                       <tr>
                         <th>
-                          Sala 
+                          Sala
                         </th>
                         <th>
-                          Andar 
+                          Andar
                         </th>
                     </tbody>
                   </table>
@@ -482,7 +461,8 @@ Coded by www.creative-tim.com
   <!--  Notifications Plugin    -->
   <script src="../../assets/js/plugins/bootstrap-notify.js"></script>
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script>
+  <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
   <script src="../../assets/demo/demo.js"></script>
 </body>
 
@@ -491,33 +471,33 @@ Coded by www.creative-tim.com
   // function limparFormulario() {
   //       document.getElementById("form_postagem").reset();
   //   }
-    function editarModal(idSala, nome, sala) {
-      document.getElementById("inp_edit_name").value = nome;
-      document.getElementById("inp_edit_andar").value = sala;
-      document.getElementById("btn_edit").value = idSala;
-      $('#exampleModal').modal('show')
-    }
+  function editarModal(idSala, nome, sala) {
+    document.getElementById("inp_edit_name").value = nome;
+    document.getElementById("inp_edit_andar").value = sala;
+    document.getElementById("btn_edit").value = idSala;
+    $('#exampleModal').modal('show')
+  }
 
-    fetch(`/sala/buscar`)
-        .then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
+  fetch(`/sala/buscar`)
+    .then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!")
 
-            if (resposta.ok) {
-                console.log(resposta);
+      if (resposta.ok) {
+        console.log(resposta);
 
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
+        resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
 
-                    const dataSize = json.length;
-                    const tbody = document.getElementById("tb_sala");
+          const dataSize = json.length;
+          const tbody = document.getElementById("tb_sala");
 
-                    for (let i = 0; i < dataSize; i++) {
-                      var idSala = json[i]["idSalas"]
-                      var nomeSala = json[i]["nomeSala"]
-                      var andarSala = json[i]["andarSala"]
+          for (let i = 0; i < dataSize; i++) {
+            var idSala = json[i]["idSalas"]
+            var nomeSala = json[i]["nomeSala"]
+            var andarSala = json[i]["andarSala"]
 
-                      tbody.innerHTML += `
+            tbody.innerHTML += `
                         <tr>
                           <td>
                             ${nomeSala}
@@ -530,122 +510,122 @@ Coded by www.creative-tim.com
 
                         </tr>
                       `
-                    } 
-                });
-            }
-        }).catch(function (erro) {
-            console.log(erro);
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "O Login está inválido";
-        })
-
-
-        function publicar() {
-          // var idUsuario = 1
-
-          var corpo = {
-              nomeSala: inp_name.value,
-              andarSala: inp_andar.value,
-              fkEmpresa: sessionStorage.getItem("FK_EMPRESA")
           }
-
-          window.alert("publicando")
-          fetch(`/sala/publicar`, {
-              method: "POST",
-              headers: {
-                  "Content-Type": "application/json"
-              },
-              body: JSON.stringify(corpo)
-          }).then(function (resposta) {
-
-              console.log("resposta: ", resposta);
-
-              if (resposta.ok) {
-                  window.alert("Sala cadastrada com sucesso!");
-                  window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addSala.html";
-                  limparFormulario();
-                  finalizarAguardar();
-              } else if (resposta.status == 404) {
-                  window.alert("Deu 404!");
-              } else {
-                  throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-              }
-          }).catch(function (resposta) {
-              console.log(`#ERRO: ${resposta}`);
-              // finalizarAguardar();
-          });
-
-          return false;
-
-    }
-
-
-    function deletar(idSala) {
-        var promptConfimacao = prompt('Digite "deletar" para apagar a sala');
-
-        if (promptConfimacao != "deletar") {
-          window.alert("Você não digitou deletar então a sala não sera apagada")
-          return
-        }
-
-        fetch(`/sala/deletar/${idSala}`, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then(function (resposta) {
-            if (resposta.ok) {
-                window.alert("Sala deletada com sucesso");
-                window.location = "addSala.html"
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            } else {
-                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
         });
+      }
+    }).catch(function (erro) {
+      console.log(erro);
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "O Login está inválido";
+    })
+
+
+  function publicar() {
+    // var idUsuario = 1
+
+    var corpo = {
+      nomeSala: inp_name.value,
+      andarSala: inp_andar.value,
+      fkEmpresa: sessionStorage.getItem("FK_EMPRESA")
     }
 
-    function editar(idSala) {
-          var corpo = {
-              nomeSala: inp_edit_name.value,
-              andarSala: inp_edit_andar.value
-          }
+    window.alert("publicando")
+    fetch(`/sala/publicar`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(corpo)
+    }).then(function (resposta) {
 
-        fetch(`/sala/editar/${idSala}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(corpo)
-        }).then(function (resposta) {
-            if (resposta.ok) {
-                window.alert("Sala editada com sucesso");
-                window.location = "addSala.html"
-            } else if (resposta.status == 404) {
-                window.alert("Deu 404!");
-            } else {
-                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        window.alert("Sala cadastrada com sucesso!");
+        window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addSala.html";
+        limparFormulario();
+        finalizarAguardar();
+      } else if (resposta.status == 404) {
+        window.alert("Deu 404!");
+      } else {
+        throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+      }
+    }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      // finalizarAguardar();
+    });
+
+    return false;
+
+  }
+
+
+  function deletar(idSala) {
+    var promptConfimacao = prompt('Digite "deletar" para apagar a sala');
+
+    if (promptConfimacao != "deletar") {
+      window.alert("Você não digitou deletar então a sala não sera apagada")
+      return
     }
+
+    fetch(`/sala/deletar/${idSala}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(function (resposta) {
+      if (resposta.ok) {
+        window.alert("Sala deletada com sucesso");
+        window.location = "addSala.html"
+      } else if (resposta.status == 404) {
+        window.alert("Deu 404!");
+      } else {
+        throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+      }
+    }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+    });
+  }
+
+  function editar(idSala) {
+    var corpo = {
+      nomeSala: inp_edit_name.value,
+      andarSala: inp_edit_andar.value
+    }
+
+    fetch(`/sala/editar/${idSala}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(corpo)
+    }).then(function (resposta) {
+      if (resposta.ok) {
+        window.alert("Sala editada com sucesso");
+        window.location = "addSala.html"
+      } else if (resposta.status == 404) {
+        window.alert("Deu 404!");
+      } else {
+        throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+      }
+    }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+    });
+  }
 
   function testar() {
-        aguardar();
+    aguardar();
 
-        var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
+    var formulario = new URLSearchParams(new FormData(document.getElementById("form_postagem")));
 
-        var divResultado = document.getElementById("div_feed");
+    var divResultado = document.getElementById("div_feed");
 
-        divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
-        divResultado.innerHTML = formulario.get("descricao");
+    divResultado.appendChild(document.createTextNode(formulario.get("descricao")));
+    divResultado.innerHTML = formulario.get("descricao");
 
-        finalizarAguardar();
+    finalizarAguardar();
 
-        return false;
-    }
+    return false;
+  }
 
 </script>
