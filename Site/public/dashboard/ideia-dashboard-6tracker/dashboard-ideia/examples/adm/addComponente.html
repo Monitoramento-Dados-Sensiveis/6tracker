@@ -303,19 +303,19 @@ Coded by www.creative-tim.com
                     <div class="col-md-6 pr -1">
                       <div class="form-group">
                         <label>Nome: </label>
-                        <input type="text" class="form-control" placeholder="Nome do componente">
+                        <input id="nome_input" type="text" class="form-control" placeholder="Nome do componente">
                       </div>
                     </div>
                     <div class="col-md-3 px-1">
                       <div class="form-group">
                         <label>Empresa fornecedora:</label>
-                        <input type="text" class="form-control" placeholder="Fornecedor">
+                        <input id="fornecedor_input" type="text" class="form-control" placeholder="Fornecedor">
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Modelo do componente: </label>
-                        <input type="text" class="form-control" placeholder="Modelo do componente: ">
+                        <input id="modelo_input" type="text" class="form-control" placeholder="Modelo do componente: ">
                       </div>
                     </div>
                   </div>
@@ -323,19 +323,19 @@ Coded by www.creative-tim.com
                     <div class="col-md-3">
                       <div class="form-group">
                         <label>Métrica Minima:</label>
-                        <input type="text" class="form-control" placeholder="Métrica Minima">
+                        <input id="maxima_input" type="text" class="form-control" placeholder="Métrica Minima">
                       </div>
                     </div>
                     <div class="col-md-69 pr -1">
                       <div class="form-group">
                         <label>Métrica Máxima: </label>
-                        <input type="text" class="form-control" placeholder="Métrica Máxima">
+                        <input id="minima_input" type="text" class="form-control" placeholder="Métrica Máxima">
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Valor Total: </label>
-                        <input type="text" class="form-control" placeholder="Valor Total">
+                        <input id="total_input" type="text" class="form-control" placeholder="Valor Total">
                       </div>
                     </div>
                   </div>
@@ -343,7 +343,7 @@ Coded by www.creative-tim.com
                     <div class="col-md-6 pr -1">
                       <div class="form-group">
                         <label>Servidor: </label>
-                        <select class="form-control" id="servidorSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                        <select class="form-control" id="servidorSelect" name="unidade">
                           <option value="">Servidores</option>
                         </select>
                       </div>
@@ -351,7 +351,7 @@ Coded by www.creative-tim.com
                     <div class="col-md-3 px-1">
                       <div class="form-group">
                         <label>Unidade de medida:</label>
-                        <select class="form-control" id="medidaSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                        <select class="form-control" id="medidaSelect" name="unidade">
                           <option value="">Unidade de medida</option>
                         </select>
                       </div>
@@ -359,7 +359,7 @@ Coded by www.creative-tim.com
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Tipo de componente: </label>
-                        <select class="form-control" id="componenteSelect" name="unidade" onChange="AbrirSecao(this.value)">
+                        <select class="form-control" id="componenteSelect" name="unidade">
                           <option value="">Tipo de componente</option>
                         </select>
                       </div>
@@ -367,7 +367,7 @@ Coded by www.creative-tim.com
                   </div>
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round" style="background-color: #c211a1;">Adicionar componente</button>
+                      <button type="submit" class="btn btn-primary btn-round" style="background-color: #c211a1;" onclick="cadastrarComponente()">Adicionar componente</button>
                     </div>
                   </div>
                 </form>
@@ -533,4 +533,84 @@ Coded by www.creative-tim.com
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "O Login está inválido";
         })
+
+        // CADASTRAR COMPONENTE NO BANCO
+
+        function cadastrarComponente() {
+
+        console.log("Chamando Função cadastrar componente")
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var fornecedorVar = fornecedor_input.value;
+        var modeloVar = modelo_input.value;
+        var maximaVar = maxima_input.value;
+        var minimaVar = minima_input.value;
+        var valorTotalVar = total_input.value;
+        var ServidorVar = servidorSelect.value;
+        var UnidadeVar = medidaSelect.value;
+        var TipoVar = componenteSelect.value;
+        // var fkempresa = sessionStorage.NOME_EMPRESA;
+
+        console.log("Registrando Variavéis")
+        console.log(ServidorVar)
+        console.log(UnidadeVar)
+        console.log(TipoVar)
+
+
+        if (ServidorVar == "Servidor Principal") { ServidorVar = 1 }
+        else { ServidorVar = 2 }
+
+        if (UnidadeVar == "%") { UnidadeVar = 1 }
+        else { UnidadeVar = 2 }
+
+        if (TipoVar == "CPU") { TipoVar = 1 }
+        else { TipoVar = 2 }
+
+        console.log(ServidorVar)
+        console.log(UnidadeVar)
+        console.log(TipoVar)
+        console.log("Entrando no fetch");
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrarComponente", {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            nomeServer: nomeVar,
+            fornecedorServer: fornecedorVar,
+            modeloServer: modeloVar,
+            maximaServer: maximaVar,
+            minimaServer: minimaVar,
+            totalServer: valorTotalVar,
+            ServidorServer: ServidorVar,
+            UnidadeMedidaServer: UnidadeVar,
+            TipoComponenteServer: TipoVar,
+          })
+        }).then(function (resposta) {
+        
+          console.log("resposta: ", resposta);
+        
+          if (resposta.ok) {
+            window.alert("Servidor cadastrado com sucesso!");
+            window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addComponente.html";
+            limparFormulario();
+            finalizarAguardar();
+          } else if (resposta.status == 404) {
+            window.alert("Deu 404!");
+          } else {
+            throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+          }
+        }).catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          // finalizarAguardar();
+        });
+
+        return false;
+
+}
 </script>
