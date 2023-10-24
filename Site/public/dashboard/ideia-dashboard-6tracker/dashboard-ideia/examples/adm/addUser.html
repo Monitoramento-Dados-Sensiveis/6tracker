@@ -21,7 +21,7 @@ Coded by www.creative-tim.com
   <link rel="icon" type="image/png" href="../../assets/img/6Tracker/logo-sf-vertical-preta.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Adicionar coloboradores
+    Adicionar Usuários
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
     name='viewport' />
@@ -149,7 +149,7 @@ Coded by www.creative-tim.com
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:;">Informações do colaborador</a>
+            <a class="navbar-brand" href="javascript:;">Informações do Usuário</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
             aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -243,16 +243,16 @@ Coded by www.creative-tim.com
                         <label>Email: </label>
                         <input id="email_input" type="email" class="form-control" placeholder="Email do colaborador">
                       </div>
-                    </div>                    
-                      <div class="col-md-4 pl-1">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Permissão: </label>
-                          <select class="form-control" id="nivelPermissaoSelect" name="unidade" onChange="AbrirSecao(this.value)">
-                            <option value="">Tipo de permissão</option>
-                          </select>
-                        </div>                        
-                      </div>                      
-                    </div>                 
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Permissão: </label>
+                        <select class="form-control" id="nivelPermissaoSelect" name="unidade">
+                          <option value="">Tipo de permissão</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                   <div class="row">
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
@@ -270,8 +270,8 @@ Coded by www.creative-tim.com
                   </div>
                   <div class="row">
                     <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round" id="btn-user"
-                        style="background-color: #c211a1;" onclick="cadastrarUser()">Adicionar Usuário</button>
+                      <button onclick="cadastrarUser()" type="submit" class="btn btn-primary btn-round" id="btn-user"
+                        style="background-color: #c211a1;">Adicionar Usuário</button>
                     </div>
                     <div id="div_aguardar" class="loading-div">
                       <img src="" id="loading-gif" />
@@ -284,80 +284,54 @@ Coded by www.creative-tim.com
                         <span id="mensagem_erro"></span>
                       </div>
                     </div>
-                  </div>    
+                  </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </div>                
-        <footer class="footer footer-black  footer-white ">
-          <div class="container-fluid">
-            <div class="row">
-              <nav class="footer-nav">
-                <ul>
-                  <li><a href="./principalDashAdm.html" target="_blank">Suporte</a></li>
-                  <li><a href="./principalDashAdm.html/blog" target="_blank">Comunicação</a></li>
-                  <li><a href="./principalDashAdm.html/license" target="_blank">Site institucional</a></li>
-                </ul>
-              </nav>
-              <div class="credits ml-auto">
-                <span class="copyright">
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear())
-                  </script>, made with 6Tracker.
-                </span>
-              </div>
+      </div>
+      <footer class="footer footer-black  footer-white ">
+        <div class="container-fluid">
+          <div class="row">
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="./principalDashAdm.html" target="_blank">Suporte</a></li>
+                <li><a href="./principalDashAdm.html/blog" target="_blank">Comunicação</a></li>
+                <li><a href="./principalDashAdm.html/license" target="_blank">Site institucional</a></li>
+              </ul>
+            </nav>
+            <div class="credits ml-auto">
+              <span class="copyright">
+                ©
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>, made with 6Tracker.
+              </span>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
-    <!--   Core JS Files   -->
-    <script src="../../assets/js/core/jquery.min.js"></script>
-    <script src="../../assets/js/core/popper.min.js"></script>
-    <script src="../../assets/js/core/bootstrap.min.js"></script>
-    <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    <!--  Google Maps Plugin    -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
-    <!-- Chart JS -->
-    <script src="../../assets/js/plugins/chartjs.min.js"></script>
-    <!--  Notifications Plugin    -->
-    <script src="../../assets/js/plugins/bootstrap-notify.js"></script>
-    <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="../../assets/demo/demo.js"></script>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../../assets/js/core/jquery.min.js"></script>
+  <script src="../../assets/js/core/popper.min.js"></script>
+  <script src="../../assets/js/core/bootstrap.min.js"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+  <!-- Chart JS -->
+  <script src="../../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../../assets/demo/demo.js"></script>
 
 </body>
 
 </html>
 <script>
-  // sessão
-  function validarSessao() {
-    // aguardar();
-
-    var email = sessionStorage.EMAIL_USUARIO;
-    var nome = sessionStorage.NOME_USUARIO;
-
-    var b_usuario = document.getElementById("b_usuario");
-
-    if (email != null && nome != null) {
-      // window.alert(`Seja bem-vindo, ${nome}!`);
-      b_usuario.innerHTML = nome;
-
-      // finalizarAguardar();
-    } else {
-      window.location = "../login.html";
-    }
-  }
-
-  function limparSessao() {
-    // aguardar();
-    sessionStorage.clear();
-    // finalizarAguardar();
-    window.location = "../login.html";
-  }
-
   // carregamento (loading)
   function aguardar() {
     var divAguardar = document.getElementById("div_aguardar");
@@ -377,90 +351,139 @@ Coded by www.creative-tim.com
 </script>
 
 
-<script>
+<script>  
+  // BUSCAR TIPOS DE COMPONENTES
+  fetch(`/componente/buscarNivelPermissao/`)
+    .then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!")
+
+      if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+
+          var NivelPermissao = json
+
+          var selectElement = document.getElementById('nivelPermissaoSelect');
+
+          // Itera sobre o array de empresas e cria as opções do select
+          for (let i = 0; i < NivelPermissao.length; i++) {
+            const nivelPermissao = NivelPermissao[i];
+            const nivelPermissaoNome = nivelPermissao.nomeCargo;
+
+            // Cria um novo elemento de opção em cada iteração
+            const optionElement = document.createElement('option');
+            optionElement.value = 1;
+            optionElement.text = nivelPermissaoNome;
+
+            selectElement.appendChild(optionElement);
+          }
+
+
+        });
+
+      }
+    }).catch(function (erro) {
+      console.log(erro);
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "O Nível Permissao está inválido";
+    })
+
   function cadastrarUser() {
 
+    console.log("Chamando Função cadastrar user")
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var nomeVar = nome_input.value;
     var cpfVar = cpf_input.value;
     var telefoneVar = telefone_input.value;
     var emailVar = email_input.value;
-    var nivelPermissaoVar = nivelPermissao_input.value;
+    var nivelPermissaoVar = nivelPermissaoSelect.value;
     var senhaVar = senha_input.value;
     var confirmSenhaVar = confirm_senha_input.value;
     var fkempresa = sessionStorage.NOME_EMPRESA;
 
-    if (nomeVar == "" || cpfVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "") {
-      cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "Todos os campos são obrigatórios";
-      setTimeout(function () {
-        cardErro.style.display = "none";
-      }, 3000);
-      finalizarAguardar();
-      return false;
-    }
+    console.log("Registrando Variavéis")
+    console.log(nivelPermissaoVar)
 
-    if (senhaVar != confirmSenhaVar) {
-      cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "Senhas diferentes!";
 
-      setTimeout(function () {
-        cardErro.style.display = "none";
-      }, 3000);
+    if (nivelPermissaoVar == "Admin") { nivelPermissaoVar = 1 }
+    console.log(nivelPermissaoVar)
 
-      finalizarAguardar();
-      return false;
-    }
+    // if (nomeVar == "" || cpfVar == "" || emailVar == "" || telefoneVar == "" || senhaVar == "") {
+    //   cardErro.style.display = "block"
+    //   mensagem_erro.innerHTML = "Todos os campos são obrigatórios";
+    //   setTimeout(function () {
+    //     cardErro.style.display = "none";
+    //   }, 3000);
+    //   finalizarAguardar();
+    //   return false;
+    // }
 
-    if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.indexOf("@") > emailVar.indexOf(".com")) {
-      cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "Email Inválido!";
+    // if (senhaVar != confirmSenhaVar) {
+    //   cardErro.style.display = "block"
+    //   mensagem_erro.innerHTML = "Senhas diferentes!";
 
-      setTimeout(function () {
-        cardErro.style.display = "none";
-      }, 3000);
+    //   setTimeout(function () {
+    //     cardErro.style.display = "none";
+    //   }, 3000);
 
-      finalizarAguardar();
-      return false;
-    }
+    //   finalizarAguardar();
+    //   return false;
+    // }
 
-    if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(senhaVar) || senhaVar.length < 8) {
-      cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "Senha Inválida! Coloque um caracter especial e mais de 8 dígitos";
+    // if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1 || emailVar.indexOf("@") > emailVar.indexOf(".com")) {
+    //   cardErro.style.display = "block"
+    //   mensagem_erro.innerHTML = "Email Inválido!";
 
-      setTimeout(function () {
-        cardErro.style.display = "none";
-      }, 3000);
+    //   setTimeout(function () {
+    //     cardErro.style.display = "none";
+    //   }, 3000);
 
-      finalizarAguardar();
-      return false;
-    }
+    //   finalizarAguardar();
+    //   return false;
+    // }
 
-    if (telefoneVar.length != 11) {
-      cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "Número de telefone inválido!";
+    // if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(senhaVar) || senhaVar.length < 8) {
+    //   cardErro.style.display = "block"
+    //   mensagem_erro.innerHTML = "Senha Inválida! Coloque um caracter especial e mais de 8 dígitos";
 
-      setTimeout(function () {
-        cardErro.style.display = "none";
-      }, 3000);
+    //   setTimeout(function () {
+    //     cardErro.style.display = "none";
+    //   }, 3000);
 
-      finalizarAguardar();
-      return false;
-    }
+    //   finalizarAguardar();
+    //   return false;
+    // }
 
-    if (cpfVar.length != 11) {
-      cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "CPF inválido!";
+    // if (telefoneVar.length != 11) {
+    //   cardErro.style.display = "block"
+    //   mensagem_erro.innerHTML = "Número de telefone inválido!";
 
-      setTimeout(function () {
-        cardErro.style.display = "none";
-      }, 3000);
+    //   setTimeout(function () {
+    //     cardErro.style.display = "none";
+    //   }, 3000);
 
-      finalizarAguardar();
-      return false;
-    }    
+    //   finalizarAguardar();
+    //   return false;
+    // }
 
+    // if (cpfVar.length != 11) {
+    //   cardErro.style.display = "block"
+    //   mensagem_erro.innerHTML = "CPF inválido!";
+
+    //   setTimeout(function () {
+    //     cardErro.style.display = "none";
+    //   }, 3000);
+
+    //   finalizarAguardar();
+    //   return false;
+    // }    
+
+    console.log("Entrando no fetch");
+    
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrarUser", {
       method: "post",
@@ -500,45 +523,4 @@ Coded by www.creative-tim.com
     return false;
 
   }
-</script>
-
-<script>
-    // BUSCAR TIPOS DE COMPONENTES
-    fetch(`/componente/buscarNivelPermissao/`)
-        .then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    var NivelPermissao = json
-
-                    var selectElement = document.getElementById('nivelPermissaoSelect');
-
-                    // Itera sobre o array de empresas e cria as opções do select
-                    for (let i = 0; i < NivelPermissao.length; i++) {
-                        const nivelPermissao = NivelPermissao[i];
-                        const nivelPermissaoNome = nivelPermissao.nomeCargo;
-
-                        // Cria um novo elemento de opção em cada iteração
-                        const optionElement = document.createElement('option');
-                        optionElement.value = '../Dashboard.html';
-                        optionElement.text = nivelPermissaoNome;
-
-                        selectElement.appendChild(optionElement);
-                    }
-
-
-                });
-
-            }
-        }).catch(function (erro) {
-            console.log(erro);
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "O Nível Permissao está inválido";
-        })
 </script>
