@@ -1,9 +1,9 @@
-Entregáveis SP2: 
+ Entregáveis SP2: 
 ✔: Finalizado;
 ❌: Em processo;
 Pesquisa & Inovação
 • Cadastros e estrutura do Backend NodeJS funcionando ✔
-• Site + Cadastros + MVP do Dashboard (funcional) ❌
+• Site + Cadastros + MVP do Dashboard (funcional) ✔
 • Diagrama de Solução Técnica (Arquitetura Técnica) ✔
 
 Linguagem de Programação
@@ -15,11 +15,11 @@ Análise de Requisitos
 
 Sistemas Operacionais
 • Listar Processos via API ✔
-• Assistente de Instalação do Client (Wizard) ❌
+• Assistente de Instalação do Client (Wizard) ✔
 • VM na Nuvem AWS ✔
 
 Cálculo Computacional
 • Captura de processos (ETL) ✔
 • Mineração dos dados (Modelos analíticos) - R ✔
-• Gráfico/Dashboard ❌
+• Gráfico/Dashboard ✔
 • Definição de Alertas e Métricas ✔
