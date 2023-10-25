@@ -39,13 +39,24 @@ demo = {
         ],
         datasets: [
           {
-            label: "Rendimento do sistema",
-            borderColor: "#000000",
-            backgroundColor: "#c211a1",
+            label: "CPU",
+            borderColor: "##ff00d0",
+            backgroundColor: "#eb98dc",
             pointRadius: 8,
             pointHoverRadius: 15,
             borderWidth: 0.1,
-            data: [25, 35, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95],
+            data: [75, 90, 85, 70, 75, 70, 65, 60, 75, 50, 45, 40, 35],
+            fill: false,
+          },
+          {
+            label: "RAM   ",
+            borderColor: "#0004ff",
+            backgroundColor: "#b011c2",
+            pointRadius: 8,
+            pointHoverRadius: 15,
+            borderWidth: 0.1,
+            data: [25, 35, 45, 50, 55, 40, 75, 30, 75, 30, 85, 90, 95],
+            fill: false,
           },
         ],
       },
@@ -153,7 +164,7 @@ demo = {
     myChart = new Chart(ctx, {
       type: "doughnut",
       data: {
-        labels: ["Seguro", "Alerta", "Risco"],
+        labels: ["Em Uso", "Disponível"],
         datasets: [
           {
             fill: false,
@@ -161,7 +172,7 @@ demo = {
             pointHoverRadius: 0,
             backgroundColor: ["#eb98dc","#d651be","#c211a1"],
             borderWidth: 0,
-            data: [85, 10,5],
+            data: [85, 10],
           },
         ],
       },
