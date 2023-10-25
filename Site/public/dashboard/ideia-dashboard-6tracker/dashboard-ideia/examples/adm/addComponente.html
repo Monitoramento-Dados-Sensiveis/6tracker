@@ -418,14 +418,15 @@ Coded by www.creative-tim.com
 </html>
 <script>
   // BUSCAR SERVIDORES
-    fetch(`/componente/buscar/`)
+    fetch(`/servidor/buscar/`)
         .then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
+                  console.log("testttt");
+                    console.log(resposta);
 
             if (resposta.ok) {
-                console.log(resposta);
-
                 resposta.json().then(json => {
+                    console.log("testttt");
                     console.log(json);
                     console.log(JSON.stringify(json));
 
@@ -440,7 +441,7 @@ Coded by www.creative-tim.com
 
                         // Cria um novo elemento de opção em cada iteração
                         const optionElement = document.createElement('option');
-                        optionElement.value = '../Dashboard.html';
+                        optionElement.value = servidor.idServidor;
                         optionElement.text = servidorNome;
 
                         selectElement.appendChild(optionElement);
@@ -479,7 +480,7 @@ Coded by www.creative-tim.com
 
                         // Cria um novo elemento de opção em cada iteração
                         const optionElement = document.createElement('option');
-                        optionElement.value = '../Dashboard.html';
+                        optionElement.value = medida.idUnidadeMedida;
                         optionElement.text = medidaNome;
 
                         selectElement.appendChild(optionElement);
@@ -518,7 +519,7 @@ Coded by www.creative-tim.com
 
                         // Cria um novo elemento de opção em cada iteração
                         const optionElement = document.createElement('option');
-                        optionElement.value = '../Dashboard.html';
+                        optionElement.value = componente.idTipoComponente;
                         optionElement.text = componenteNome;
 
                         selectElement.appendChild(optionElement);
@@ -550,26 +551,13 @@ Coded by www.creative-tim.com
         var ServidorVar = servidorSelect.value;
         var UnidadeVar = medidaSelect.value;
         var TipoVar = componenteSelect.value;
-        // var fkempresa = sessionStorage.NOME_EMPRESA;
+
 
         console.log("Registrando Variavéis")
         console.log(ServidorVar)
         console.log(UnidadeVar)
         console.log(TipoVar)
 
-
-        if (ServidorVar == "Servidor Principal") { ServidorVar = 1 }
-        else { ServidorVar = 2 }
-
-        if (UnidadeVar == "%") { UnidadeVar = 1 }
-        else { UnidadeVar = 2 }
-
-        if (TipoVar == "CPU") { TipoVar = 1 }
-        else { TipoVar = 2 }
-
-        console.log(ServidorVar)
-        console.log(UnidadeVar)
-        console.log(TipoVar)
         console.log("Entrando no fetch");
 
         // Enviando o valor da nova input
@@ -596,7 +584,7 @@ Coded by www.creative-tim.com
           console.log("resposta: ", resposta);
         
           if (resposta.ok) {
-            window.alert("Servidor cadastrado com sucesso!");
+            window.alert("Componente cadastrado com sucesso!");
             window.location = "/dashboard/ideia-dashboard-6tracker/dashboard-ideia/examples/adm/addComponente.html";
             limparFormulario();
             finalizarAguardar();

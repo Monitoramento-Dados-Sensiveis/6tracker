@@ -5,6 +5,7 @@ function buscarServidores(){
 
     if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
        instrucaoSql = `select 
+       Servidor.idServidor,
        Servidor.nome 
            from Componente 
                join Servidor 
@@ -23,10 +24,8 @@ function buscarMedidas(){
 
     if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
        instrucaoSql = `select 
-       UnidadeMedida.unidadeMedida 
-           from Componente 
-               join UnidadeMedida 
-                   on UnidadeMedida.idUnidadeMedida = Componente.fkServidor;`;
+        *
+           from UnidadeMedida`;
    } else {
        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
        return
@@ -40,11 +39,10 @@ function buscarComponentes(){
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-       instrucaoSql = `select 
-       TipoComponente.tipoComponente 
-           from Componente 
-               join TipoComponente 
-                   on TipoComponente.idTipoComponente = Componente.fkServidor;`;
+       instrucaoSql = `
+        select 
+            *
+           from TipoComponente;`;
    } else {
        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
        return

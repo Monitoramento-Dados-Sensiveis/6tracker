@@ -139,11 +139,11 @@ function publicar(req, res) {
 // }
 
 
-function buscarSalas(req, res){
+function buscar(req, res){
 
     console.log(`Recuperando medidas em tempo real`);
 
-    servidorModel.buscarSalas().then(function (resultado) {
+    servidorModel.buscarServidores().then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -158,7 +158,7 @@ function buscarSalas(req, res){
 
 
 module.exports = {
-    buscarSalas,
+    buscar,
     testar,
     // listar,
     // listarPorUsuario,

@@ -148,7 +148,7 @@ async function cadastrarComponente(nome, fornecedor, modelo, maxima, minima, tot
     // `;
 
     var instrucao = `
-                INSERT INTO Componente (nomeComponente, modeloComponente, fabricante, metricaMin, metricaMax, valorTotal, fkServidor, fkUnidadeMedida, fkTipoComponente) VALUES ('${nome}', '${modelo}', '${fornecedor}', '${minima}', '${maxima}', ${total},${Servidor}, ${UnidadeMedida}, ${TipoComponente}, );
+                INSERT INTO Componente (nomeComponente, modeloComponente, fabricante, metricaMin, metricaMax, valorTotal, fkServidor, fkUnidadeMedida, fkTipoComponente) VALUES ('${nome}', '${modelo}', '${fornecedor}', '${minima}', '${maxima}', ${total},${Servidor}, ${UnidadeMedida}, ${TipoComponente});
             `;
             console.log("Executando a instrução SQL: \n" + instrucao);
 

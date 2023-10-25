@@ -35,7 +35,7 @@ router.post("/publicar", function (req, res) {
 
 
 router.get("/buscar/", function (req, res) {
-    servidorController.buscarSalas(req, res);
+    servidorController.buscar(req, res);
 })
 
 

@@ -79,11 +79,14 @@ function publicar(nome, codigo, so, usb, sala) {
 // }
 
 
-function buscarSalas(){
+function buscarServidores(){
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-       instrucaoSql = `select idSalas, nomeSala from Salas`;
+       instrucaoSql = `select 
+       Servidor.idServidor,
+       Servidor.nome 
+           from Servidor;`;
    } else {
        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
        return
@@ -97,7 +100,7 @@ function buscarSalas(){
 
 
 module.exports = {
-    buscarSalas,
+    buscarServidores,
     // listar,
     // listarPorUsuario,
     // pesquisarDescricao,
