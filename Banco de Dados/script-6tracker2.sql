@@ -1,3 +1,10 @@
+-- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
+-- Você precisa executar os comandos no banco de dados para criar as tabelas,
+-- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+
+/*
+comandos para mysql - banco local - ambiente de desenvolvimento
+*/
 Create DATABASE sixtracker;
 use sixtracker;
 
@@ -63,7 +70,7 @@ idServidor int primary key auto_increment,
 nome varchar(60),
 codigo varchar(50),
 sistemaOperacional varchar(45),
-usbDetectado varchar(45), 
+ip varchar(45), 
 fkSalas int,
 constraint FkSalasServidor foreign key (fkSalas)
 	references Salas(idSalas)
@@ -107,49 +114,6 @@ constraint FkComponenteRegistro foreign key (fkComponente)
 	references Componente (idComponente)    
 );
 
-select * from registro;
-
-CREATE TABLE rede (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            nomeRede VARCHAR(50),
-            bytesEnviados LONG,
-            bytesRecebidos LONG,
-            dataHora TIMESTAMP,
-            fkServidor int,
-            constraint fkServidorRede foreign key (fkServidor) 
-			references Servidor(idServidor)
-        );
-       
-        select * from rede;
-	
-        
- CREATE TABLE janelas (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            nomeJanelaJson VARCHAR(1000),
-            quantidade INT,
-            dataHora TIMESTAMP,
-            fkServidor int,
-            constraint fkServidorJanelas foreign key (fkServidor) 
-			references Servidor (idServidor)
-        );
-        
-        
-        
-        select * from janelas;
-       
-        
-        CREATE TABLE  usb (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            idExclusivo varchar(30),
-            nomeUSB VARCHAR(50),
-            dataHora TIMESTAMP,
-            fkServidor int not null,
-            constraint fkServidor foreign key (fkServidor) 
-			references Servidor (idServidor)
-        );
-        
-        select * from usb;
-
 desc Permissao;
 desc NivelAcesso;
 desc Funcionario;
@@ -165,14 +129,14 @@ desc TipoComponente;
 -- Função Cadastro Empresa--
 
 -- Insere dados na tabela Empresa --
- insert into Empresa values(
- null, 'Nubank', '123456789012345678', '12345678901'
+insert into Empresa (nome, CNPJ) values(
+ 'Nubank', '123456789012345678'
  );
  
  -- insere o endereço da empresa na tabela Endereco --
- insert into Endereco values(
- null, '04742040', 'São Paulo', 'Santa Zoe', '243', 'Santo Amaro', 'São Paulo', 1
- );
+ insert into Endereco (CEP, estado, rua, numero, bairro, cidade) values (
+	'04742040', 'São Paulo', 'Santa Zoe', '243', 'Santo Amaro', 'São Paulo'
+	);
  
 -- Teste -- 
  select * 
@@ -193,7 +157,7 @@ null, 'Admin', 1
 
 -- Adiciona as informações do Funcionário Admin -- 
 insert into Funcionario values(
-null, 'Guilherme', '008.539.263-18', 'guilherme.gsantos@sptech.school', '11982206065','Guigon89', 1, 1
+null, 'Guilherme', '008.539.263-18', 'guilherme.gsantos@sptech.school', '11982206065','Guigon89!', 1, 1
 );
 
 -- Teste -- 
@@ -290,7 +254,7 @@ select
  select 
 	Servidor.nome as NomeServidor, 
     Servidor.sistemaOperacional as SoServidor, 
-    Servidor.usbDetectado as USB, 
+    Servidor.ip as IP, 
     Componente.nomeComponente as NomeComponente, 
     Componente.modeloComponente as ModeloComponente, 
     Componente.metricaMin as Min, 
@@ -314,6 +278,20 @@ select
 				on Servidor.idServidor = Componente.fkServidor
 			group by Servidor.idServidor, Servidor.nome, Componente.nomeComponente, Componente.modeloComponente 
 			order by Servidor.idServidor, Componente.nomeComponente;
-	
- 
- 
+-- /*
+-- comandos para criar usuário em banco de dados azure, sqlserver,
+-- com permissão de insert + update + delete + select
+-- */
+
+-- CREATE USER [usuarioParaAPIWebDataViz_datawriter_datareader]
+-- WITH PASSWORD = '#Gf_senhaParaAPIWebDataViz',
+-- DEFAULT_SCHEMA = dbo;
+
+-- EXEC sys.sp_addrolemember @rolename = N'db_datawriter',
+-- @membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+
+-- EXEC sys.sp_addrolemember @rolename = N'db_datareader',
+-- @membername = N'usuarioParaAPIWebDataViz_datawriter_datareader';
+
+select * from Registro
+join Componente on fkComponente = idComponente;

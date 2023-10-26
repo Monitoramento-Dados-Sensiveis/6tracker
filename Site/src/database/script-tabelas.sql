@@ -70,7 +70,7 @@ idServidor int primary key auto_increment,
 nome varchar(60),
 codigo varchar(50),
 sistemaOperacional varchar(45),
-usbDetectado varchar(45), 
+ip int, 
 fkSalas int,
 constraint FkSalasServidor foreign key (fkSalas)
 	references Salas(idSalas)
