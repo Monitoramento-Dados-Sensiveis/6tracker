@@ -507,11 +507,10 @@ Coded by www.creative-tim.com
 
       console.log("resposta: ", resposta);
 
-      if (resposta.ok) {        
-        cardErro.style.display = "block";
-        cardErro.style.backgroundColor = "#02b41a";
-        cardErro.style.borderColor = "#02b41a";
-        mensagem_erro.innerHTML = "Usuário adicionado com sucesso";        
+      if (resposta.ok) {
+                alert("Servidor cadastrado com sucesso!");                
+                limparFormulario();
+                finalizarAguardar();     
       } else if (resposta.status == 404) {
         window.alert("Deu 404!");
       } else {

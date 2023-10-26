@@ -209,7 +209,7 @@
           <span class="intro-faleconosco">Fale <span class="color">Conosco!</span> </span>
           <div class="formulario">
             <div class="campo">
-              <input id="nome_input" type="text" class="input" required="required" />
+              <input id="ipt_nome" type="text" class="input" required="required" />
               <span>Nome</span> 
             </div>
 
@@ -219,7 +219,7 @@
             </div>
 
             <div class="campo">
-              <input id="senha_input" type="text" class="input1" required="required" />
+              <input id="ipt_mensagem" type="text" class="input1" required="required" />
               <span class="span1">Mensagem</span>
             </div>
 
@@ -328,7 +328,7 @@
 <script>
   function enviar() {
 
-    var email = "simone.santos@sptech.school";
+    var email = "6tracker@sptech.school";
     var assunto = `Olá, meu nome é ` + ipt_nome.value;
     var corpo = ipt_mensagem.value;
     window.open("mailto:" + email + "?subject=" + assunto + "&body=" + corpo);
