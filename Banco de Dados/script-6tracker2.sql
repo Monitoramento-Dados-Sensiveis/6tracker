@@ -6,7 +6,7 @@
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
 Create DATABASE sixtracker;
-use sixtracker;
+Use sixtracker;
 
 create table Permissao (
 idPermissao INT PRIMARY KEY auto_increment,
@@ -112,7 +112,42 @@ dataRegistro datetime,
 fkComponente int,
 constraint FkComponenteRegistro foreign key (fkComponente) 
 	references Componente (idComponente)    
-);
+); 
+            
+CREATE TABLE janelas (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nomeJanelaJson VARCHAR(1000),
+            quantidade INT,
+            dataHora TIMESTAMP,
+            fkServidor int,
+            constraint fkServidor foreign key (fkServidor) 
+			references Servidor (idServidor)
+        );
+
+            
+CREATE TABLE rede (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nomeRede VARCHAR(50),
+            bytesEnviados LONG,
+            bytesRecebidos LONG,
+            dataHora TIMESTAMP,
+            fkServidor int,
+            constraint fkRedeServidor foreign key (fkServidor) 
+			references Servidor (idServidor)
+        );
+    
+		
+CREATE TABLE usb (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    idExclusivo Int,
+                    qtdConectada INT,
+                    nomeUSB VARCHAR(50),
+                    dataHora TIMESTAMP,
+                    fkServidor int,
+                    constraint fkUsbServidor foreign key (fkServidor) 
+			        references Servidor (idServidor)
+                    );
+		
 
 desc Permissao;
 desc NivelAcesso;
